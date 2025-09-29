@@ -436,13 +436,21 @@
         // Carregar biblioteca DE->PARA do JSON
         async function carregarBiblioteca() {
             try {
+                console.log('Carregando biblioteca DEPARA...');
                 const response = await fetch('./data/depara.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
                 const dados = await response.json();
+                console.log('Dados recebidos:', dados.length, 'produtos');
                 
                 // Converter array para objeto de lookup
                 bibliotecaDePara = {};
-                dados.forEach(item => {
-                    bibliotecaDePara[item.codigoprodutofornecedor] = {
+                dados.forEach((item, index) => {
+                    const codigo = item.codigoprodutofornecedor.toString();
+                    bibliotecaDePara[codigo] = {
                         codigoERP: item.codigoerp,
                         nomeERP: item.nomeerp,
                         fornecedor: item.fornecedor_grupo,
@@ -452,12 +460,19 @@
                     };
                 });
                 
-                console.log(`Biblioteca carregada: ${dados.length} produtos`);
-                document.getElementById('totalMappings').textContent = dados.length;
-                return dados.length;
+                console.log('Biblioteca processada:', Object.keys(bibliotecaDePara).length, 'produtos');
+                
+                // Testar alguns códigos conhecidos
+                console.log('Teste 4700103:', bibliotecaDePara['4700103']);
+                console.log('Teste 20000:', bibliotecaDePara['20000']);
+                console.log('Teste 1468100:', bibliotecaDePara['1468100']);
+                
+                document.getElementById('totalMappings').textContent = Object.keys(bibliotecaDePara).length;
+                return Object.keys(bibliotecaDePara).length;
                 
             } catch (error) {
                 console.error('Erro ao carregar biblioteca:', error);
+                showNotification('Erro ao carregar biblioteca: ' + error.message, 'error');
                 
                 // Fallback com alguns produtos essenciais
                 bibliotecaDePara = {
@@ -468,6 +483,7 @@
                     "732100": { codigoERP: "12779", nomeERP: "VOIL 100% POLIESTER", fornecedor: "EURO" }
                 };
                 
+                console.log('Usando biblioteca fallback:', Object.keys(bibliotecaDePara).length, 'produtos');
                 document.getElementById('totalMappings').textContent = Object.keys(bibliotecaDePara).length;
                 return Object.keys(bibliotecaDePara).length;
             }
@@ -490,6 +506,22 @@
                 
                 // Atualizar displays
                 atualizarDisplays();
+                
+                // Função de teste disponível no console
+                window.testarCodigo = function(codigo) {
+                    console.log('=== TESTE DE CÓDIGO ===');
+                    console.log('Código:', codigo);
+                    console.log('Biblioteca carregada?', Object.keys(bibliotecaDePara).length > 0);
+                    console.log('Código existe na biblioteca?', bibliotecaDePara[codigo] ? 'SIM' : 'NÃO');
+                    
+                    if (window.CodigoDecoder) {
+                        const resultado = window.CodigoDecoder.decodificar(codigo, bibliotecaDePara);
+                        console.log('Resultado decoder:', resultado);
+                        return resultado;
+                    } else {
+                        console.log('CodigoDecoder não carregado');
+                    }
+                };
                 
                 showNotification(`Sistema iniciado! ${totalProdutos} produtos carregados.`, 'success');
                 
@@ -515,8 +547,47 @@
                 return;
             }
             
-            window.ScannerReal.processarCodigo(codigo);
+            // Processar usando o decoder com a biblioteca carregada
+            const resultado = window.CodigoDecoder.decodificar(codigo, bibliotecaDePara);
+            
+            if (resultado && resultado.nomeERP !== 'PRODUTO NÃO MAPEADO') {
+                preencherCampos(resultado);
+                showNotification(`Produto encontrado: ${resultado.nomeERP}`, 'success');
+            } else {
+                preencherCamposDesconhecido(codigo);
+                showNotification('Código não encontrado na biblioteca', 'warning');
+            }
+            
             document.getElementById('manualBarcode').value = '';
+        }
+
+        // Preencher campos quando produto é encontrado
+        function preencherCampos(resultado) {
+            document.getElementById('barcode').value = resultado.codigoFornecedor || '';
+            document.getElementById('productName').value = resultado.nomeERP || '';
+            document.getElementById('erpCodeDisplay').value = resultado.codigoERP || '';
+            
+            if (resultado.quantidade > 0) {
+                document.getElementById('quantity').value = resultado.quantidade;
+            }
+            
+            if (resultado.cor) {
+                document.getElementById('color').value = resultado.cor;
+            }
+            
+            if (resultado.observacoes) {
+                document.getElementById('observations').value = resultado.observacoes;
+            }
+        }
+
+        // Preencher para código desconhecido
+        function preencherCamposDesconhecido(codigo) {
+            document.getElementById('barcode').value = codigo;
+            document.getElementById('productName').value = 'PRODUTO NÃO MAPEADO';
+            document.getElementById('erpCodeDisplay').value = codigo;
+            document.getElementById('quantity').value = '';
+            document.getElementById('color').value = '';
+            document.getElementById('observations').value = 'Produto não encontrado na biblioteca';
         }
 
         function adicionarItem() {
