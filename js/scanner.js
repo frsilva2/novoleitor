@@ -27,7 +27,7 @@ class ScannerReal {
             const response = await fetch(`./data/depara.json?v=${Date.now()}`, { cache: 'no-store' });
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
             const data = await response.json();
-
+            
             // Aceita objeto {produtos:{...}} ou array [...]
             if (data && typeof data === 'object' && !Array.isArray(data)) {
                 this.bibliotecaDePara = data.produtos || {};
@@ -35,17 +35,33 @@ class ScannerReal {
             } else if (Array.isArray(data)) {
                 const mapa = {};
                 let ignorados = 0;
-                for (const row of data) {
+                data.forEach((row) => {
                     const fornecedor = String(row.fornecedor_grupo || '').trim().toUpperCase();
                     let cod = String(row.codigoprodutofornecedor ?? '').replace(/\D+/g, '').replace(/^0+/, '');
-                    if (!cod) { ignorados++; continue; }
+                    if (!cod) { ignorados++; return; }
                     const codigoERP = row.codigoerp != null ? String(row.codigoerp).split('.')[0] : null;
-                    mapa[cod] = {
-                        codigoERP,
-                        nomeERP: row.nomeerp || null,
-                        fornecedor
-                    };
-                }
+                    mapa[cod] = { codigoERP: codigoERP, nomeERP: row.nomeerp || null, fornecedor: fornecedor };
+                });
+                this.bibliotecaDePara = mapa;
+                this.mapeamentoCores = {};
+                console.log('Ignorados:', ignorados);
+            } else {
+                throw new Error('Formato inválido de JSON');
+            }
+            
+            const totalProdutos = Object.keys(this.bibliotecaDePara).length;
+            console.log(`Biblioteca carregada: ${totalProdutos} produtos`);
+            
+            // Atualizar UI
+            document.getElementById('totalMappings').textContent = totalProdutos;
+            
+            return data;
+        } catch (error) {
+            console.error('Erro ao carregar biblioteca:', error);
+            // Fallback para biblioteca embarcada
+            this.carregarBibliotecaFallback();
+        }
+    }
                 this.bibliotecaDePara = mapa;
                 this.mapeamentoCores = {};
                 console.log(`Ignorados: ${ignorados}`);
