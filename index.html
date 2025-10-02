@@ -5,194 +5,271 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Leitor de Códigos – Empório</title>
-<!-- Script Principal (revisado) -->
-<script>
-  // ===== Estado global do inventário =====
-  let inventario = [];
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>Leitor de Códigos • Empório dos Tecidos</h1>
+    <div class="topbar">
+      <span class="badge">Produtos na biblioteca: <strong id="totalMappings">0</strong></span>
+    </div>
+  </header>
 
-  // Inicialização: somente o ScannerReal faz o carregamento da biblioteca
-  window.addEventListener('DOMContentLoaded', () => {
-    if (window.ScannerReal && typeof window.ScannerReal.init === 'function') {
-      window.ScannerReal.init();
-    }
-    carregarInventario();
-    atualizarDisplays();
-    // Atalho: Enter na entrada manual
-    document.getElementById('manualBarcode')?.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') processarCodigoManual();
+  <main class="container">
+    <div class="tabs">
+      <button class="tab active" onclick="showSection('scanner')">Scanner</button>
+      <button class="tab" onclick="showSection('manual')">Entrada manual</button>
+      <button class="tab" onclick="showSection('inventory')">Inventário</button>
+    </div>
+
+    <!-- Scanner -->
+    <section id="scanner" class="section active">
+      <div class="grid">
+        <div class="card">
+          <h2>Câmera</h2>
+          <div id="scanner-container">Habilite a câmera para iniciar a leitura</div>
+          <div class="row" style="margin-top:10px">
+            <button id="startBtn">Iniciar</button>
+            <button id="stopBtn" class="secondary" disabled>Parar</button>
+            <button id="flashBtn" class="secondary">Flash</button>
+            <span id="scannerStatus" style="padding:6px 10px;background:#f1f1f6;border-radius:999px;border:1px solid #dcdce8">Aguardando…</span>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Resultado</h2>
+          <div class="row">
+            <input id="barcode" placeholder="Código fornecedor" />
+            <input id="productName" placeholder="Produto identificado" />
+          </div>
+          <div class="row">
+            <input id="erpCodeDisplay" placeholder="Código ERP" />
+            <input id="quantity" placeholder="Quantidade (MT)" type="number" step="0.01" />
+          </div>
+          <div class="row">
+            <input id="color" placeholder="Cor" />
+            <input id="observations" placeholder="Observações" />
+          </div>
+          <div class="row" style="margin-top:10px">
+            <button onclick="adicionarItem()">Adicionar ao inventário</button>
+            <button class="secondary" onclick="limparFormulario()">Limpar campos</button>
+          </div>
+          <div class="kpi" style="margin-top:10px">
+            <span class="pill">Coletados: <b id="collectedCount">0</b></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manual -->
+    <section id="manual" class="section">
+      <div class="card">
+        <h2>Entrada manual</h2>
+        <div class="row">
+          <input id="manualBarcode" placeholder="Cole ou digite o código exato da etiqueta" />
+          <button onclick="processarCodigoManual()">Processar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inventário -->
+    <section id="inventory" class="section">
+      <div class="card">
+        <h2>Inventário</h2>
+        <div class="kpi" style="margin-bottom:10px">
+          <span class="pill">Itens: <b id="totalItems">0</b></span>
+          <span class="pill">Metros: <b id="totalMeters">0.0</b></span>
+          <span class="pill">Valor estimado: <b id="totalValue">R$ 0,00</b></span>
+        </div>
+        <div class="row" style="margin-bottom:8px">
+          <button onclick="exportarExcel()">Exportar Excel</button>
+          <button class="warn" onclick="limparDados()">Limpar tudo</button>
+          <span class="pill">Itens para exportar: <b id="exportCount">0</b></span>
+        </div>
+        <div style="overflow:auto;max-height:420px;border:1px solid #eee;border-radius:10px">
+          <table>
+            <thead>
+              <tr>
+                <th>Código ERP</th>
+                <th>Produto</th>
+                <th>Qtd (MT)</th>
+                <th>Cor</th>
+                <th>Data</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="notification" class="notification">ok</div>
+
+  <!-- Bibliotecas externas -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="https://unpkg.com/quagga/dist/quagga.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <!-- Seus módulos -->
+  <script src="./js/decoder.js"></script>
+  <script src="./js/scanner.js"></script>
+
+  <!-- Script Principal -->
+  <script>
+    let inventario = [];
+
+    window.addEventListener('load', () => {
+      if (window.ScannerReal && typeof window.ScannerReal.init === 'function') {
+        window.ScannerReal.init();
+      }
+      carregarInventario();
+      atualizarDisplays();
+      document.getElementById('manualBarcode')?.addEventListener('keypress', e => {
+        if (e.key === 'Enter') processarCodigoManual();
+      });
     });
-  });
 
-  // ===== Entrada manual utilizando o decoder do Scanner =====
-  function processarCodigoManual() {
-    const codigo = document.getElementById('manualBarcode').value.trim();
-    if (!codigo) {
-      showNotification('Digite um código válido', 'error');
-      return;
-    }
-    if (!window.ScannerReal || typeof window.ScannerReal.processarCodigo !== 'function') {
-      showNotification('Scanner não inicializado', 'error');
-      return;
-    }
-    // Usa o fluxo oficial do scanner (preenche os campos via decoder.js)
-    window.ScannerReal.processarCodigo(codigo);
-    document.getElementById('manualBarcode').value = '';
-  }
-
-  // ===== Inventário =====
-  function adicionarItem() {
-    const codigoFornecedor = document.getElementById('barcode').value;
-    const nomeERP         = document.getElementById('productName').value;
-    const codigoERP       = document.getElementById('erpCodeDisplay').value;
-    const quantidade      = parseFloat(document.getElementById('quantity').value);
-    const cor             = document.getElementById('color').value;
-    const observacoes     = document.getElementById('observations').value;
-
-    if (!codigoFornecedor || !quantidade || quantidade <= 0) {
-      showNotification('Preencha código e quantidade válida', 'error');
-      return;
+    function processarCodigoManual() {
+      const codigo = document.getElementById('manualBarcode').value.trim();
+      if (!codigo) return showNotification('Digite um código válido','error');
+      if (!window.ScannerReal || typeof window.ScannerReal.processarCodigo !== 'function') {
+        return showNotification('Scanner não inicializado','error');
+      }
+      window.ScannerReal.processarCodigo(codigo);
+      document.getElementById('manualBarcode').value='';
+      showSection('scanner');
     }
 
-    const item = {
-      id: Date.now(),
-      codigoFornecedor,
-      codigoERP,
-      nomeERP,
-      quantidade,
-      cor: cor || 'N/A',
-      observacoes: observacoes || '',
-      data: new Date().toLocaleDateString('pt-BR'),
-      timestamp: new Date().toISOString()
-    };
+    function adicionarItem() {
+      const get = (id)=>document.getElementById(id).value;
+      const codigoFornecedor = get('barcode');
+      const nomeERP = get('productName');
+      const codigoERP = get('erpCodeDisplay');
+      const quantidade = parseFloat(get('quantity'));
+      const cor = get('color');
+      const observacoes = get('observations');
 
-    inventario.push(item);
-    limparFormulario();
-    atualizarDisplays();
-    salvarInventario();
-    showNotification(`Item ${inventario.length} registrado com sucesso!`, 'success');
-  }
+      if (!codigoFornecedor || !quantidade || quantidade <= 0) {
+        return showNotification('Preencha código e quantidade válida','error');
+      }
 
-  function limparFormulario() {
-    ['barcode','productName','erpCodeDisplay','quantity','color','observations']
-      .forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
-  }
-
-  function atualizarDisplays() {
-    const totalItens  = inventario.length;
-    const totalMetros = inventario.reduce((sum, item) => sum + (item.quantidade || 0), 0);
-    const valorEstimado = totalMetros * 15; // estimativa simples
-
-    setText('collectedCount', totalItens);
-    setText('exportCount',   totalItens);
-    setText('totalItems',    totalItens);
-    setText('totalMeters',   totalMetros.toFixed(1));
-    setText('totalValue',    'R$ ' + valorEstimado.toLocaleString('pt-BR'));
-
-    atualizarTabelaInventario();
-  }
-
-  function atualizarTabelaInventario() {
-    const tbody = document.getElementById('inventoryBody');
-    if (!tbody) return;
-    tbody.innerHTML = '';
-    inventario.forEach(item => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${item.codigoERP || ''}</td>
-        <td style="font-size: 0.8em;">${item.nomeERP || ''}</td>
-        <td>${(item.quantidade ?? 0).toFixed(1)}</td>
-        <td>${item.cor || ''}</td>
-        <td style="font-size: 0.8em;">${item.data || ''}</td>
-        <td>
-          <button onclick="removerItem(${item.id})"
-            style="background:#e74c3c;color:#fff;border:none;padding:4px 8px;border-radius:4px;font-size:0.7em;">
-            Remover
-          </button>
-        </td>`;
-      tbody.appendChild(tr);
-    });
-  }
-
-  function removerItem(id) {
-    inventario = inventario.filter(i => i.id !== id);
-    atualizarDisplays();
-    salvarInventario();
-    showNotification('Item removido', 'success');
-  }
-
-  function exportarExcel() {
-    if (inventario.length === 0) {
-      showNotification('Nenhum item para exportar', 'warning');
-      return;
+      const item = {
+        id: Date.now(),
+        codigoFornecedor, codigoERP, nomeERP,
+        quantidade, cor: cor || 'N/A', observacoes: observacoes || '',
+        data: new Date().toLocaleDateString('pt-BR'),
+        timestamp: new Date().toISOString()
+      };
+      inventario.push(item);
+      limparFormulario();
+      atualizarDisplays();
+      salvarInventario();
+      showNotification(`Item ${inventario.length} registrado`, 'success');
     }
-    const dadosExport = inventario.map((item, idx) => ({
-      'Item': idx + 1,
-      'Código ERP': item.codigoERP,
-      'Nome ERP': item.nomeERP,
-      'Quantidade': item.quantidade,
-      'Unidade': 'MT',
-      'Cor': item.cor,
-      'Código Fornecedor': item.codigoFornecedor,
-      'Observações': item.observacoes,
-      'Data Coleta': item.data
-    }));
-    const ws = XLSX.utils.json_to_sheet(dadosExport);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'Inventario');
-    ws['!cols'] = [
-      {width: 8},{width: 15},{width: 30},{width: 12},
-      {width: 8},{width: 12},{width: 15},{width: 25},{width: 12}
-    ];
-    const filename = `inventario_${new Date().toISOString().slice(0,10)}.xlsx`;
-    XLSX.writeFile(wb, filename);
-    showNotification(`Exportado: ${inventario.length} itens`, 'success');
-  }
 
-  function limparDados() {
-    if (confirm('Limpar todos os dados coletados? Esta ação não pode ser desfeita.')) {
+    function limparFormulario() {
+      ['barcode','productName','erpCodeDisplay','quantity','color','observations']
+        .forEach(id => { const el=document.getElementById(id); if (el) el.value=''; });
+    }
+
+    function atualizarDisplays() {
+      const totalItens  = inventario.length;
+      const totalMetros = inventario.reduce((s,i)=>s+(i.quantidade||0),0);
+      const valorEst    = totalMetros * 15;
+      setText('collectedCount', totalItens);
+      setText('exportCount', totalItens);
+      setText('totalItems', totalItens);
+      setText('totalMeters', totalMetros.toFixed(1));
+      setText('totalValue', 'R$ '+valorEst.toLocaleString('pt-BR'));
+      atualizarTabelaInventario();
+    }
+
+    function atualizarTabelaInventario() {
+      const tbody = document.getElementById('inventoryBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+      inventario.forEach(item => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${item.codigoERP||''}</td>
+          <td style="font-size:.9em">${item.nomeERP||''}</td>
+          <td>${(item.quantidade??0).toFixed(1)}</td>
+          <td>${item.cor||''}</td>
+          <td style="font-size:.9em">${item.data||''}</td>
+          <td><button onclick="removerItem(${item.id})" class="warn" style="padding:4px 8px;border-radius:6px">Remover</button></td>`;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function removerItem(id) {
+      inventario = inventario.filter(i=>i.id!==id);
+      atualizarDisplays();
+      salvarInventario();
+      showNotification('Item removido','success');
+    }
+
+    function exportarExcel() {
+      if (inventario.length===0) return showNotification('Nenhum item para exportar','warning');
+      const dados = inventario.map((it,idx)=>({
+        'Item': idx+1,
+        'Código ERP': it.codigoERP,
+        'Produto': it.nomeERP,
+        'Quantidade (MT)': it.quantidade,
+        'Cor': it.cor,
+        'Código Fornecedor': it.codigoFornecedor,
+        'Observações': it.observacoes,
+        'Data Coleta': it.data
+      }));
+      const ws = XLSX.utils.json_to_sheet(dados);
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Inventario');
+      ws['!cols'] = [{width:6},{width:14},{width:32},{width:14},{width:12},{width:18},{width:24},{width:14}];
+      const filename = `inventario_${new Date().toISOString().slice(0,10)}.xlsx`;
+      XLSX.writeFile(wb, filename);
+      showNotification(`Exportado: ${inventario.length} itens`,'success');
+    }
+
+    function limparDados() {
+      if (!confirm('Limpar todos os dados?')) return;
       inventario = [];
       atualizarDisplays();
       salvarInventario();
-      showNotification('Todos os dados foram limpos', 'success');
+      showNotification('Dados limpos','success');
     }
-  }
 
-  function salvarInventario() {
-    try { localStorage.setItem('inventario_textil', JSON.stringify(inventario)); }
-    catch(e) { console.error('Erro ao salvar inventário:', e); }
-  }
-  function carregarInventario() {
-    try {
-      const saved = localStorage.getItem('inventario_textil');
-      if (saved) inventario = JSON.parse(saved);
-    } catch(e) { console.error('Erro ao carregar inventário:', e); }
-  }
-
-  // ===== Navegação de abas =====
-  function showSection(sectionId) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.getElementById(sectionId)?.classList.add('active');
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    // Mantém comportamento existente que usa event.target
-    if (window.event && window.event.target && window.event.target.classList) {
-      window.event.target.classList.add('active');
+    function salvarInventario() {
+      try { localStorage.setItem('inventario_textil', JSON.stringify(inventario)); } catch(e){}
     }
-    if (sectionId === 'inventory') atualizarDisplays();
-  }
+    function carregarInventario() {
+      try { const s=localStorage.getItem('inventario_textil'); if (s) inventario = JSON.parse(s);} catch(e){}
+    }
 
-  // ===== Util =====
-  function setText(id, txt) { const el = document.getElementById(id); if (el) el.textContent = txt; }
-  function showNotification(message, type = 'success') {
-    const el = document.getElementById('notification'); if (!el) return;
-    el.textContent = message; el.className = `notification ${type} show`;
-    setTimeout(() => el.classList.remove('show'), 3000);
-  }
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+      document.getElementById(sectionId)?.classList.add('active');
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+      if (window.event && window.event.target && window.event.target.classList) {
+        window.event.target.classList.add('active');
+      }
+      if (sectionId==='inventory') atualizarDisplays();
+    }
 
-  // Expor funções usadas por botões no HTML
-  window.processarCodigoManual = processarCodigoManual;
-  window.adicionarItem = adicionarItem;
-  window.exportarExcel = exportarExcel;
-  window.limparDados = limparDados;
-  window.removerItem = removerItem;
-  window.showSection = showSection;
-</script>
+    function setText(id, txt){const el=document.getElementById(id); if (el) el.textContent = txt;}
+    function showNotification(message, type='success'){
+      const el=document.getElementById('notification'); if(!el) return;
+      el.textContent=message; el.className=`notification ${type} show`;
+      setTimeout(()=>el.classList.remove('show'), 2500);
+    }
+
+    // Expor funções globais
+    window.processarCodigoManual = processarCodigoManual;
+    window.adicionarItem = adicionarItem;
+    window.removerItem = removerItem;
+    window.exportarExcel = exportarExcel;
+    window.limparDados = limparDados;
+    window.showSection = showSection;
+    window.limparFormulario = limparFormulario;
+  </script>
+</body>
+</html>
