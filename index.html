@@ -435,111 +435,66 @@
 
         // Carregar biblioteca DE->PARA do JSON
         async function carregarBiblioteca() {
-    try {
-      console.log('=== INICIANDO CARREGAMENTO DA BIBLIOTECA ===');
-      const url = `./data/depara.json?v=${Date.now()}`; // cache-bust
-      console.log('Tentando carregar:', url);
+  try {
+    const url = `./data/depara.json?v=${Date.now()}`; // cache-bust
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
 
-      const response = await fetch(url, { cache: 'no-store' });
-      console.log('Status da resposta:', response.status, response.statusText);
-      if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    const raw = await response.text();
+    const dados = JSON.parse(raw);
 
-      const texto = await response.text();
-      console.log('Tamanho do arquivo:', texto.length, 'caracteres');
-      console.log('Primeiros 200 caracteres:', texto.substring(0, 200));
+    // Aceita OBJETO { produtos: {...} } ou ARRAY [...]
+    bibliotecaDePara = {};
+    let ignorados = 0;
 
-      const dados = JSON.parse(texto);
-      console.log('JSON parseado com sucesso');
-      console.log('Tipo de dados:', Array.isArray(dados) ? 'Array' : 'Object');
-
-      // === NOVO: aceita OBJETO {produtos:{...}} ou ARRAY de linhas ===
-      bibliotecaDePara = {};
-      let erros = 0;
-
-      if (dados && typeof dados === 'object' && !Array.isArray(dados)) {
-        // Formato MAPA: { produtos: { "20030005": {codigoERP, nomeERP, fornecedor}, ... }, mapeamentoCores: {...} }
-        if (!dados.produtos || typeof dados.produtos !== 'object') {
-          throw new Error('Formato inválido: objeto sem chave "produtos"');
-        }
-        bibliotecaDePara = dados.produtos;
-        console.log('Biblioteca (mapa) carregada:', Object.keys(bibliotecaDePara).length, 'produtos');
-      } else if (Array.isArray(dados)) {
-        // Formato ARRAY: converte para mapa por codigoprodutofornecedor
-        dados.forEach((item, index) => {
-          const cod = (item?.codigoprodutofornecedor ?? '').toString().replace(/\D+/g,'').replace(/^0+/, '');
-          if (!cod) { erros++; console.warn(`Registro ${index} sem código:`, item); return; }
-
-          bibliotecaDePara[cod] = {
-            codigoERP: item.codigoerp != null ? String(item.codigoerp).split('.')[0] : null,
-            nomeERP: item.nomeerp ?? null,
-            fornecedor: (item.fornecedor_grupo ?? '').toString().trim().toUpperCase(),
-            produtoFornecedor: item.produtofornecedor ?? null,
-            ncm: item.ncm ?? null,
-            unidade: item.unidademedida ?? null
-          };
-        });
-        console.log('Biblioteca (array→mapa) processada:', Object.keys(bibliotecaDePara).length, 'produtos', '| ignorados:', erros);
-      } else {
-        throw new Error('Formato inválido: tipo ' + typeof dados);
+    if (dados && typeof dados === 'object' && !Array.isArray(dados)) {
+      if (!dados.produtos || typeof dados.produtos !== 'object') {
+        throw new Error('Formato inválido: objeto sem chave "produtos"');
       }
-
-      const totalCarregado = Object.keys(bibliotecaDePara).length;
-      document.getElementById('totalMappings').textContent = totalCarregado;
-
-      // Atualiza status visual
-      const statusDiv = document.getElementById('bibliotecaStatus');
-      if (statusDiv) {
-        statusDiv.innerHTML = `
-          <div style="background:#27ae60;color:#fff;padding:15px;border-radius:10px;margin-bottom:20px;">
-            <h3>✅ Biblioteca Carregada</h3>
-            <p style="margin:5px 0;">Produtos: ${totalCarregado}</p>
-            <p style="margin:5px 0;font-size:.9em;">Arquivo: data/depara.json</p>
-          </div>
-        `;
+      bibliotecaDePara = dados.produtos;
+    } else if (Array.isArray(dados)) {
+      for (let i = 0; i < dados.length; i++) {
+        const it = dados[i] || {};
+        let cod = String(it.codigoprodutofornecedor ?? '')
+                    .replace(/\D+/g, '')
+                    .replace(/^0+/, '');
+        if (!cod) { ignorados++; continue; }
+        const codigoERP = it.codigoerp != null ? String(it.codigoerp).split('.')[0] : null;
+        const fornecedor = String(it.fornecedor_grupo || '').trim().toUpperCase();
+        bibliotecaDePara[cod] = {
+          codigoERP,
+          nomeERP: it.nomeerp ?? null,
+          fornecedor: fornecedor || null,
+          produtoFornecedor: it.produtofornecedor ?? null,
+          ncm: it.ncm ?? null,
+          unidade: it.unidademedida ?? null
+        };
       }
-
-      // Logs de verificação
-      console.log('=== TESTANDO CÓDIGOS CONHECIDOS ===');
-      ['4700103', '20000', '20030005', '1468100', '5038103'].forEach(c => {
-        const ok = bibliotecaDePara[c] ? '✅' : '❌';
-        console.log(`${ok} ${c}:`, bibliotecaDePara[c]?.nomeERP || 'não encontrado');
-      });
-
-      return totalCarregado;
-
-    } catch (error) {
-      console.error('=== ERRO NO CARREGAMENTO ===');
-      console.error('Tipo:', error.name);
-      console.error('Mensagem:', error.message);
-      console.error('Stack:', error.stack);
-
-      showNotification('Erro ao carregar biblioteca: ' + error.message, 'error');
-
-      // Fallback mínimo (mantido)
-      console.warn('Usando biblioteca FALLBACK (5 produtos)');
-      bibliotecaDePara = {
-        "5038103": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "EURO" },
-        "4700103": { codigoERP: "9109", nomeERP: "OXFORDINE", fornecedor: "EURO" },
-        "20000":   { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "LITORAL" },
-        "1468100": { codigoERP: "9532",  nomeERP: "PERCAL - 400 FIOS", fornecedor: "EURO" },
-        "732100":  { codigoERP: "12779", nomeERP: "VOIL 100% POLIESTER", fornecedor: "EURO" }
-      };
-      document.getElementById('totalMappings').textContent = Object.keys(bibliotecaDePara).length;
-
-      const statusDiv = document.getElementById('bibliotecaStatus');
-      if (statusDiv) {
-        statusDiv.innerHTML = `
-          <div style="background:#e74c3c;color:#fff;padding:15px;border-radius:10px;margin-bottom:20px;">
-            <h3>⚠️ Erro no Carregamento</h3>
-            <p style="margin:5px 0;">Usando fallback: 5 produtos</p>
-            <p style="margin:5px 0;font-size:.9em;">Erro: ${error.message}</p>
-          </div>
-        `;
-      }
-
-      return Object.keys(bibliotecaDePara).length;
+    } else {
+      throw new Error('Formato inválido: tipo ' + typeof dados);
     }
+
+    // Atualiza contador
+    const total = Object.keys(bibliotecaDePara).length;
+    const counterEl = document.getElementById('totalMappings');
+    if (counterEl) counterEl.textContent = total;
+
+    return total;
+
+  } catch (error) {
+    // Fallback mínimo (igual ao seu original)
+    bibliotecaDePara = {
+      "5038103": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "EURO" },
+      "4700103": { codigoERP: "9109",  nomeERP: "OXFORDINE", fornecedor: "EURO" },
+      "20000":   { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "LITORAL" },
+      "1468100": { codigoERP: "9532",  nomeERP: "PERCAL - 400 FIOS", fornecedor: "EURO" },
+      "732100":  { codigoERP: "12779", nomeERP: "VOIL 100% POLIESTER", fornecedor: "EURO" }
+    };
+    const counterEl = document.getElementById('totalMappings');
+    if (counterEl) counterEl.textContent = Object.keys(bibliotecaDePara).length;
+    return Object.keys(bibliotecaDePara).length;
   }
+}
         // Inicialização
         document.addEventListener('DOMContentLoaded', async function() {
             try {
