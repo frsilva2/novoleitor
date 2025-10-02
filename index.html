@@ -1,275 +1,107 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Leitor de Códigos – Empório</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <header>
-    <h1>Leitor de Códigos • Empório dos Tecidos</h1>
-    <div class="topbar">
-      <span class="badge">Produtos na biblioteca: <strong id="totalMappings">0</strong></span>
-    </div>
-  </header>
+ // Carregar biblioteca DE->PARA do JSON (aceita objeto {produtos:{...}} ou array [...])
+  async function carregarBiblioteca() {
+    try {
+      console.log('=== INICIANDO CARREGAMENTO DA BIBLIOTECA ===');
+      const url = `./data/depara.json?v=${Date.now()}`; // cache-bust
+      console.log('Tentando carregar:', url);
 
-  <main class="container">
-    <div class="tabs">
-      <button class="tab active" onclick="showSection('scanner')">Scanner</button>
-      <button class="tab" onclick="showSection('manual')">Entrada manual</button>
-      <button class="tab" onclick="showSection('inventory')">Inventário</button>
-    </div>
+      const response = await fetch(url, { cache: 'no-store' });
+      console.log('Status da resposta:', response.status, response.statusText);
+      if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
 
-    <!-- Scanner -->
-    <section id="scanner" class="section active">
-      <div class="grid">
-        <div class="card">
-          <h2>Câmera</h2>
-          <div id="scanner-container">Habilite a câmera para iniciar a leitura</div>
-          <div class="row" style="margin-top:10px">
-            <button id="startBtn">Iniciar</button>
-            <button id="stopBtn" class="secondary" disabled>Parar</button>
-            <button id="flashBtn" class="secondary">Flash</button>
-            <span id="scannerStatus" style="padding:6px 10px;background:#f1f1f6;border-radius:999px;border:1px solid #dcdce8">Aguardando…</span>
-          </div>
-        </div>
-        <div class="card">
-          <h2>Resultado</h2>
-          <div class="row">
-            <input id="barcode" placeholder="Código fornecedor" />
-            <input id="productName" placeholder="Produto identificado" />
-          </div>
-          <div class="row">
-            <input id="erpCodeDisplay" placeholder="Código ERP" />
-            <input id="quantity" placeholder="Quantidade (MT)" type="number" step="0.01" />
-          </div>
-          <div class="row">
-            <input id="color" placeholder="Cor" />
-            <input id="observations" placeholder="Observações" />
-          </div>
-          <div class="row" style="margin-top:10px">
-            <button onclick="adicionarItem()">Adicionar ao inventário</button>
-            <button class="secondary" onclick="limparFormulario()">Limpar campos</button>
-          </div>
-          <div class="kpi" style="margin-top:10px">
-            <span class="pill">Coletados: <b id="collectedCount">0</b></span>
-          </div>
-        </div>
-      </div>
-    </section>
+      const texto = await response.text();
+      console.log('Tamanho do arquivo:', texto.length, 'caracteres');
+      console.log('Primeiros 200 caracteres:', texto.substring(0, 200));
 
-    <!-- Manual -->
-    <section id="manual" class="section">
-      <div class="card">
-        <h2>Entrada manual</h2>
-        <div class="row">
-          <input id="manualBarcode" placeholder="Cole ou digite o código exato da etiqueta" />
-          <button onclick="processarCodigoManual()">Processar</button>
-        </div>
-      </div>
-    </section>
+      const dados = JSON.parse(texto);
+      console.log('JSON parseado com sucesso');
+      console.log('Tipo de dados:', Array.isArray(dados) ? 'Array' : 'Object');
 
-    <!-- Inventário -->
-    <section id="inventory" class="section">
-      <div class="card">
-        <h2>Inventário</h2>
-        <div class="kpi" style="margin-bottom:10px">
-          <span class="pill">Itens: <b id="totalItems">0</b></span>
-          <span class="pill">Metros: <b id="totalMeters">0.0</b></span>
-          <span class="pill">Valor estimado: <b id="totalValue">R$ 0,00</b></span>
-        </div>
-        <div class="row" style="margin-bottom:8px">
-          <button onclick="exportarExcel()">Exportar Excel</button>
-          <button class="warn" onclick="limparDados()">Limpar tudo</button>
-          <span class="pill">Itens para exportar: <b id="exportCount">0</b></span>
-        </div>
-        <div style="overflow:auto;max-height:420px;border:1px solid #eee;border-radius:10px">
-          <table>
-            <thead>
-              <tr>
-                <th>Código ERP</th>
-                <th>Produto</th>
-                <th>Qtd (MT)</th>
-                <th>Cor</th>
-                <th>Data</th>
-                <th>Ação</th>
-              </tr>
-            </thead>
-            <tbody id="inventoryBody"></tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-  </main>
+      // === NOVO: aceita OBJETO {produtos:{...}} ou ARRAY de linhas ===
+      bibliotecaDePara = {};
+      let erros = 0;
 
-  <div id="notification" class="notification">ok</div>
+      if (dados && typeof dados === 'object' && !Array.isArray(dados)) {
+        // Formato MAPA: { produtos: { "20030005": {codigoERP, nomeERP, fornecedor}, ... }, mapeamentoCores: {...} }
+        if (!dados.produtos || typeof dados.produtos !== 'object') {
+          throw new Error('Formato inválido: objeto sem chave "produtos"');
+        }
+        bibliotecaDePara = dados.produtos;
+        console.log('Biblioteca (mapa) carregada:', Object.keys(bibliotecaDePara).length, 'produtos');
+      } else if (Array.isArray(dados)) {
+        // Formato ARRAY: converte para mapa por codigoprodutofornecedor
+        dados.forEach((item, index) => {
+          const cod = (item?.codigoprodutofornecedor ?? '').toString().replace(/\D+/g,'').replace(/^0+/, '');
+          if (!cod) { erros++; console.warn(`Registro ${index} sem código:`, item); return; }
 
-  <!-- Bibliotecas externas -->
-  <script src="https://unpkg.com/html5-qrcode"></script>
-  <script src="https://unpkg.com/quagga/dist/quagga.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-
-  <!-- Seus módulos -->
-  <script src="./js/decoder.js"></script>
-  <script src="./js/scanner.js"></script>
-
-  <!-- Script Principal -->
-  <script>
-    let inventario = [];
-
-    window.addEventListener('load', () => {
-      if (window.ScannerReal && typeof window.ScannerReal.init === 'function') {
-        window.ScannerReal.init();
+          bibliotecaDePara[cod] = {
+            codigoERP: item.codigoerp != null ? String(item.codigoerp).split('.')[0] : null,
+            nomeERP: item.nomeerp ?? null,
+            fornecedor: (item.fornecedor_grupo ?? '').toString().trim().toUpperCase(),
+            produtoFornecedor: item.produtofornecedor ?? null,
+            ncm: item.ncm ?? null,
+            unidade: item.unidademedida ?? null
+          };
+        });
+        console.log('Biblioteca (array→mapa) processada:', Object.keys(bibliotecaDePara).length, 'produtos', '| ignorados:', erros);
+      } else {
+        throw new Error('Formato inválido: tipo ' + typeof dados);
       }
-      carregarInventario();
-      atualizarDisplays();
-      document.getElementById('manualBarcode')?.addEventListener('keypress', e => {
-        if (e.key === 'Enter') processarCodigoManual();
+
+      const totalCarregado = Object.keys(bibliotecaDePara).length;
+      document.getElementById('totalMappings').textContent = totalCarregado;
+
+      // Atualiza status visual
+      const statusDiv = document.getElementById('bibliotecaStatus');
+      if (statusDiv) {
+        statusDiv.innerHTML = `
+          <div style="background:#27ae60;color:#fff;padding:15px;border-radius:10px;margin-bottom:20px;">
+            <h3>✅ Biblioteca Carregada</h3>
+            <p style="margin:5px 0;">Produtos: ${totalCarregado}</p>
+            <p style="margin:5px 0;font-size:.9em;">Arquivo: data/depara.json</p>
+          </div>
+        `;
+      }
+
+      // Logs de verificação
+      console.log('=== TESTANDO CÓDIGOS CONHECIDOS ===');
+      ['4700103', '20000', '20030005', '1468100', '5038103'].forEach(c => {
+        const ok = bibliotecaDePara[c] ? '✅' : '❌';
+        console.log(`${ok} ${c}:`, bibliotecaDePara[c]?.nomeERP || 'não encontrado');
       });
-    });
 
-    function processarCodigoManual() {
-      const codigo = document.getElementById('manualBarcode').value.trim();
-      if (!codigo) return showNotification('Digite um código válido','error');
-      if (!window.ScannerReal || typeof window.ScannerReal.processarCodigo !== 'function') {
-        return showNotification('Scanner não inicializado','error');
-      }
-      window.ScannerReal.processarCodigo(codigo);
-      document.getElementById('manualBarcode').value='';
-      showSection('scanner');
-    }
+      return totalCarregado;
 
-    function adicionarItem() {
-      const get = (id)=>document.getElementById(id).value;
-      const codigoFornecedor = get('barcode');
-      const nomeERP = get('productName');
-      const codigoERP = get('erpCodeDisplay');
-      const quantidade = parseFloat(get('quantity'));
-      const cor = get('color');
-      const observacoes = get('observations');
+    } catch (error) {
+      console.error('=== ERRO NO CARREGAMENTO ===');
+      console.error('Tipo:', error.name);
+      console.error('Mensagem:', error.message);
+      console.error('Stack:', error.stack);
 
-      if (!codigoFornecedor || !quantidade || quantidade <= 0) {
-        return showNotification('Preencha código e quantidade válida','error');
-      }
+      showNotification('Erro ao carregar biblioteca: ' + error.message, 'error');
 
-      const item = {
-        id: Date.now(),
-        codigoFornecedor, codigoERP, nomeERP,
-        quantidade, cor: cor || 'N/A', observacoes: observacoes || '',
-        data: new Date().toLocaleDateString('pt-BR'),
-        timestamp: new Date().toISOString()
+      // Fallback mínimo (mantido)
+      console.warn('Usando biblioteca FALLBACK (5 produtos)');
+      bibliotecaDePara = {
+        "5038103": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "EURO" },
+        "4700103": { codigoERP: "9109", nomeERP: "OXFORDINE", fornecedor: "EURO" },
+        "20000":   { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "LITORAL" },
+        "1468100": { codigoERP: "9532",  nomeERP: "PERCAL - 400 FIOS", fornecedor: "EURO" },
+        "732100":  { codigoERP: "12779", nomeERP: "VOIL 100% POLIESTER", fornecedor: "EURO" }
       };
-      inventario.push(item);
-      limparFormulario();
-      atualizarDisplays();
-      salvarInventario();
-      showNotification(`Item ${inventario.length} registrado`, 'success');
-    }
+      document.getElementById('totalMappings').textContent = Object.keys(bibliotecaDePara).length;
 
-    function limparFormulario() {
-      ['barcode','productName','erpCodeDisplay','quantity','color','observations']
-        .forEach(id => { const el=document.getElementById(id); if (el) el.value=''; });
-    }
-
-    function atualizarDisplays() {
-      const totalItens  = inventario.length;
-      const totalMetros = inventario.reduce((s,i)=>s+(i.quantidade||0),0);
-      const valorEst    = totalMetros * 15;
-      setText('collectedCount', totalItens);
-      setText('exportCount', totalItens);
-      setText('totalItems', totalItens);
-      setText('totalMeters', totalMetros.toFixed(1));
-      setText('totalValue', 'R$ '+valorEst.toLocaleString('pt-BR'));
-      atualizarTabelaInventario();
-    }
-
-    function atualizarTabelaInventario() {
-      const tbody = document.getElementById('inventoryBody');
-      if (!tbody) return;
-      tbody.innerHTML = '';
-      inventario.forEach(item => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${item.codigoERP||''}</td>
-          <td style="font-size:.9em">${item.nomeERP||''}</td>
-          <td>${(item.quantidade??0).toFixed(1)}</td>
-          <td>${item.cor||''}</td>
-          <td style="font-size:.9em">${item.data||''}</td>
-          <td><button onclick="removerItem(${item.id})" class="warn" style="padding:4px 8px;border-radius:6px">Remover</button></td>`;
-        tbody.appendChild(tr);
-      });
-    }
-
-    function removerItem(id) {
-      inventario = inventario.filter(i=>i.id!==id);
-      atualizarDisplays();
-      salvarInventario();
-      showNotification('Item removido','success');
-    }
-
-    function exportarExcel() {
-      if (inventario.length===0) return showNotification('Nenhum item para exportar','warning');
-      const dados = inventario.map((it,idx)=>({
-        'Item': idx+1,
-        'Código ERP': it.codigoERP,
-        'Produto': it.nomeERP,
-        'Quantidade (MT)': it.quantidade,
-        'Cor': it.cor,
-        'Código Fornecedor': it.codigoFornecedor,
-        'Observações': it.observacoes,
-        'Data Coleta': it.data
-      }));
-      const ws = XLSX.utils.json_to_sheet(dados);
-      const wb = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(wb, ws, 'Inventario');
-      ws['!cols'] = [{width:6},{width:14},{width:32},{width:14},{width:12},{width:18},{width:24},{width:14}];
-      const filename = `inventario_${new Date().toISOString().slice(0,10)}.xlsx`;
-      XLSX.writeFile(wb, filename);
-      showNotification(`Exportado: ${inventario.length} itens`,'success');
-    }
-
-    function limparDados() {
-      if (!confirm('Limpar todos os dados?')) return;
-      inventario = [];
-      atualizarDisplays();
-      salvarInventario();
-      showNotification('Dados limpos','success');
-    }
-
-    function salvarInventario() {
-      try { localStorage.setItem('inventario_textil', JSON.stringify(inventario)); } catch(e){}
-    }
-    function carregarInventario() {
-      try { const s=localStorage.getItem('inventario_textil'); if (s) inventario = JSON.parse(s);} catch(e){}
-    }
-
-    function showSection(sectionId) {
-      document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-      document.getElementById(sectionId)?.classList.add('active');
-      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-      if (window.event && window.event.target && window.event.target.classList) {
-        window.event.target.classList.add('active');
+      const statusDiv = document.getElementById('bibliotecaStatus');
+      if (statusDiv) {
+        statusDiv.innerHTML = `
+          <div style="background:#e74c3c;color:#fff;padding:15px;border-radius:10px;margin-bottom:20px;">
+            <h3>⚠️ Erro no Carregamento</h3>
+            <p style="margin:5px 0;">Usando fallback: 5 produtos</p>
+            <p style="margin:5px 0;font-size:.9em;">Erro: ${error.message}</p>
+          </div>
+        `;
       }
-      if (sectionId==='inventory') atualizarDisplays();
-    }
 
-    function setText(id, txt){const el=document.getElementById(id); if (el) el.textContent = txt;}
-    function showNotification(message, type='success'){
-      const el=document.getElementById('notification'); if(!el) return;
-      el.textContent=message; el.className=`notification ${type} show`;
-      setTimeout(()=>el.classList.remove('show'), 2500);
+      return Object.keys(bibliotecaDePara).length;
     }
-
-    // Expor funções globais
-    window.processarCodigoManual = processarCodigoManual;
-    window.adicionarItem = adicionarItem;
-    window.removerItem = removerItem;
-    window.exportarExcel = exportarExcel;
-    window.limparDados = limparDados;
-    window.showSection = showSection;
-    window.limparFormulario = limparFormulario;
-  </script>
-</body>
-</html>
+  }
