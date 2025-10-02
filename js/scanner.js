@@ -1,15 +1,13 @@
-// js/scanner.js - Scanner Real (versão simplificada e robusta)
+// js/scanner.js - Scanner Real (corrigido final)
 class ScannerReal {
   constructor() {
     this.html5QrCode = null;
     this.isScanning = false;
     this.lastScanTime = 0;
-
-    this.bibliotecaDePara = {}; // mapa: codFornecedor -> {codigoERP, nomeERP, fornecedor}
+    this.bibliotecaDePara = {};
     this.mapeamentoCores = {};
   }
 
-  // ====== BOOT ======
   async init() {
     try {
       await this.carregarBiblioteca();
@@ -21,87 +19,64 @@ class ScannerReal {
     }
   }
 
-  // ====== CARGA DA BIBLIOTECA ======
   async carregarBiblioteca() {
-    // Cache-bust garante pegar o JSON novo
-    const url = `./data/depara.json?v=${Date.now()}`;
-    let data;
-
     try {
-      const resp = await fetch(url);
+      const resp = await fetch(`./data/depara.json?v=${Date.now()}`);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      data = await resp.json();
-    } catch (e) {
-      console.error('❌ Erro ao carregar depara.json:', e);
-      this.carregarBibliotecaFallback();
-      this.atualizarContador();
-      return;
-    }
+      const data = await resp.json();
 
-    // Aceita dois formatos:
-    // (A) { produtos: { "5038103": {...}, ... }, mapeamentoCores: {...} }
-    // (B) [ { fornecedor_grupo, codigoprodutofornecedor, codigoerp, nomeerp }, ... ]
-    if (Array.isArray(data)) {
-      const mapa = {};
-      let ignorados = 0;
-
-      for (const row of data) {
-        const fornecedor = String(row.fornecedor_grupo || '').trim().toUpperCase();
-
-        // Extrai dígitos do código do fornecedor e remove zeros à esquerda
-        let codForn = String(row.codigoprodutofornecedor ?? '').replace(/\D+/g, '');
-        codForn = codForn.replace(/^0+/, '');
-
-        // Se vazio, ignora (NÃO usar "0")
-        if (!codForn) { ignorados++; continue; }
-
-        // Normaliza ERP (string e sem .0 do Excel)
-        const codigoERP = row.codigoerp != null ? String(row.codigoerp).split('.')[0] : null;
-
-        mapa[codForn] = {
-          codigoERP,
-          nomeERP: row.nomeerp || null,
-          fornecedor: fornecedor || null
-        };
+      // Se vier OBJETO (formato mapa)
+      if (data && typeof data === 'object' && !Array.isArray(data)) {
+        this.bibliotecaDePara = data.produtos || {};
+        this.mapeamentoCores = data.mapeamentoCores || {};
+        console.log(`📚 Itens (mapa): ${Object.keys(this.bibliotecaDePara).length}`);
+      }
+      // Se vier ARRAY
+      else if (Array.isArray(data)) {
+        const mapa = {};
+        let ignorados = 0;
+        for (const row of data) {
+          const fornecedor = String(row.fornecedor_grupo || '').trim().toUpperCase();
+          let codForn = String(row.codigoprodutofornecedor ?? '').replace(/\D+/g, '').replace(/^0+/, '');
+          if (!codForn) { ignorados++; continue; }
+          const codigoERP = row.codigoerp != null ? String(row.codigoerp).split('.')[0] : null;
+          mapa[codForn] = { codigoERP, nomeERP: row.nomeerp || null, fornecedor };
+        }
+        this.bibliotecaDePara = mapa;
+        this.mapeamentoCores = {};
+        console.log(`📚 Itens (array): ${Object.keys(this.bibliotecaDePara).length} | ignorados: ${ignorados}`);
+      } else {
+        throw new Error("Formato inválido de JSON");
       }
 
-      this.bibliotecaDePara = mapa;
+      // Atualizar contador na tela
+      const total = Object.keys(this.bibliotecaDePara).length;
+      const el = document.getElementById('totalMappings');
+      if (el) el.textContent = total;
+    } catch (error) {
+      console.error("=== ERRO NO CARREGAMENTO ===");
+      console.log("Mensagem:", error.message);
+      this.bibliotecaDePara = {};
       this.mapeamentoCores = {};
-      console.log(`📚 Itens (array): ${Object.keys(this.bibliotecaDePara).length} | ignorados: ${ignorados}`);
-    } else {
-      // Formato objeto já pronto
-      this.bibliotecaDePara = data.produtos || {};
-      this.mapeamentoCores = data.mapeamentoCores || {};
-      console.log(`📚 Itens (mapa): ${Object.keys(this.bibliotecaDePara).length}`);
     }
-
-    this.atualizarContador();
   }
 
   carregarBibliotecaFallback() {
     this.bibliotecaDePara = {
       "5038103": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "EURO" },
-      "4700103": { codigoERP: "9109",  nomeERP: "OXFORDINE", fornecedor: "EURO"  },
-      "20030005":{ codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "LITORAL" }
+      "4700103": { codigoERP: "9109", nomeERP: "OXFORDINE", fornecedor: "EURO" },
+      "20030005": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "LITORAL" }
     };
     this.mapeamentoCores = { '100':'branco','103':'tinto','999':'preto','408':'azul','500':'cinza' };
     console.log('📦 Biblioteca fallback carregada');
   }
 
-  atualizarContador() {
-    const total = Object.keys(this.bibliotecaDePara).length;
-    const el = document.getElementById('totalMappings');
-    if (el) el.textContent = total;
-  }
-
-  // ====== UI / EVENTOS ======
   setupEventListeners() {
     document.getElementById('startBtn')?.addEventListener('click', () => this.iniciarScanner());
-    document.getElementById('stopBtn')?.addEventListener('click',  () => this.pararScanner());
+    document.getElementById('stopBtn')?.addEventListener('click', () => this.pararScanner());
     document.getElementById('flashBtn')?.addEventListener('click', () => this.toggleFlash());
   }
 
-  // ====== SCANNER ======
   async iniciarScanner() {
     const startBtn = document.getElementById('startBtn');
     const stopBtn  = document.getElementById('stopBtn');
@@ -112,23 +87,19 @@ class ScannerReal {
       if (status) status.textContent = 'Iniciando scanner...';
 
       this.html5QrCode = new Html5Qrcode("scanner-container");
-      const config = {
-        fps: 10,
-        qrbox: { width: 300, height: 120 },
-        aspectRatio: 1.0,
-        supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA]
-      };
+      const config = { fps: 10, qrbox: { width: 300, height: 120 }, aspectRatio: 1.0,
+        supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA] };
 
       await this.html5QrCode.start(
         { facingMode: "environment" },
         config,
         (decodedText) => this.onScanSuccess(decodedText),
-        () => {} // erros de leitura são normais
+        () => {}
       );
 
       this.isScanning = true;
       if (stopBtn) stopBtn.disabled = false;
-      if (status) status.textContent = 'Scanner ativo - Posicione o código';
+      if (status) status.textContent = 'Scanner ativo';
       this.showNotification('Scanner iniciado', 'success');
     } catch (err) {
       console.error('⚠️ HTML5QrCode falhou, tentando Quagga:', err);
@@ -146,21 +117,9 @@ class ScannerReal {
   async iniciarQuaggaScanner() {
     return new Promise((resolve, reject) => {
       Quagga.init({
-        inputStream: {
-          name: "Live",
-          type: "LiveStream",
-          target: document.querySelector('#scanner-container'),
-          constraints: { width: 400, height: 300, facingMode: "environment" }
-        },
-        decoder: {
-          readers: [
-            "code_128_reader",
-            "ean_reader",
-            "ean_8_reader",
-            "code_39_reader",
-            "i2of5_reader"
-          ]
-        }
+        inputStream: { name: "Live", type: "LiveStream", target: document.querySelector('#scanner-container'),
+          constraints: { width: 400, height: 300, facingMode: "environment" } },
+        decoder: { readers: ["code_128_reader","ean_reader","ean_8_reader","code_39_reader","i2of5_reader"] }
       }, (err) => {
         if (err) { reject(err); return; }
         Quagga.start();
@@ -182,9 +141,8 @@ class ScannerReal {
 
   onScanSuccess(decodedText) {
     const now = Date.now();
-    if (now - this.lastScanTime < 1200) return; // de-bounce ~1.2s
+    if (now - this.lastScanTime < 1200) return; // de-bounce
     this.lastScanTime = now;
-
     console.log('🔎 Código lido:', decodedText);
     this.processarCodigo(decodedText);
     this.playBeep();
@@ -199,7 +157,6 @@ class ScannerReal {
     try {
       if (this.html5QrCode && this.isScanning) await this.html5QrCode.stop();
       if (typeof Quagga !== 'undefined') Quagga.stop();
-
       this.isScanning = false;
       if (startBtn) startBtn.disabled = false;
       if (stopBtn)  stopBtn.disabled = true;
@@ -211,18 +168,13 @@ class ScannerReal {
   }
 
   async toggleFlash() {
-    this.showNotification('Flash não implementado nesta versão', 'warning');
+    this.showNotification('Flash não implementado', 'warning');
   }
 
-  // ====== PROCESSAMENTO ======
   processarCodigo(codigo) {
-    // Usa o decoder já corrigido (EURO + LITORAL)
     const resultado = window.CodigoDecoder.decodificar(
-      codigo,
-      this.bibliotecaDePara,
-      this.mapeamentoCores
+      codigo, this.bibliotecaDePara, this.mapeamentoCores
     );
-
     if (resultado && resultado.nomeERP && resultado.codigoERP) {
       this.preencherCampos(resultado);
     } else {
@@ -232,19 +184,16 @@ class ScannerReal {
 
   preencherCampos(res) {
     const $ = (id) => document.getElementById(id);
-
     $('#barcode').value        = res.codigoFornecedor || '';
     $('#productName').value    = res.nomeERP || '';
     $('#erpCodeDisplay').value = res.codigoERP || '';
-
     if (res.quantidade > 0) $('#quantity').value = res.quantidade;
-    if (res.cor)             $('#color').value    = res.cor;
-    if (res.observacoes)     $('#observations').value = res.observacoes;
+    if (res.cor) $('#color').value = res.cor;
+    if (res.observacoes) $('#observations').value = res.observacoes;
   }
 
   preencherCamposDesconhecido(codigo) {
     const $ = (id) => document.getElementById(id);
-
     $('#barcode').value        = codigo;
     $('#productName').value    = 'PRODUTO NÃO MAPEADO';
     $('#erpCodeDisplay').value = '';
@@ -253,7 +202,6 @@ class ScannerReal {
     $('#observations').value   = 'Código não encontrado na biblioteca';
   }
 
-  // ====== UX ======
   playBeep() {
     try {
       const AudioCtx = window.AudioContext || window.webkitAudioContext;
@@ -278,6 +226,4 @@ class ScannerReal {
   }
 }
 
-// Expor e inicializar (caso queira iniciar automático ao carregar a página)
 window.ScannerReal = new ScannerReal();
-// Inicie manualmente chamando: window.ScannerReal.init();
