@@ -1,223 +1,315 @@
-// js/scanner.js — versão robusta c/ espera de libs e DEPARA fixo (mapa)
+// js/scanner.js - Módulo do Scanner Real
 class ScannerReal {
-  constructor() {
-    this.html5QrCode = null;
-    this.isScanning = false;
-    this.lastScanTime = 0;
-    this.bibliotecaDePara = {};
-    this.mapeamentoCores = {};
-  }
-
-  async waitForGlobals(timeoutMs = 6000) {
-    const need = () =>
-      typeof window.CodigoDecoder !== 'undefined' &&
-      (typeof window.Html5Qrcode !== 'undefined' || typeof window.Quagga !== 'undefined');
-
-    const t0 = Date.now();
-    while (!need()) {
-      await new Promise(r => setTimeout(r, 100));
-      if (Date.now() - t0 > timeoutMs) {
-        throw new Error('Dependências não disponíveis (Html5Qrcode/CodigoDecoder)');
-      }
-    }
-  }
-
-  async init() {
-    try {
-      await this.waitForGlobals();                      // ← garante libs carregadas
-      await this.carregarBiblioteca();                  // ← carrega DEPARA
-      this.setupEventListeners();
-      this.showNotification(`DEPARA OK • ${Object.keys(this.bibliotecaDePara).length} itens`, 'success');
-      console.log('✅ Scanner inicializado');
-    } catch (err) {
-      console.error('❌ Erro ao iniciar scanner:', err);
-      this.showNotification(err.message || 'Erro ao iniciar', 'error');
-    }
-  }
-
-  async carregarBiblioteca() {
-    const setTotal = (n) => {
-      const el = document.getElementById('totalMappings');
-      if (el) el.textContent = n;
-    };
-
-    const url = `./data/depara.json?v=${Date.now()}`;  // ← seu arquivo comprovado
-    let data = null;
-
-    const resp = await fetch(url, { cache: 'no-store' });
-    if (!resp.ok) throw new Error(`Falha ao carregar DEPARA (HTTP ${resp.status})`);
-    try {
-      data = await resp.json();
-    } catch (e) {
-      throw new Error('JSON inválido em /data/depara.json');
+    constructor() {
+        this.html5QrCode = null;
+        this.isScanning = false;
+        this.currentStream = null;
+        this.lastScanTime = 0;
+        this.bibliotecaDePara = {};
+        this.mapeamentoCores = {};
     }
 
-    if (!data || typeof data !== 'object' || typeof data.produtos !== 'object') {
-      throw new Error('Formato do DEPARA inesperado (esperado {"produtos":{...}})');
+    // Inicializar scanner
+    async init() {
+        try {
+            await this.carregarBiblioteca();
+            this.setupEventListeners();
+            console.log('Scanner inicializado com sucesso');
+        } catch (error) {
+            console.error('Erro ao inicializar scanner:', error);
+            throw error;
+        }
     }
 
-    this.bibliotecaDePara = data.produtos;
-    this.mapeamentoCores = data.mapeamentoCores || {};
-    setTotal(Object.keys(this.bibliotecaDePara).length);
-    console.log('📚 Itens (mapa):', Object.keys(this.bibliotecaDePara).length);
-  }
+    // Carregar biblioteca DE→PARA do arquivo JSON
+    async carregarBiblioteca() {
+        try {
+            const response = await fetch(`./data/depara.json?v=${Date.now()}`, { cache: 'no-store' });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const data = await response.json();
 
-  setupEventListeners() {
-    document.getElementById('startBtn')?.addEventListener('click', () => this.iniciarScanner());
-    document.getElementById('stopBtn')?.addEventListener('click',  () => this.pararScanner());
-    document.getElementById('flashBtn')?.addEventListener('click', () => this.toggleFlash());
-  }
+            // Aceita objeto {produtos:{...}} ou array [...]
+            if (data && typeof data === 'object' && !Array.isArray(data)) {
+                this.bibliotecaDePara = data.produtos || {};
+                this.mapeamentoCores = data.mapeamentoCores || {};
+            } else if (Array.isArray(data)) {
+                const mapa = {};
+                let ignorados = 0;
+                for (const row of data) {
+                    const fornecedor = String(row.fornecedor_grupo || '').trim().toUpperCase();
+                    let cod = String(row.codigoprodutofornecedor ?? '').replace(/\D+/g, '').replace(/^0+/, '');
+                    if (!cod) { ignorados++; continue; }
+                    const codigoERP = row.codigoerp != null ? String(row.codigoerp).split('.')[0] : null;
+                    mapa[cod] = {
+                        codigoERP,
+                        nomeERP: row.nomeerp || null,
+                        fornecedor
+                    };
+                }
+                this.bibliotecaDePara = mapa;
+                this.mapeamentoCores = {};
+                console.log(`Ignorados: ${ignorados}`);
+            } else {
+                throw new Error('Formato inválido de JSON');
+            }
 
-  async iniciarScanner() {
-    const startBtn = document.getElementById('startBtn');
-    const stopBtn  = document.getElementById('stopBtn');
-    const status   = document.getElementById('scannerStatus');
+            const totalProdutos = Object.keys(this.bibliotecaDePara).length;
+            console.log(`Biblioteca carregada: ${totalProdutos} produtos`);
+            document.getElementById('totalMappings').textContent = totalProdutos;
+            return data;
+        } catch (error) {
+            console.error('Erro ao carregar biblioteca:', error);
+            this.carregarBibliotecaFallback();
+        }
+    }
 
-    try {
-      if (startBtn) startBtn.disabled = true;
-      if (status) status.textContent = 'Iniciando scanner...';
-
-      if (typeof Html5Qrcode !== 'undefined') {
-        this.html5QrCode = new Html5Qrcode("scanner-container");
-        const config = {
-          fps: 10,
-          qrbox: { width: 300, height: 120 },
-          aspectRatio: 1.0,
-          supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA]
+    // Biblioteca fallback (caso o JSON não carregue)
+    carregarBibliotecaFallback() {
+        this.bibliotecaDePara = {
+            "5038103": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "EURO" },
+            "4700103": { codigoERP: "9109", nomeERP: "OXFORDINE", fornecedor: "EURO" },
+            "20000": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "LITORAL" },
+            // ... outros produtos essenciais
         };
-        await this.html5QrCode.start(
-          { facingMode: "environment" },
-          config,
-          (decodedText) => this.onScanSuccess(decodedText),
-          () => {}
-        );
-      } else if (typeof Quagga !== 'undefined') {
-        await this.iniciarQuaggaScanner();
-      } else {
-        throw new Error('Nenhuma lib de câmera disponível');
-      }
-
-      this.isScanning = true;
-      if (stopBtn) stopBtn.disabled = false;
-      if (status) status.textContent = 'Scanner ativo - Posicione o código';
-      this.showNotification('Scanner iniciado', 'success');
-
-    } catch (err) {
-      console.error('⚠️ Erro ao iniciar scanner:', err);
-      if (status) status.textContent = 'Erro ao iniciar scanner';
-      if (startBtn) startBtn.disabled = false;
-      this.showNotification(err.message || 'Erro ao acessar câmera', 'error');
+        
+        this.mapeamentoCores = {
+            '100': 'branco', '103': 'tinto', '999': 'preto',
+            '408': 'azul', '500': 'cinza'
+        };
+        
+        console.log('Biblioteca fallback carregada');
     }
-  }
 
-  async iniciarQuaggaScanner() {
-    return new Promise((resolve, reject) => {
-      Quagga.init({
-        inputStream: {
-          name: "Live",
-          type: "LiveStream",
-          target: document.querySelector('#scanner-container'),
-        },
-        decoder: { readers: ["code_128_reader","ean_reader","ean_8_reader","code_39_reader","i2of5_reader"] }
-      }, (err) => {
-        if (err) return reject(err);
-        Quagga.start();
+    // Configurar event listeners
+    setupEventListeners() {
+        document.getElementById('startBtn')?.addEventListener('click', () => this.iniciarScanner());
+        document.getElementById('stopBtn')?.addEventListener('click', () => this.pararScanner());
+        document.getElementById('flashBtn')?.addEventListener('click', () => this.toggleFlash());
+    }
+
+    // Iniciar scanner real
+    async iniciarScanner() {
+        const startBtn = document.getElementById('startBtn');
         const stopBtn = document.getElementById('stopBtn');
-        const status  = document.getElementById('scannerStatus');
-        if (stopBtn) stopBtn.disabled = false;
-        if (status) status.textContent = 'Scanner QuaggaJS ativo';
-        resolve();
-      });
-      Quagga.onDetected((data) => {
-        const code = data?.codeResult?.code;
-        if (code) this.onScanSuccess(code);
-      });
-    });
-  }
+        const status = document.getElementById('scannerStatus');
+        
+        try {
+            startBtn.disabled = true;
+            status.textContent = 'Iniciando scanner...';
+            
+            // Tentar HTML5-QRCode primeiro
+            this.html5QrCode = new Html5Qrcode("scanner-container");
+            
+            const config = {
+                fps: 10,
+                qrbox: { width: 300, height: 120 },
+                aspectRatio: 1.0,
+                supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA]
+            };
 
-  onScanSuccess(decodedText) {
-    const now = Date.now();
-    if (now - this.lastScanTime < 1200) return; // de-bounce
-    this.lastScanTime = now;
-
-    console.log('🔎 Código lido:', decodedText);
-    this.processarCodigo(decodedText);
-    this.playBeep();
-    this.showNotification(`Código: ${decodedText}`, 'success');
-  }
-
-  async pararScanner() {
-    const startBtn = document.getElementById('startBtn');
-    const stopBtn  = document.getElementById('stopBtn');
-    const status   = document.getElementById('scannerStatus');
-
-    try {
-      if (this.html5QrCode && this.isScanning) await this.html5QrCode.stop();
-      if (typeof Quagga !== 'undefined') Quagga.stop();
-      this.isScanning = false;
-      if (startBtn) startBtn.disabled = false;
-      if (stopBtn)  stopBtn.disabled = true;
-      if (status)   status.textContent = 'Scanner parado';
-      this.showNotification('Scanner parado', 'success');
-    } catch (err) {
-      console.error('Erro ao parar scanner:', err);
+            await this.html5QrCode.start(
+                { facingMode: "environment" },
+                config,
+                (decodedText) => this.onScanSuccess(decodedText),
+                (error) => this.onScanError(error)
+            );
+            
+            this.isScanning = true;
+            stopBtn.disabled = false;
+            status.textContent = 'Scanner ativo - Posicione o código na área destacada';
+            this.showNotification('Scanner iniciado com sucesso!', 'success');
+            
+        } catch (err) {
+            console.error('Erro HTML5QRCode:', err);
+            
+            // Fallback para QuaggaJS
+            try {
+                await this.iniciarQuaggaScanner();
+            } catch (quaggaErr) {
+                console.error('Erro QuaggaJS:', quaggaErr);
+                status.textContent = 'Erro ao iniciar scanner';
+                startBtn.disabled = false;
+                this.showNotification('Erro ao acessar câmera: ' + err.message, 'error');
+            }
+        }
     }
-  }
 
-  async toggleFlash() {
-    this.showNotification('Flash não implementado', 'warning');
-  }
+    // Iniciar QuaggaJS como fallback
+    async iniciarQuaggaScanner() {
+        return new Promise((resolve, reject) => {
+            Quagga.init({
+                inputStream: {
+                    name: "Live",
+                    type: "LiveStream",
+                    target: document.querySelector('#scanner-container'),
+                    constraints: {
+                        width: 400,
+                        height: 300,
+                        facingMode: "environment"
+                    }
+                },
+                decoder: {
+                    readers: [
+                        "code_128_reader",
+                        "ean_reader",
+                        "ean_8_reader", 
+                        "code_39_reader",
+                        "i2of5_reader"
+                    ]
+                }
+            }, (err) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                
+                Quagga.start();
+                this.isScanning = true;
+                document.getElementById('stopBtn').disabled = false;
+                document.getElementById('scannerStatus').textContent = 'Scanner QuaggaJS ativo';
+                this.showNotification('Scanner QuaggaJS iniciado!', 'success');
+                resolve();
+            });
 
-  processarCodigo(codigo) {
-    const r = window.CodigoDecoder.decodificar(
-      codigo, this.bibliotecaDePara, this.mapeamentoCores
-    );
-    if (r && r.nomeERP && r.codigoERP) this.preencherCampos(r);
-    else this.preencherCamposDesconhecido(codigo);
-  }
+            Quagga.onDetected((data) => {
+                const code = data.codeResult.code;
+                this.onScanSuccess(code);
+            });
+        });
+    }
 
-  preencherCampos(res) {
-    const $ = (id) => document.getElementById(id);
-    $('#barcode').value        = res.codigoFornecedor || '';
-    $('#productName').value    = res.nomeERP || '';
-    $('#erpCodeDisplay').value = res.codigoERP || '';
-    if (res.quantidade > 0) $('#quantity').value = res.quantidade;
-    if (res.cor)             $('#color').value    = res.cor;
-    if (res.observacoes)     $('#observations').value = res.observacoes;
-  }
+    // Callback de sucesso na leitura
+    onScanSuccess(decodedText) {
+        // Evitar leituras duplicadas
+        const now = Date.now();
+        if (now - this.lastScanTime < 2000) return;
+        this.lastScanTime = now;
+        
+        console.log('Código lido:', decodedText);
+        
+        // Processar código
+        this.processarCodigo(decodedText);
+        
+        // Feedback
+        this.playBeep();
+        this.showNotification(`Código lido: ${decodedText}`, 'success');
+    }
 
-  preencherCamposDesconhecido(codigo) {
-    const $ = (id) => document.getElementById(id);
-    $('#barcode').value        = codigo;
-    $('#productName').value    = 'PRODUTO NÃO MAPEADO';
-    $('#erpCodeDisplay').value = '';
-    $('#quantity').value       = '';
-    $('#color').value          = '';
-    $('#observations').value   = 'Código não encontrado na biblioteca';
-  }
+    // Callback de erro
+    onScanError(error) {
+        // Silencioso - erros são normais durante scanning
+    }
 
-  playBeep() {
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.connect(gain); gain.connect(ctx.destination);
-      osc.frequency.value = 820; osc.type = 'square';
-      gain.gain.setValueAtTime(0.2, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
-      osc.start(); osc.stop(ctx.currentTime + 0.1);
-    } catch {}
-  }
+    // Processar código escaneado
+    processarCodigo(codigo) {
+        const resultado = window.CodigoDecoder.decodificar(codigo, this.bibliotecaDePara, this.mapeamentoCores);
+        
+        if (resultado) {
+            // Preencher campos da UI
+            this.preencherCampos(resultado);
+            this.showNotification(`Produto: ${resultado.nomeERP}`, 'success');
+        } else {
+            // Código não reconhecido
+            this.preencherCamposDesconhecido(codigo);
+            this.showNotification('Código não reconhecido', 'warning');
+        }
+    }
 
-  showNotification(message, type = 'success') {
-    const el = document.getElementById('notification');
-    if (!el) return;
-    el.textContent = message;
-    el.className = `notification ${type} show`;
-    setTimeout(() => el.classList.remove('show'), 3000);
-  }
+    // Preencher campos da interface
+    preencherCampos(resultado) {
+        document.getElementById('barcode').value = resultado.codigoFornecedor || '';
+        document.getElementById('productName').value = resultado.nomeERP || '';
+        document.getElementById('erpCodeDisplay').value = resultado.codigoERP || '';
+        
+        if (resultado.quantidade > 0) {
+            document.getElementById('quantity').value = resultado.quantidade;
+        }
+        
+        if (resultado.cor) {
+            document.getElementById('color').value = resultado.cor;
+        }
+        
+        if (resultado.observacoes) {
+            document.getElementById('observations').value = resultado.observacoes;
+        }
+    }
+
+    // Preencher para código desconhecido
+    preencherCamposDesconhecido(codigo) {
+        document.getElementById('barcode').value = codigo;
+        document.getElementById('productName').value = 'PRODUTO NÃO MAPEADO';
+        document.getElementById('erpCodeDisplay').value = codigo;
+        document.getElementById('quantity').value = '';
+        document.getElementById('color').value = '';
+        document.getElementById('observations').value = 'Código não encontrado na biblioteca';
+    }
+
+    // Parar scanner
+    async pararScanner() {
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const status = document.getElementById('scannerStatus');
+        
+        try {
+            if (this.html5QrCode && this.isScanning) {
+                await this.html5QrCode.stop();
+            }
+            
+            if (typeof Quagga !== 'undefined') {
+                Quagga.stop();
+            }
+            
+            this.isScanning = false;
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+            status.textContent = 'Scanner parado';
+            this.showNotification('Scanner parado', 'success');
+            
+        } catch (err) {
+            console.error('Erro ao parar scanner:', err);
+        }
+    }
+
+    // Toggle flash (se disponível)
+    async toggleFlash() {
+        // Implementar se necessário
+        this.showNotification('Flash não implementado nesta versão', 'warning');
+    }
+
+    // Som de beep
+    playBeep() {
+        if ('AudioContext' in window) {
+            const audioContext = new AudioContext();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.value = 800;
+            oscillator.type = 'square';
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+            
+            oscillator.start();
+            oscillator.stop(audioContext.currentTime + 0.1);
+        }
+    }
+
+    // Mostrar notificação
+    showNotification(message, type = 'success') {
+        const notification = document.getElementById('notification');
+        if (notification) {
+            notification.textContent = message;
+            notification.className = `notification ${type} show`;
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    }
 }
 
+// Instanciar scanner global
 window.ScannerReal = new ScannerReal();
