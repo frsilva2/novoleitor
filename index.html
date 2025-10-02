@@ -436,19 +436,44 @@
         // Carregar biblioteca DE->PARA do JSON
         async function carregarBiblioteca() {
             try {
-                console.log('Carregando biblioteca DEPARA...');
+                console.log('=== INICIANDO CARREGAMENTO DA BIBLIOTECA ===');
+                console.log('Tentando carregar: ./data/depara.json');
+                
                 const response = await fetch('./data/depara.json');
+                console.log('Status da resposta:', response.status, response.statusText);
                 
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
                 
-                const dados = await response.json();
-                console.log('Dados recebidos:', dados.length, 'produtos');
+                const texto = await response.text();
+                console.log('Tamanho do arquivo:', texto.length, 'caracteres');
+                console.log('Primeiros 200 caracteres:', texto.substring(0, 200));
+                
+                const dados = JSON.parse(texto);
+                console.log('JSON parseado com sucesso');
+                console.log('Tipo de dados:', Array.isArray(dados) ? 'Array' : 'Object');
+                console.log('Total de registros:', dados.length);
+                
+                if (!Array.isArray(dados)) {
+                    throw new Error('Formato inválido: esperado array, recebido ' + typeof dados);
+                }
+                
+                if (dados.length === 0) {
+                    throw new Error('Arquivo JSON vazio');
+                }
                 
                 // Converter array para objeto de lookup
                 bibliotecaDePara = {};
+                let erros = 0;
+                
                 dados.forEach((item, index) => {
+                    if (!item.codigoprodutofornecedor) {
+                        erros++;
+                        console.warn(`Registro ${index} sem código:`, item);
+                        return;
+                    }
+                    
                     const codigo = item.codigoprodutofornecedor.toString();
                     bibliotecaDePara[codigo] = {
                         codigoERP: item.codigoerp,
@@ -460,21 +485,47 @@
                     };
                 });
                 
-                console.log('Biblioteca processada:', Object.keys(bibliotecaDePara).length, 'produtos');
+                const totalCarregado = Object.keys(bibliotecaDePara).length;
+                console.log('Biblioteca processada:', totalCarregado, 'produtos');
                 
-                // Testar alguns códigos conhecidos
-                console.log('Teste 4700103:', bibliotecaDePara['4700103']);
-                console.log('Teste 20000:', bibliotecaDePara['20000']);
-                console.log('Teste 1468100:', bibliotecaDePara['1468100']);
+                if (erros > 0) {
+                    console.warn('Registros com erro:', erros);
+                }
                 
-                document.getElementById('totalMappings').textContent = Object.keys(bibliotecaDePara).length;
-                return Object.keys(bibliotecaDePara).length;
+                // Testar códigos específicos
+                console.log('=== TESTANDO CÓDIGOS CONHECIDOS ===');
+                const codigosTeste = ['4700103', '20000', '20030005', '1468100', '5038103'];
+                codigosTeste.forEach(codigo => {
+                    const existe = bibliotecaDePara[codigo] ? '✅' : '❌';
+                    console.log(`${existe} Código ${codigo}:`, bibliotecaDePara[codigo]?.nomeERP || 'não encontrado');
+                });
+                
+                document.getElementById('totalMappings').textContent = totalCarregado;
+                
+                // Atualizar status da biblioteca
+                const statusDiv = document.getElementById('bibliotecaStatus');
+                if (statusDiv) {
+                    statusDiv.innerHTML = `
+                        <div style="background: #27ae60; color: white; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                            <h3>✅ Biblioteca Carregada</h3>
+                            <p style="margin: 5px 0;">Produtos: ${totalCarregado}</p>
+                            <p style="margin: 5px 0; font-size: 0.9em;">Arquivo: data/depara.json</p>
+                        </div>
+                    `;
+                }
+                
+                return totalCarregado;
                 
             } catch (error) {
-                console.error('Erro ao carregar biblioteca:', error);
+                console.error('=== ERRO NO CARREGAMENTO ===');
+                console.error('Tipo:', error.name);
+                console.error('Mensagem:', error.message);
+                console.error('Stack:', error.stack);
+                
                 showNotification('Erro ao carregar biblioteca: ' + error.message, 'error');
                 
                 // Fallback com alguns produtos essenciais
+                console.warn('Usando biblioteca FALLBACK (5 produtos)');
                 bibliotecaDePara = {
                     "5038103": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "EURO" },
                     "4700103": { codigoERP: "9109", nomeERP: "OXFORDINE", fornecedor: "EURO" },
@@ -483,8 +534,20 @@
                     "732100": { codigoERP: "12779", nomeERP: "VOIL 100% POLIESTER", fornecedor: "EURO" }
                 };
                 
-                console.log('Usando biblioteca fallback:', Object.keys(bibliotecaDePara).length, 'produtos');
                 document.getElementById('totalMappings').textContent = Object.keys(bibliotecaDePara).length;
+                
+                // Atualizar status com erro
+                const statusDiv = document.getElementById('bibliotecaStatus');
+                if (statusDiv) {
+                    statusDiv.innerHTML = `
+                        <div style="background: #e74c3c; color: white; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                            <h3>⚠️ Erro no Carregamento</h3>
+                            <p style="margin: 5px 0;">Usando fallback: 5 produtos</p>
+                            <p style="margin: 5px 0; font-size: 0.9em;">Erro: ${error.message}</p>
+                        </div>
+                    `;
+                }
+                
                 return Object.keys(bibliotecaDePara).length;
             }
         }
