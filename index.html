@@ -1,5 +1,440 @@
- // Carregar biblioteca DE->PARA do JSON (aceita objeto {produtos:{...}} ou array [...])
-  async function carregarBiblioteca() {
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de controle de estoque com scanner mobile real">
+    <title>Sistema de Estoque - Scanner Real</title>
+    
+    <!-- Bibliotecas Externas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    
+    <!-- CSS Inline (para simplicidade) -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 10px;
+            -webkit-font-smoothing: antialiased;
+            touch-action: manipulation;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: calc(100vh - 20px);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+        }
+
+        .header h1 { font-size: 1.8em; margin-bottom: 5px; font-weight: 300; }
+        .header p { opacity: 0.9; font-size: 0.9em; }
+
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 3px solid #e9ecef;
+            overflow-x: auto;
+        }
+
+        .tab {
+            flex: 0 0 auto;
+            min-width: 120px;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .tab:hover { background: rgba(52, 152, 219, 0.1); color: #3498db; }
+        .tab.active { background: #3498db; color: white; }
+
+        .content { padding: 15px; }
+        .section { display: none; }
+        .section.active { display: block; animation: fadeIn 0.5s ease; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+        }
+
+        .input-group { margin-bottom: 15px; }
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .camera-container {
+            position: relative;
+            background: #2c3e50;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            height: 300px;
+        }
+
+        #scanner-container { 
+            width: 100%; 
+            height: 100%; 
+            position: relative;
+        }
+
+        .scanner-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid #27ae60;
+            width: 80%;
+            height: 80px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(39, 174, 96, 0.5);
+            z-index: 10;
+        }
+
+        .scanner-status {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 0.9em;
+            z-index: 11;
+        }
+
+        .btn-mobile {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 120px;
+            touch-action: manipulation;
+            margin: 5px;
+        }
+
+        .btn-mobile:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .btn-success { background: linear-gradient(135deg, #27ae60, #219a52); }
+        .btn-danger { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-card h3 { font-size: 2em; margin-bottom: 10px; }
+
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-size: 0.85em;
+        }
+
+        .result-table th, .result-table td {
+            padding: 8px 6px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .result-table th {
+            background: #3498db;
+            color: white;
+            font-weight: 500;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            right: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            transform: translateY(-100px);
+            transition: transform 0.3s ease;
+            z-index: 2000;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .notification.show { transform: translateY(0); }
+        .notification.success { background: #27ae60; color: white; }
+        .notification.error { background: #e74c3c; color: white; }
+        .notification.warning { background: #f39c12; color: white; }
+
+        @media (max-width: 768px) {
+            .container { border-radius: 0; min-height: 100vh; }
+            body { padding: 0; }
+            .camera-container { height: 250px; }
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Scanner Real - Sistema de Estoque</h1>
+            <p>Decodificação automática de códigos EUROTEXTIL e LITORAL</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showSection('scanner')">Scanner</button>
+            <button class="tab" onclick="showSection('inventory')">Inventário</button>
+            <button class="tab" onclick="showSection('export')">Exportar</button>
+            <button class="tab" onclick="showSection('biblioteca')">Biblioteca</button>
+        </div>
+
+        <div class="content">
+            <!-- Scanner Section -->
+            <div id="scanner" class="section active">
+                <div class="card">
+                    <h2>Scanner Mobile Real</h2>
+                    <div class="camera-container">
+                        <div id="scanner-container"></div>
+                        <div class="scanner-overlay"></div>
+                        <div class="scanner-status" id="scannerStatus">Clique em "Iniciar Scanner" para começar</div>
+                    </div>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        <button class="btn-mobile" id="startBtn">Iniciar Scanner</button>
+                        <button class="btn-mobile" id="stopBtn" disabled>Parar Scanner</button>
+                        <button class="btn-mobile" id="flashBtn" style="display:none;">Flash</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Dados Decodificados</h3>
+                    <div class="input-group">
+                        <label>Código do Fornecedor:</label>
+                        <input type="text" id="barcode" readonly placeholder="Aguardando leitura...">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Produto Identificado:</label>
+                        <input type="text" id="productName" readonly placeholder="Será identificado automaticamente">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Código ERP:</label>
+                        <input type="text" id="erpCodeDisplay" readonly placeholder="Convertido automaticamente">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Quantidade (MT):</label>
+                        <input type="number" id="quantity" step="0.1" placeholder="Auto-preenchida">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Cor:</label>
+                        <input type="text" id="color" placeholder="Auto-detectada">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Observações:</label>
+                        <input type="text" id="observations" placeholder="Informações adicionais">
+                    </div>
+
+                    <button class="btn-mobile btn-success" onclick="adicionarItem()" style="width: 100%; margin-top: 10px;">
+                        Confirmar e Registrar
+                    </button>
+                    
+                    <p style="margin-top: 10px; text-align: center; color: #666;">
+                        Total registrado: <span id="collectedCount">0</span> itens
+                    </p>
+                </div>
+
+                <!-- Manual Input -->
+                <div class="card">
+                    <h3>Entrada Manual</h3>
+                    <div class="input-group">
+                        <label>Digite o código completo:</label>
+                        <input type="text" id="manualBarcode" placeholder="Ex: 0000004700103.000050000.000SDE999.230132.02377">
+                    </div>
+                    <button class="btn-mobile" onclick="processarCodigoManual()">Processar Código</button>
+                </div>
+            </div>
+
+            <!-- Inventory Section -->
+            <div id="inventory" class="section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3 id="totalItems">0</h3>
+                        <p>Itens Coletados</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="totalMeters">0</h3>
+                        <p>Total Metros</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="totalValue">R$ 0</h3>
+                        <p>Estimativa</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Inventário Coletado</h2>
+                    <table class="result-table">
+                        <thead>
+                            <tr>
+                                <th>Código ERP</th>
+                                <th>Nome ERP</th>
+                                <th>Qtd (MT)</th>
+                                <th>Cor</th>
+                                <th>Data</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inventoryBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Export Section -->
+            <div id="export" class="section">
+                <div class="card">
+                    <h2>Exportar Dados</h2>
+                    <p>Total coletado: <strong id="exportCount">0</strong> itens</p>
+                    
+                    <button class="btn-mobile btn-success" onclick="exportarExcel()" style="width: 100%; margin: 20px 0;">
+                        Exportar para Excel
+                    </button>
+                    
+                    <button class="btn-mobile btn-danger" onclick="limparDados()" style="width: 100%;">
+                        Limpar Todos os Dados
+                    </button>
+                    
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-top: 20px;">
+                        <h4>Formato de Saída:</h4>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li><strong>Código ERP</strong> - Seu código interno</li>
+                            <li><strong>Nome ERP</strong> - Nome do produto no seu sistema</li>
+                            <li><strong>Quantidade</strong> - Em metros (MT)</li>
+                            <li><strong>Cor</strong> - Decodificada automaticamente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biblioteca Section -->
+            <div id="biblioteca" class="section">
+                <div class="card">
+                    <h2>Biblioteca DE→PARA</h2>
+                    <div id="bibliotecaStatus" style="background: #27ae60; color: white; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                        <div class="loading" style="display: none;"></div>
+                        <h3>Carregando biblioteca...</h3>
+                        <p>Produtos na biblioteca: <span id="totalMappings">0</span></p>
+                    </div>
+                    
+                    <div style="background: #e8f5e8; padding: 15px; border-radius: 10px; border-left: 4px solid #27ae60;">
+                        <h4>Como funciona:</h4>
+                        <p style="margin: 5px 0;">🔍 Scanner lê código → Identifica padrão automaticamente</p>
+                        <p style="margin: 5px 0;">📚 Busca na biblioteca → Converte para código ERP</p>
+                        <p style="margin: 5px 0;">🎯 Decodifica dados → Extrai quantidade e cor</p>
+                        <p style="margin: 5px 0;">📊 Exporta planilha → Formato pronto para ERP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <!-- Scripts Modulares -->
+    <script src="./js/decoder.js"></script>
+    <script src="./js/scanner.js"></script>
+    
+    <!-- Script Principal -->
+    <script>
+        // Estado global da aplicação
+        let inventario = [];
+        let bibliotecaDePara = {};
+
+        // Carregar biblioteca DE->PARA do JSON
+        async function carregarBiblioteca() {
     try {
       console.log('=== INICIANDO CARREGAMENTO DA BIBLIOTECA ===');
       const url = `./data/depara.json?v=${Date.now()}`; // cache-bust
@@ -105,3 +540,281 @@
       return Object.keys(bibliotecaDePara).length;
     }
   }
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                // Carregar biblioteca primeiro
+                const totalProdutos = await carregarBiblioteca();
+                
+                // Inicializar scanner com a biblioteca carregada
+                if (window.ScannerReal) {
+                    window.ScannerReal.bibliotecaDePara = bibliotecaDePara;
+                    await window.ScannerReal.init();
+                }
+                
+                // Configurar event listeners
+                setupEventListeners();
+                
+                // Atualizar displays
+                atualizarDisplays();
+                
+                // Função de teste disponível no console
+                window.testarCodigo = function(codigo) {
+                    console.log('=== TESTE DE CÓDIGO ===');
+                    console.log('Código:', codigo);
+                    console.log('Biblioteca carregada?', Object.keys(bibliotecaDePara).length > 0);
+                    console.log('Código existe na biblioteca?', bibliotecaDePara[codigo] ? 'SIM' : 'NÃO');
+                    
+                    if (window.CodigoDecoder) {
+                        const resultado = window.CodigoDecoder.decodificar(codigo, bibliotecaDePara);
+                        console.log('Resultado decoder:', resultado);
+                        return resultado;
+                    } else {
+                        console.log('CodigoDecoder não carregado');
+                    }
+                };
+                
+                showNotification(`Sistema iniciado! ${totalProdutos} produtos carregados.`, 'success');
+                
+            } catch (error) {
+                console.error('Erro na inicialização:', error);
+                showNotification('Erro ao inicializar sistema: ' + error.message, 'error');
+            }
+        });
+
+        function setupEventListeners() {
+            // Event listeners para entrada manual
+            document.getElementById('manualBarcode')?.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    processarCodigoManual();
+                }
+            });
+        }
+
+        function processarCodigoManual() {
+            const codigo = document.getElementById('manualBarcode').value.trim();
+            if (!codigo) {
+                showNotification('Digite um código válido', 'error');
+                return;
+            }
+            
+            // Processar usando o decoder com a biblioteca carregada
+            const resultado = window.CodigoDecoder.decodificar(codigo, bibliotecaDePara);
+            
+            if (resultado && resultado.nomeERP !== 'PRODUTO NÃO MAPEADO') {
+                preencherCampos(resultado);
+                showNotification(`Produto encontrado: ${resultado.nomeERP}`, 'success');
+            } else {
+                preencherCamposDesconhecido(codigo);
+                showNotification('Código não encontrado na biblioteca', 'warning');
+            }
+            
+            document.getElementById('manualBarcode').value = '';
+        }
+
+        // Preencher campos quando produto é encontrado
+        function preencherCampos(resultado) {
+            document.getElementById('barcode').value = resultado.codigoFornecedor || '';
+            document.getElementById('productName').value = resultado.nomeERP || '';
+            document.getElementById('erpCodeDisplay').value = resultado.codigoERP || '';
+            
+            if (resultado.quantidade > 0) {
+                document.getElementById('quantity').value = resultado.quantidade;
+            }
+            
+            if (resultado.cor) {
+                document.getElementById('color').value = resultado.cor;
+            }
+            
+            if (resultado.observacoes) {
+                document.getElementById('observations').value = resultado.observacoes;
+            }
+        }
+
+        // Preencher para código desconhecido
+        function preencherCamposDesconhecido(codigo) {
+            document.getElementById('barcode').value = codigo;
+            document.getElementById('productName').value = 'PRODUTO NÃO MAPEADO';
+            document.getElementById('erpCodeDisplay').value = codigo;
+            document.getElementById('quantity').value = '';
+            document.getElementById('color').value = '';
+            document.getElementById('observations').value = 'Produto não encontrado na biblioteca';
+        }
+
+        function adicionarItem() {
+            const codigoFornecedor = document.getElementById('barcode').value;
+            const nomeERP = document.getElementById('productName').value;
+            const codigoERP = document.getElementById('erpCodeDisplay').value;
+            const quantidade = parseFloat(document.getElementById('quantity').value);
+            const cor = document.getElementById('color').value;
+            const observacoes = document.getElementById('observations').value;
+            
+            if (!codigoFornecedor || !quantidade || quantidade <= 0) {
+                showNotification('Preencha código e quantidade válida', 'error');
+                return;
+            }
+            
+            const item = {
+                id: Date.now(),
+                codigoFornecedor,
+                codigoERP,
+                nomeERP,
+                quantidade,
+                cor: cor || 'N/A',
+                observacoes: observacoes || '',
+                data: new Date().toLocaleDateString('pt-BR'),
+                timestamp: new Date().toISOString()
+            };
+            
+            inventario.push(item);
+            limparFormulario();
+            atualizarDisplays();
+            salvarInventario();
+            
+            showNotification(`Item ${inventario.length} registrado com sucesso!`, 'success');
+        }
+
+        function limparFormulario() {
+            ['barcode', 'productName', 'erpCodeDisplay', 'quantity', 'color', 'observations'].forEach(id => {
+                document.getElementById(id).value = '';
+            });
+        }
+
+        function atualizarDisplays() {
+            // Atualizar contadores
+            const totalItens = inventario.length;
+            const totalMetros = inventario.reduce((sum, item) => sum + item.quantidade, 0);
+            const valorEstimado = totalMetros * 15; // R$ 15 por metro estimado
+            
+            document.getElementById('collectedCount').textContent = totalItens;
+            document.getElementById('exportCount').textContent = totalItens;
+            document.getElementById('totalItems').textContent = totalItens;
+            document.getElementById('totalMeters').textContent = totalMetros.toFixed(1);
+            document.getElementById('totalValue').textContent = 'R$ ' + valorEstimado.toLocaleString('pt-BR');
+            
+            // Atualizar tabela de inventário
+            atualizarTabelaInventario();
+        }
+
+        function atualizarTabelaInventario() {
+            const tbody = document.getElementById('inventoryBody');
+            tbody.innerHTML = '';
+            
+            inventario.forEach(item => {
+                const row = tbody.insertRow();
+                row.innerHTML = `
+                    <td>${item.codigoERP}</td>
+                    <td style="font-size: 0.8em;">${item.nomeERP}</td>
+                    <td>${item.quantidade.toFixed(1)}</td>
+                    <td>${item.cor}</td>
+                    <td style="font-size: 0.8em;">${item.data}</td>
+                    <td>
+                        <button onclick="removerItem(${item.id})" 
+                                style="background: #e74c3c; color: white; border: none; padding: 4px 8px; border-radius: 4px; font-size: 0.7em;">
+                            Remover
+                        </button>
+                    </td>
+                `;
+            });
+        }
+
+        function removerItem(id) {
+            inventario = inventario.filter(item => item.id !== id);
+            atualizarDisplays();
+            salvarInventario();
+            showNotification('Item removido', 'success');
+        }
+
+        function exportarExcel() {
+            if (inventario.length === 0) {
+                showNotification('Nenhum item para exportar', 'warning');
+                return;
+            }
+
+            const dadosExport = inventario.map((item, index) => ({
+                'Item': index + 1,
+                'Código ERP': item.codigoERP,
+                'Nome ERP': item.nomeERP,
+                'Quantidade': item.quantidade,
+                'Unidade': 'MT',
+                'Cor': item.cor,
+                'Código Fornecedor': item.codigoFornecedor,
+                'Observações': item.observacoes,
+                'Data Coleta': item.data
+            }));
+
+            const ws = XLSX.utils.json_to_sheet(dadosExport);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, 'Inventario');
+
+            // Ajustar largura das colunas
+            ws['!cols'] = [
+                {width: 8}, {width: 15}, {width: 30}, {width: 12},
+                {width: 8}, {width: 12}, {width: 15}, {width: 25}, {width: 12}
+            ];
+
+            const filename = `inventario_${new Date().toISOString().slice(0,10)}.xlsx`;
+            XLSX.writeFile(wb, filename);
+            
+            showNotification(`Exportado: ${inventario.length} itens`, 'success');
+        }
+
+        function limparDados() {
+            if (confirm('Limpar todos os dados coletados? Esta ação não pode ser desfeita.')) {
+                inventario = [];
+                atualizarDisplays();
+                salvarInventario();
+                showNotification('Todos os dados foram limpos', 'success');
+            }
+        }
+
+        function salvarInventario() {
+            try {
+                localStorage.setItem('inventario_textil', JSON.stringify(inventario));
+            } catch (e) {
+                console.error('Erro ao salvar inventário:', e);
+            }
+        }
+
+        function carregarInventario() {
+            try {
+                const saved = localStorage.getItem('inventario_textil');
+                if (saved) {
+                    inventario = JSON.parse(saved);
+                    atualizarDisplays();
+                }
+            } catch (e) {
+                console.error('Erro ao carregar inventário:', e);
+            }
+        }
+
+        function showSection(sectionId) {
+            // Remover active de todas as seções e tabs
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            
+            // Ativar seção e tab selecionadas
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+            
+            // Atualizar displays se necessário
+            if (sectionId === 'inventory') {
+                atualizarDisplays();
+            }
+        }
+
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type} show`;
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Carregar inventário ao inicializar
+        carregarInventario();
+    </script>
+</body>
+</html>
