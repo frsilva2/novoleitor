@@ -69,7 +69,7 @@ class CodigoDecoder {
 
     // Extrair quantidade (próximos 5 dígitos, dividir por 100)
     const qtdString = codigoLimpo.substring(8, 13);
-    const quantidade = (parseInt(qtdString, 10) || 0) / 100;
+    const quantidade = (parseInt(qtdString, 10) || 0) / 1000;
 
     // Resto do código é controle (não usado para match)
     // const controle = codigoLimpo.substring(13);
