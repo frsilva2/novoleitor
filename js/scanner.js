@@ -62,22 +62,6 @@ class ScannerReal {
             this.carregarBibliotecaFallback();
         }
     }
-                this.bibliotecaDePara = mapa;
-                this.mapeamentoCores = {};
-                console.log(`Ignorados: ${ignorados}`);
-            } else {
-                throw new Error('Formato inválido de JSON');
-            }
-
-            const totalProdutos = Object.keys(this.bibliotecaDePara).length;
-            console.log(`Biblioteca carregada: ${totalProdutos} produtos`);
-            document.getElementById('totalMappings').textContent = totalProdutos;
-            return data;
-        } catch (error) {
-            console.error('Erro ao carregar biblioteca:', error);
-            this.carregarBibliotecaFallback();
-        }
-    }
 
     // Biblioteca fallback (caso o JSON não carregue)
     carregarBibliotecaFallback() {
