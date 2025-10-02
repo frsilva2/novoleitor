@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DEBUG depara.json</title>
+  <style>body{font-family:Arial,Helvetica,sans-serif;margin:24px} code{background:#f4f4f4;padding:2px 4px;border-radius:4px}</style>
+</head>
+<body>
+  <h1>Debug do DEPARA</h1>
+  <p>Base URL: <code id="base"></code></p>
+  <p>Tentando caminhos:</p>
+  <ul id="tries"></ul>
+  <h2>Resultado</h2>
+  <p>Status: <b id="status">Aguardando…</b></p>
+  <p>Itens detectados: <b id="count">0</b></p>
+  <pre id="sample" style="white-space:pre-wrap;background:#f9f9f9;border:1px solid #ddd;padding:8px;border-radius:6px"></pre>
+
+<script>
+(async function(){
+  const base = location.href;
+  document.getElementById('base').textContent = base;
+  const triesEl = document.getElementById('tries');
+
+  const candidates = [
+    './data/depara.json?v=' + Date.now(),
+    './data/DEPARA.json?v=' + Date.now(),
+    './data/depara_mapa.json?v=' + Date.now()
+  ];
+
+  function logTry(u, ok, msg) {
+    const li = document.createElement('li');
+    li.textContent = (ok ? '✅ ' : '❌ ') + u + (msg ? ' — ' + msg : '');
+    triesEl.appendChild(li);
+  }
+
+  let data = null;
+  for (const u of candidates) {
+    try {
+      const url = new URL(u, location.href).toString();
+      const r = await fetch(url, { cache: 'no-store' });
+      if (!r.ok) { logTry(url, false, 'HTTP ' + r.status); continue; }
+      data = await r.json();
+      logTry(url, true);
+      break;
+    } catch(e) {
+      logTry(u, false, e.message);
+    }
+  }
+
+  if (!data) {
+    document.getElementById('status').textContent = 'Falha ao carregar';
+    return;
+  }
+
+  let count = 0, sample='';
+  if (Array.isArray(data)) {
+    count = data.length;
+    sample = JSON.stringify(data.slice(0,2), null, 2);
+  } else if (data && typeof data==='object') {
+    const produtos = data.produtos && typeof data.produtos==='object' ? data.produtos : {};
+    count = Object.keys(produtos).length || 0;
+    sample = JSON.stringify(Object.entries(produtos).slice(0,2), null, 2);
+  }
+  document.getElementById('status').textContent = 'OK';
+  document.getElementById('count').textContent = count;
+  document.getElementById('sample').textContent = sample || '(sem sample)';
+})();
+</script>
+</body>
+</html>
