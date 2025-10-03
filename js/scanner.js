@@ -30,7 +30,7 @@ class ScannerReal {
             
             // Aceita objeto {produtos:{...}} ou array [...]
             if (data && typeof data === 'object' && !Array.isArray(data)) {
-                this.bibliotecaDePara = data.produtos || {};
+                this.bibliotecaDePara = data.produtos || data.lookup || data;
                 this.mapeamentoCores = data.mapeamentoCores || {};
             } else if (Array.isArray(data)) {
                 const mapa = {};
