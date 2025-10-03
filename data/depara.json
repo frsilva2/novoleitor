@@ -1,1840 +1,6340 @@
-{
-  "produtos": {
-    "5038103": {
-      "codigoERP": "14527",
-      "nomeERP": "ALFAIATARIA NEW LOOK - LISO",
-      "fornecedor": "EURO"
-    },
-    "20000": {
-      "codigoERP": "14527",
-      "nomeERP": "ALFAIATARIA NEW LOOK - LISO",
-      "fornecedor": "LITORAL"
-    },
-    "30000": {
-      "codigoERP": "14527",
-      "nomeERP": "ALFAIATARIA NEW LOOK - LISO",
-      "fornecedor": "LITORAL"
-    },
-    "3831103": {
-      "codigoERP": "14527",
-      "nomeERP": "ALFAIATARIA NEW LOOK - LISO",
-      "fornecedor": "EURO"
-    },
-    "4792103": {
-      "codigoERP": "14527",
-      "nomeERP": "ALFAIATARIA NEW LOOK - LISO",
-      "fornecedor": "EURO"
-    },
-    "5213103": {
-      "codigoERP": "14527",
-      "nomeERP": "ALFAIATARIA NEW LOOK - LISO",
-      "fornecedor": "EURO"
-    },
-    "3376100": {
-      "codigoERP": "14527",
-      "nomeERP": "ALFAIATARIA NEW LOOK - LISO",
-      "fornecedor": "EURO"
-    },
-    "3376103": {
-      "codigoERP": "14527",
-      "nomeERP": "ALFAIATARIA NEW LOOK - LISO",
-      "fornecedor": "EURO"
-    },
-    "5213100": {
-      "codigoERP": "14527",
-      "nomeERP": "ALFAIATARIA NEW LOOK - LISO",
-      "fornecedor": "EURO"
-    },
-    "4885100": {
-      "codigoERP": "3911",
-      "nomeERP": "CETIM LISO",
-      "fornecedor": "EURO"
-    },
-    "4885103": {
-      "codigoERP": "3911",
-      "nomeERP": "CETIM LISO",
-      "fornecedor": "EURO"
-    },
-    "4548100": {
-      "codigoERP": "13290",
-      "nomeERP": "CETIM BUCOL 100% POLIESTER - TINTO",
-      "fornecedor": "EURO"
-    },
-    "4548103": {
-      "codigoERP": "13290",
-      "nomeERP": "CETIM BUCOL 100% POLIESTER - TINTO",
-      "fornecedor": "EURO"
-    },
-    "57780000": {
-      "codigoERP": "13290",
-      "nomeERP": "CETIM BUCOL 100% POLIESTER - TINTO",
-      "fornecedor": "LITORAL"
-    },
-    "1700000": {
-      "codigoERP": "3670",
-      "nomeERP": "CETIM 100% POLIESTER - LISO",
-      "fornecedor": "LITORAL"
-    },
-    "1710000": {
-      "codigoERP": "3670",
-      "nomeERP": "CETIM 100% POLIESTER - LISO",
-      "fornecedor": "LITORAL"
-    },
-    "1800000": {
-      "codigoERP": "3710",
-      "nomeERP": "CETIM  C/ ELASTANO - LISO",
-      "fornecedor": "LITORAL"
-    },
-    "1810000": {
-      "codigoERP": "3710",
-      "nomeERP": "CETIM  C/ ELASTANO - LISO",
-      "fornecedor": "LITORAL"
-    },
-    "172103": {
-      "codigoERP": "3710",
-      "nomeERP": "CETIM  C/ ELASTANO - LISO",
-      "fornecedor": "EURO"
-    },
-    "172100": {
-      "codigoERP": "3670",
-      "nomeERP": "CETIM 100% POLIESTER - LISO",
-      "fornecedor": "EURO"
-    },
-    "5212100": {
-      "codigoERP": "3710",
-      "nomeERP": "CETIM  C/ ELASTANO - LISO",
-      "fornecedor": "EURO"
-    },
-    "5212103": {
-      "codigoERP": "3710",
-      "nomeERP": "CETIM  C/ ELASTANO - LISO",
-      "fornecedor": "EURO"
-    },
-    "169100": {
-      "codigoERP": "3710",
-      "nomeERP": "CETIM  C/ ELASTANO - LISO",
-      "fornecedor": "EURO"
-    },
-    "169103": {
-      "codigoERP": "3710",
-      "nomeERP": "CETIM  C/ ELASTANO - LISO",
-      "fornecedor": "EURO"
-    },
-    "1990000": {
-      "codigoERP": "3951",
-      "nomeERP": "CHIFFON",
-      "fornecedor": "LITORAL"
-    },
-    "1950000": {
-      "codigoERP": "3951",
-      "nomeERP": "CHIFFON",
-      "fornecedor": "LITORAL"
-    },
-    "54680000": {
-      "codigoERP": "3951",
-      "nomeERP": "CHIFFON",
-      "fornecedor": "LITORAL"
-    },
-    "54690000": {
-      "codigoERP": "3951",
-      "nomeERP": "CHIFFON",
-      "fornecedor": "LITORAL"
-    },
-    "201100": {
-      "codigoERP": "3951",
-      "nomeERP": "CHIFFON",
-      "fornecedor": "EURO"
-    },
-    "201103": {
-      "codigoERP": "3951",
-      "nomeERP": "CHIFFON",
-      "fornecedor": "EURO"
-    },
-    "54790000": {
-      "codigoERP": "4072",
-      "nomeERP": "CHITAO / TEXTOLEEN ESTAMPADO 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "3667103": {
-      "codigoERP": "4072",
-      "nomeERP": "CHITAO / TEXTOLEEN ESTAMPADO 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "5612103": {
-      "codigoERP": "4072",
-      "nomeERP": "CHITAO / TEXTOLEEN ESTAMPADO 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "5607103": {
-      "codigoERP": "4072",
-      "nomeERP": "CHITAO / TEXTOLEEN ESTAMPADO 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "5142100": {
-      "codigoERP": "4402",
-      "nomeERP": "CREPE AMANDA",
-      "fornecedor": "EURO"
-    },
-    "5142103": {
-      "codigoERP": "4402",
-      "nomeERP": "CREPE AMANDA",
-      "fornecedor": "EURO"
-    },
-    "3235100": {
-      "codigoERP": "4402",
-      "nomeERP": "CREPE AMANDA",
-      "fornecedor": "EURO"
-    },
-    "3235103": {
-      "codigoERP": "4402",
-      "nomeERP": "CREPE AMANDA",
-      "fornecedor": "EURO"
-    },
-    "54660000": {
-      "codigoERP": "4724",
-      "nomeERP": "CREPE GEORGETE LISO 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "56900000": {
-      "codigoERP": "4724",
-      "nomeERP": "CREPE GEORGETE LISO 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "56910000": {
-      "codigoERP": "4724",
-      "nomeERP": "CREPE GEORGETE LISO 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "3281103": {
-      "codigoERP": "4724",
-      "nomeERP": "CREPE GEORGETE LISO 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "3281100": {
-      "codigoERP": "4724",
-      "nomeERP": "CREPE GEORGETE LISO 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "51600000": {
-      "codigoERP": "4682",
-      "nomeERP": "CREPE DUNA  - AIR FLOW",
-      "fornecedor": "LITORAL"
-    },
-    "14200000": {
-      "codigoERP": "4682",
-      "nomeERP": "CREPE DUNA  - AIR FLOW",
-      "fornecedor": "LITORAL"
-    },
-    "14210000": {
-      "codigoERP": "4682",
-      "nomeERP": "CREPE DUNA  - AIR FLOW",
-      "fornecedor": "LITORAL"
-    },
-    "55250000": {
-      "codigoERP": "4682",
-      "nomeERP": "CREPE DUNA  - AIR FLOW",
-      "fornecedor": "LITORAL"
-    },
-    "5012103": {
-      "codigoERP": "4682",
-      "nomeERP": "CREPE DUNA  - AIR FLOW",
-      "fornecedor": "EURO"
-    },
-    "5051103": {
-      "codigoERP": "4682",
-      "nomeERP": "CREPE DUNA  - AIR FLOW",
-      "fornecedor": "EURO"
-    },
-    "4861100": {
-      "codigoERP": "4682",
-      "nomeERP": "CREPE DUNA  - AIR FLOW",
-      "fornecedor": "EURO"
-    },
-    "4861103": {
-      "codigoERP": "4682",
-      "nomeERP": "CREPE DUNA  - AIR FLOW",
-      "fornecedor": "EURO"
-    },
-    "5502103": {
-      "codigoERP": "4682",
-      "nomeERP": "CREPE DUNA  - AIR FLOW",
-      "fornecedor": "EURO"
-    },
-    "4335100": {
-      "codigoERP": "2770",
-      "nomeERP": "ATOALHADO - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "4335103": {
-      "codigoERP": "2770",
-      "nomeERP": "ATOALHADO - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "4476100": {
-      "codigoERP": "5491",
-      "nomeERP": "FILÓ DE ARMAÇÃO",
-      "fornecedor": "EURO"
-    },
-    "4476103": {
-      "codigoERP": "5491",
-      "nomeERP": "FILÓ DE ARMAÇÃO",
-      "fornecedor": "EURO"
-    },
-    "4973103": {
-      "codigoERP": "FLEECE",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4697104": {
-      "codigoERP": "FLEECE 3D",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4697103": {
-      "codigoERP": "FLEECE 3D",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5011103": {
-      "codigoERP": "FLEECE 3D",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "16670000": {
-      "codigoERP": "FLEECE 3D ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "5010103": {
-      "codigoERP": "FLEECE DOTS",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5010100": {
-      "codigoERP": "FLEECE DOTS",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4996103": {
-      "codigoERP": "FLEECE EMBOSSED",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5025103": {
-      "codigoERP": "FLEECE ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "55270000": {
-      "codigoERP": "FLEECE ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "4788103": {
-      "codigoERP": "FLEECE LISO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "55020000": {
-      "codigoERP": "FLEECE LISO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "57150000": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "57140000": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "16930000": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "16920000": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "5202100": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "5202103": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "5428103": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "3510000": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "3520000": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "4725100": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "4725103": {
-      "codigoERP": "5747",
-      "nomeERP": "GABARDINE   - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "250103": {
-      "codigoERP": "13991",
-      "nomeERP": "GABARDINE 170G M2",
-      "fornecedor": "EURO"
-    },
-    "250100": {
-      "codigoERP": "MESCLA JEANS",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5424103": {
-      "codigoERP": "7353",
-      "nomeERP": "MALHA HELANCA KG",
-      "fornecedor": "EURO"
-    },
-    "2248103": {
-      "codigoERP": "7353",
-      "nomeERP": "MALHA HELANCA KG",
-      "fornecedor": "EURO"
-    },
-    "2248100": {
-      "codigoERP": "7353",
-      "nomeERP": "MALHA HELANCA KG",
-      "fornecedor": "EURO"
-    },
-    "2817103": {
-      "codigoERP": "7353",
-      "nomeERP": "MALHA HELANCA KG",
-      "fornecedor": "EURO"
-    },
-    "4923103": {
-      "codigoERP": "7353",
-      "nomeERP": "MALHA HELANCA KG",
-      "fornecedor": "EURO"
-    },
-    "4923100": {
-      "codigoERP": "7353",
-      "nomeERP": "MALHA HELANCA KG",
-      "fornecedor": "EURO"
-    },
-    "4170000": {
-      "codigoERP": "7353",
-      "nomeERP": "MALHA HELANCA KG",
-      "fornecedor": "LITORAL"
-    },
-    "4180000": {
-      "codigoERP": "7353",
-      "nomeERP": "MALHA HELANCA KG",
-      "fornecedor": "LITORAL"
-    },
-    "17490000": {
-      "codigoERP": "7353",
-      "nomeERP": "MALHA HELANCA KG",
-      "fornecedor": "LITORAL"
-    },
-    "17480000": {
-      "codigoERP": "7353",
-      "nomeERP": "MALHA HELANCA KG",
-      "fornecedor": "LITORAL"
-    },
-    "58120000": {
-      "codigoERP": "5787",
-      "nomeERP": "JACQUARD",
-      "fornecedor": "LITORAL"
-    },
-    "60080000": {
-      "codigoERP": "5787",
-      "nomeERP": "JACQUARD",
-      "fornecedor": "LITORAL"
-    },
-    "60220000": {
-      "codigoERP": "5787",
-      "nomeERP": "JACQUARD",
-      "fornecedor": "LITORAL"
-    },
-    "4262103": {
-      "codigoERP": "5787",
-      "nomeERP": "JACQUARD",
-      "fornecedor": "EURO"
-    },
-    "5435103": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "EURO"
-    },
-    "4759103": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "EURO"
-    },
-    "4385103": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "EURO"
-    },
-    "4385104": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "EURO"
-    },
-    "4385106": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "EURO"
-    },
-    "4385105": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "EURO"
-    },
-    "4761103": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "EURO"
-    },
-    "4662103": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "EURO"
-    },
-    "19040000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "57710000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "57720000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "57730000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "57740000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "57750000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "57760000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "19060000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "54730000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56060000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56070000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56090000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56100000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56110000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "60870000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "60920000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "55090000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "55100000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "17720000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "28260000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "58240000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "58250000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "58270000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56610000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56620000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56630000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56650000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56710000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56720000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "19000000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "18920000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "18890000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "55610000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56010000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56020000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "54710000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "54720000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "55630000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "56040000": {
-      "codigoERP": "5919",
-      "nomeERP": "LAISE ALGODÃO - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "1965103": {
-      "codigoERP": "6120",
-      "nomeERP": "LAME - LISO",
-      "fornecedor": "EURO"
-    },
-    "3176103": {
-      "codigoERP": "6264",
-      "nomeERP": "LINHAO 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "5065103": {
-      "codigoERP": "6504",
-      "nomeERP": "LINHO BORDADO",
-      "fornecedor": "EURO"
-    },
-    "4736103": {
-      "codigoERP": "6504",
-      "nomeERP": "LINHO BORDADO",
-      "fornecedor": "EURO"
-    },
-    "5175103": {
-      "codigoERP": "6504",
-      "nomeERP": "LINHO BORDADO",
-      "fornecedor": "EURO"
-    },
-    "20180000": {
-      "codigoERP": "6827",
-      "nomeERP": "LINHO MISTO -  70% VISCOSE 30% LINHO",
-      "fornecedor": "LITORAL"
-    },
-    "12130000": {
-      "codigoERP": "6827",
-      "nomeERP": "LINHO MISTO -  70% VISCOSE 30% LINHO",
-      "fornecedor": "LITORAL"
-    },
-    "61160000": {
-      "codigoERP": "6827",
-      "nomeERP": "LINHO MISTO -  70% VISCOSE 30% LINHO",
-      "fornecedor": "LITORAL"
-    },
-    "20440000": {
-      "codigoERP": "6827",
-      "nomeERP": "LINHO MISTO -  70% VISCOSE 30% LINHO",
-      "fornecedor": "LITORAL"
-    },
-    "15420000": {
-      "codigoERP": "6827",
-      "nomeERP": "LINHO MISTO -  70% VISCOSE 30% LINHO",
-      "fornecedor": "LITORAL"
-    },
-    "5479103": {
-      "codigoERP": "6827",
-      "nomeERP": "LINHO MISTO -  70% VISCOSE 30% LINHO",
-      "fornecedor": "EURO"
-    },
-    "2443100": {
-      "codigoERP": "6827",
-      "nomeERP": "LINHO MISTO -  70% VISCOSE 30% LINHO",
-      "fornecedor": "EURO"
-    },
-    "2443103": {
-      "codigoERP": "6827",
-      "nomeERP": "LINHO MISTO -  70% VISCOSE 30% LINHO",
-      "fornecedor": "EURO"
-    },
-    "5179103": {
-      "codigoERP": "6827",
-      "nomeERP": "LINHO MISTO -  70% VISCOSE 30% LINHO",
-      "fornecedor": "EURO"
-    },
-    "5423103": {
-      "codigoERP": "6827",
-      "nomeERP": "LINHO MISTO -  70% VISCOSE 30% LINHO",
-      "fornecedor": "EURO"
-    },
-    "3980000": {
-      "codigoERP": "6344",
-      "nomeERP": "LINHO - 100%",
-      "fornecedor": "LITORAL"
-    },
-    "4103100": {
-      "codigoERP": "6344",
-      "nomeERP": "LINHO - 100%",
-      "fornecedor": "EURO"
-    },
-    "4103103": {
-      "codigoERP": "6344",
-      "nomeERP": "LINHO - 100%",
-      "fornecedor": "EURO"
-    },
-    "3990000": {
-      "codigoERP": "6344",
-      "nomeERP": "LINHO - 100%",
-      "fornecedor": "LITORAL"
-    },
-    "17250000": {
-      "codigoERP": "6344",
-      "nomeERP": "LINHO - 100%",
-      "fornecedor": "LITORAL"
-    },
-    "17260000": {
-      "codigoERP": "6344",
-      "nomeERP": "LINHO - 100%",
-      "fornecedor": "LITORAL"
-    },
-    "15490000": {
-      "codigoERP": "8369",
-      "nomeERP": "MATELASSE - 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "54460000": {
-      "codigoERP": "8369",
-      "nomeERP": "MATELASSE - 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "5249103": {
-      "codigoERP": "8369",
-      "nomeERP": "MATELASSE - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "4348103": {
-      "codigoERP": "8369",
-      "nomeERP": "MATELASSE - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "5476103": {
-      "codigoERP": "8369",
-      "nomeERP": "MATELASSE - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "5482103": {
-      "codigoERP": "8369",
-      "nomeERP": "MATELASSE - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "4397103": {
-      "codigoERP": "8369",
-      "nomeERP": "MATELASSE - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "4158103": {
-      "codigoERP": "8369",
-      "nomeERP": "MATELASSE - 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "17580000": {
-      "codigoERP": "8369",
-      "nomeERP": "MATELASSE - 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "54740000": {
-      "codigoERP": "8369",
-      "nomeERP": "MATELASSE - 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "56470000": {
-      "codigoERP": "MESCLA JEANS",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "56830000": {
-      "codigoERP": "MESCLA JEANS",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "3420000": {
-      "codigoERP": "MESCLA JEANS",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "3820103": {
-      "codigoERP": "MESCLA JEANS",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4908103": {
-      "codigoERP": "MICROPERCAL EMBOSSED",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5307103": {
-      "codigoERP": "MICROPERCAL JAZZ TINTO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5063103": {
-      "codigoERP": "MICROPERCAL JAZZ TINTO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4670100": {
-      "codigoERP": "MICROPERCAL TINTO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4670103": {
-      "codigoERP": "MICROPERCAL TINTO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "60090000": {
-      "codigoERP": "MICROPERCAL TINTO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "60100000": {
-      "codigoERP": "MICROPERCAL TINTO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "54830000": {
-      "codigoERP": "MICROPERCAL TINTO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "54840000": {
-      "codigoERP": "MICROPERCAL TINTO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "2677105": {
-      "codigoERP": "MICROPERCAL TINTO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "2677103": {
-      "codigoERP": "MICROPERCAL TINTO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "1540100": {
-      "codigoERP": "MICROPERCAL TINTO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "1540103": {
-      "codigoERP": "MICROPERCAL TINTO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "59710000": {
-      "codigoERP": "8745",
-      "nomeERP": "MUSSELINE TOQUE DE SEDA",
-      "fornecedor": "LITORAL"
-    },
-    "59720000": {
-      "codigoERP": "8745",
-      "nomeERP": "MUSSELINE TOQUE DE SEDA",
-      "fornecedor": "LITORAL"
-    },
-    "4927103": {
-      "codigoERP": "8745",
-      "nomeERP": "MUSSELINE TOQUE DE SEDA",
-      "fornecedor": "EURO"
-    },
-    "5297100": {
-      "codigoERP": "8745",
-      "nomeERP": "MUSSELINE TOQUE DE SEDA",
-      "fornecedor": "EURO"
-    },
-    "5297103": {
-      "codigoERP": "8745",
-      "nomeERP": "MUSSELINE TOQUE DE SEDA",
-      "fornecedor": "EURO"
-    },
-    "19360000": {
-      "codigoERP": "4926",
-      "nomeERP": "CREPE MUSSON",
-      "fornecedor": "LITORAL"
-    },
-    "19370000": {
-      "codigoERP": "4926",
-      "nomeERP": "CREPE MUSSON",
-      "fornecedor": "LITORAL"
-    },
-    "3170000": {
-      "codigoERP": "4926",
-      "nomeERP": "CREPE MUSSON",
-      "fornecedor": "LITORAL"
-    },
-    "4415103": {
-      "codigoERP": "4926",
-      "nomeERP": "CREPE MUSSON",
-      "fornecedor": "EURO"
-    },
-    "4564103": {
-      "codigoERP": "4926",
-      "nomeERP": "CREPE MUSSON",
-      "fornecedor": "EURO"
-    },
-    "15950000": {
-      "codigoERP": "8785",
-      "nomeERP": "ORGANZA",
-      "fornecedor": "LITORAL"
-    },
-    "323103": {
-      "codigoERP": "8785",
-      "nomeERP": "ORGANZA",
-      "fornecedor": "EURO"
-    },
-    "323100": {
-      "codigoERP": "8785",
-      "nomeERP": "ORGANZA",
-      "fornecedor": "EURO"
-    },
-    "15960000": {
-      "codigoERP": "8785",
-      "nomeERP": "ORGANZA",
-      "fornecedor": "LITORAL"
-    },
-    "5167100": {
-      "codigoERP": "8785",
-      "nomeERP": "ORGANZA",
-      "fornecedor": "EURO"
-    },
-    "5167103": {
-      "codigoERP": "8785",
-      "nomeERP": "ORGANZA",
-      "fornecedor": "EURO"
-    },
-    "20020000": {
-      "codigoERP": "9026",
-      "nomeERP": "OXFORD LISO",
-      "fornecedor": "LITORAL"
-    },
-    "20030000": {
-      "codigoERP": "9026",
-      "nomeERP": "OXFORD LISO",
-      "fornecedor": "LITORAL"
-    },
-    "59030000": {
-      "codigoERP": "9026",
-      "nomeERP": "OXFORD LISO",
-      "fornecedor": "LITORAL"
-    },
-    "59040000": {
-      "codigoERP": "9026",
-      "nomeERP": "OXFORD LISO",
-      "fornecedor": "LITORAL"
-    },
-    "334103": {
-      "codigoERP": "9026",
-      "nomeERP": "OXFORD LISO",
-      "fornecedor": "EURO"
-    },
-    "334100": {
-      "codigoERP": "9026",
-      "nomeERP": "OXFORD LISO",
-      "fornecedor": "EURO"
-    },
-    "13270000": {
-      "codigoERP": "8906",
-      "nomeERP": "OXFORD 3 M 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "13280000": {
-      "codigoERP": "8906",
-      "nomeERP": "OXFORD 3 M 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "1113103": {
-      "codigoERP": "8906",
-      "nomeERP": "OXFORD 3 M 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "1113100": {
-      "codigoERP": "8906",
-      "nomeERP": "OXFORD 3 M 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "4139103": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4723103": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "14160000": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "4682103": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5545103": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "2673103": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "2673105": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "2673104": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "19520000": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "1038106": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "1038104": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "1038103": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "19540000": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "2675103": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5083103": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4624103": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "19610000": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "16680000": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "19600000": {
-      "codigoERP": "OXFORD EST, OXFORD CHECK, OXFORD XADREZ, OXFOR ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "50080000": {
-      "codigoERP": "8986",
-      "nomeERP": "OXFORD FLAME",
-      "fornecedor": "LITORAL"
-    },
-    "50090000": {
-      "codigoERP": "8986",
-      "nomeERP": "OXFORD FLAME",
-      "fornecedor": "LITORAL"
-    },
-    "3058100": {
-      "codigoERP": "8986",
-      "nomeERP": "OXFORD FLAME",
-      "fornecedor": "EURO"
-    },
-    "3058103": {
-      "codigoERP": "8986",
-      "nomeERP": "OXFORD FLAME",
-      "fornecedor": "EURO"
-    },
-    "5570000": {
-      "codigoERP": "9109",
-      "nomeERP": "OXFORDINE",
-      "fornecedor": "LITORAL"
-    },
-    "11940000": {
-      "codigoERP": "9109",
-      "nomeERP": "OXFORDINE",
-      "fornecedor": "LITORAL"
-    },
-    "4700103": {
-      "codigoERP": "9109",
-      "nomeERP": "OXFORDINE",
-      "fornecedor": "EURO"
-    },
-    "4700100": {
-      "codigoERP": "9109",
-      "nomeERP": "OXFORDINE",
-      "fornecedor": "EURO"
-    },
-    "845103": {
-      "codigoERP": "9229",
-      "nomeERP": "PAETE - FANTASIA",
-      "fornecedor": "EURO"
-    },
-    "8760000": {
-      "codigoERP": "9229",
-      "nomeERP": "PAETE - FANTASIA",
-      "fornecedor": "LITORAL"
-    },
-    "706100": {
-      "codigoERP": "9732",
-      "nomeERP": "PERCAL 230 FIOS",
-      "fornecedor": "EURO"
-    },
-    "706103": {
-      "codigoERP": "9732",
-      "nomeERP": "PERCAL 230 FIOS",
-      "fornecedor": "EURO"
-    },
-    "7470000": {
-      "codigoERP": "9732",
-      "nomeERP": "PERCAL 230 FIOS",
-      "fornecedor": "LITORAL"
-    },
-    "7480000": {
-      "codigoERP": "9732",
-      "nomeERP": "PERCAL 230 FIOS",
-      "fornecedor": "LITORAL"
-    },
-    "1468100": {
-      "codigoERP": "9532",
-      "nomeERP": "PERCAL  -  400 FIOS",
-      "fornecedor": "EURO"
-    },
-    "1468103": {
-      "codigoERP": "9532",
-      "nomeERP": "PERCAL  -  400 FIOS",
-      "fornecedor": "EURO"
-    },
-    "54850000": {
-      "codigoERP": "9532",
-      "nomeERP": "PERCAL  -  400 FIOS",
-      "fornecedor": "LITORAL"
-    },
-    "54860000": {
-      "codigoERP": "9532",
-      "nomeERP": "PERCAL  -  400 FIOS",
-      "fornecedor": "LITORAL"
-    },
-    "5029103": {
-      "codigoERP": "PLASTICO TERMICO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5325103": {
-      "codigoERP": "PLASTICO TERMICO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5350000": {
-      "codigoERP": "15428",
-      "nomeERP": "PRADA",
-      "fornecedor": "LITORAL"
-    },
-    "19220000": {
-      "codigoERP": "15428",
-      "nomeERP": "PRADA",
-      "fornecedor": "LITORAL"
-    },
-    "19230000": {
-      "codigoERP": "15428",
-      "nomeERP": "PRADA",
-      "fornecedor": "LITORAL"
-    },
-    "54220000": {
-      "codigoERP": "15428",
-      "nomeERP": "PRADA",
-      "fornecedor": "LITORAL"
-    },
-    "54210000": {
-      "codigoERP": "15428",
-      "nomeERP": "PRADA",
-      "fornecedor": "LITORAL"
-    },
-    "13500000": {
-      "codigoERP": "15428",
-      "nomeERP": "PRADA",
-      "fornecedor": "LITORAL"
-    },
-    "404103": {
-      "codigoERP": "15428",
-      "nomeERP": "PRADA",
-      "fornecedor": "EURO"
-    },
-    "404100": {
-      "codigoERP": "15428",
-      "nomeERP": "PRADA",
-      "fornecedor": "EURO"
-    },
-    "4566103": {
-      "codigoERP": "15428",
-      "nomeERP": "PRADA",
-      "fornecedor": "EURO"
-    },
-    "18780000": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "LITORAL"
-    },
-    "5013103": {
-      "codigoERP": "RECHILIEU",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5377103": {
-      "codigoERP": "RECHILIEU",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5467103": {
-      "codigoERP": "RECHILIEU",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5452103": {
-      "codigoERP": "RECHILIEU",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5188103": {
-      "codigoERP": "RECHILIEU",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5378103": {
-      "codigoERP": "RECHILIEU",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5109103": {
-      "codigoERP": "RECHILIEU",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5109100": {
-      "codigoERP": "RECHILIEU",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5591103": {
-      "codigoERP": "RENDA GUIPIR, ARTESANIA, RENDA ARTESANIA, GUIPIR ARTESANIA",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5592103": {
-      "codigoERP": "RENDA GUIPIR, ARTESANIA, RENDA ARTESANIA, GUIPIR ARTESANIA",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5140103": {
-      "codigoERP": "RENDA GUIPIR, ARTESANIA, RENDA ARTESANIA, GUIPIR ARTESANIA",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4217103": {
-      "codigoERP": "SALINA EST",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "3835103": {
-      "codigoERP": "SALINA EST",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "16950000": {
-      "codigoERP": "SALINA EST",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "54070000": {
-      "codigoERP": "SALINA TWILL",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "53810000": {
-      "codigoERP": "SALINA TWILL",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "4416100": {
-      "codigoERP": "SALINA TWILL",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4416103": {
-      "codigoERP": "SALINA TWILL",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4387103": {
-      "codigoERP": "SALINA TWILL EST",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "4387105": {
-      "codigoERP": "SALINA TWILL EST",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5555103": {
-      "codigoERP": "SALINA TWILL EST",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5713103": {
-      "codigoERP": "SALINA TWILL EST",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5200103": {
-      "codigoERP": "SALINA TWILL EST",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5200100": {
-      "codigoERP": "SALINA TWILL EST",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "20630000": {
-      "codigoERP": "SALINA TWILL ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "5221100": {
-      "codigoERP": "5167",
-      "nomeERP": "CREPE SALINA LISO 96% POLIESTER 4% ELAST",
-      "fornecedor": "EURO"
-    },
-    "5221103": {
-      "codigoERP": "5167",
-      "nomeERP": "CREPE SALINA LISO 96% POLIESTER 4% ELAST",
-      "fornecedor": "EURO"
-    },
-    "2637103": {
-      "codigoERP": "5167",
-      "nomeERP": "CREPE SALINA LISO 96% POLIESTER 4% ELAST",
-      "fornecedor": "EURO"
-    },
-    "2637100": {
-      "codigoERP": "5167",
-      "nomeERP": "CREPE SALINA LISO 96% POLIESTER 4% ELAST",
-      "fornecedor": "EURO"
-    },
-    "5112100": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "EURO"
-    },
-    "5112103": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "EURO"
-    },
-    "4446100": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "EURO"
-    },
-    "4446103": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "EURO"
-    },
-    "5169103": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "EURO"
-    },
-    "5191103": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "EURO"
-    },
-    "5485103": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "EURO"
-    },
-    "5394103": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "EURO"
-    },
-    "4851100": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "EURO"
-    },
-    "4851103": {
-      "codigoERP": "12699",
-      "nomeERP": "VISCOSE SENSORIALLE",
-      "fornecedor": "EURO"
-    },
-    "307103": {
-      "codigoERP": "10577",
-      "nomeERP": "TACTEL",
-      "fornecedor": "EURO"
-    },
-    "307100": {
-      "codigoERP": "10577",
-      "nomeERP": "TACTEL",
-      "fornecedor": "EURO"
-    },
-    "5050000": {
-      "codigoERP": "10577",
-      "nomeERP": "TACTEL",
-      "fornecedor": "LITORAL"
-    },
-    "5040000": {
-      "codigoERP": "10577",
-      "nomeERP": "TACTEL",
-      "fornecedor": "LITORAL"
-    },
-    "19150000": {
-      "codigoERP": "10577",
-      "nomeERP": "TACTEL",
-      "fornecedor": "LITORAL"
-    },
-    "4599103": {
-      "codigoERP": "11892",
-      "nomeERP": "TULE DE MALHA",
-      "fornecedor": "EURO"
-    },
-    "4599100": {
-      "codigoERP": "11892",
-      "nomeERP": "TULE DE MALHA",
-      "fornecedor": "EURO"
-    },
-    "5703103": {
-      "codigoERP": "TULE ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "10550000": {
-      "codigoERP": "11772",
-      "nomeERP": "TULE COM GLITTER",
-      "fornecedor": "LITORAL"
-    },
-    "60750000": {
-      "codigoERP": "11772",
-      "nomeERP": "TULE COM GLITTER",
-      "fornecedor": "LITORAL"
-    },
-    "56260000": {
-      "codigoERP": "11772",
-      "nomeERP": "TULE COM GLITTER",
-      "fornecedor": "LITORAL"
-    },
-    "4592103": {
-      "codigoERP": "11932",
-      "nomeERP": "TULE ILUSAO / ILUSION",
-      "fornecedor": "EURO"
-    },
-    "3961100": {
-      "codigoERP": "12053",
-      "nomeERP": "TULE SHINE - LISO",
-      "fornecedor": "EURO"
-    },
-    "3961103": {
-      "codigoERP": "12053",
-      "nomeERP": "TULE SHINE - LISO",
-      "fornecedor": "EURO"
-    },
-    "4405103": {
-      "codigoERP": "11772",
-      "nomeERP": "TULE COM GLITTER",
-      "fornecedor": "EURO"
-    },
-    "4405100": {
-      "codigoERP": "11772",
-      "nomeERP": "TULE COM GLITTER",
-      "fornecedor": "EURO"
-    },
-    "5287103": {
-      "codigoERP": "11772",
-      "nomeERP": "TULE COM GLITTER",
-      "fornecedor": "EURO"
-    },
-    "20270000": {
-      "codigoERP": "12174",
-      "nomeERP": "TWO WAY",
-      "fornecedor": "LITORAL"
-    },
-    "13860000": {
-      "codigoERP": "12174",
-      "nomeERP": "TWO WAY",
-      "fornecedor": "LITORAL"
-    },
-    "669100": {
-      "codigoERP": "12174",
-      "nomeERP": "TWO WAY",
-      "fornecedor": "EURO"
-    },
-    "669103": {
-      "codigoERP": "12174",
-      "nomeERP": "TWO WAY",
-      "fornecedor": "EURO"
-    },
-    "5102103": {
-      "codigoERP": "12214",
-      "nomeERP": "TWO WAY - RISCA DE GIZ",
-      "fornecedor": "EURO"
-    },
-    "15990000": {
-      "codigoERP": "12294",
-      "nomeERP": "VELUDO CRISTAL 96% POLIESTER  4% ELASTANO",
-      "fornecedor": "LITORAL"
-    },
-    "3597100": {
-      "codigoERP": "12294",
-      "nomeERP": "VELUDO CRISTAL 96% POLIESTER  4% ELASTANO",
-      "fornecedor": "EURO"
-    },
-    "3597103": {
-      "codigoERP": "12294",
-      "nomeERP": "VELUDO CRISTAL 96% POLIESTER  4% ELASTANO",
-      "fornecedor": "EURO"
-    },
-    "4705100": {
-      "codigoERP": "12376",
-      "nomeERP": "VISCOLINHO LISO",
-      "fornecedor": "EURO"
-    },
-    "4705103": {
-      "codigoERP": "12376",
-      "nomeERP": "VISCOLINHO LISO",
-      "fornecedor": "EURO"
-    },
-    "5135103": {
-      "codigoERP": "12376",
-      "nomeERP": "VISCOLINHO LISO",
-      "fornecedor": "EURO"
-    },
-    "5135100": {
-      "codigoERP": "12376",
-      "nomeERP": "VISCOLINHO LISO",
-      "fornecedor": "EURO"
-    },
-    "4515100": {
-      "codigoERP": "12376",
-      "nomeERP": "VISCOLINHO LISO",
-      "fornecedor": "EURO"
-    },
-    "4515103": {
-      "codigoERP": "12376",
-      "nomeERP": "VISCOLINHO LISO",
-      "fornecedor": "EURO"
-    },
-    "15360000": {
-      "codigoERP": "12376",
-      "nomeERP": "VISCOLINHO LISO",
-      "fornecedor": "LITORAL"
-    },
-    "15370000": {
-      "codigoERP": "12376",
-      "nomeERP": "VISCOLINHO LISO",
-      "fornecedor": "LITORAL"
-    },
-    "3885103": {
-      "codigoERP": "VISCOSE EST, VISCOSE ESTAMPADO, VISCOSE RAYON EST",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "3885104": {
-      "codigoERP": "VISCOSE EST, VISCOSE ESTAMPADO, VISCOSE RAYON EST",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "2579103": {
-      "codigoERP": "VISCOSE RAYON ESTAMPADO, VISCOSE RAYON ESTAMPADO, VISCOSE ESTAMPADO, VISCOSE ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "2579105": {
-      "codigoERP": "VISCOSE RAYON ESTAMPADO, VISCOSE RAYON ESTAMPADO, VISCOSE ESTAMPADO, VISCOSE ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "5644103": {
-      "codigoERP": "VISCOSE RAYON ESTAMPADO, VISCOSE RAYON ESTAMPADO, VISCOSE ESTAMPADO, VISCOSE ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "EURO"
-    },
-    "18700000": {
-      "codigoERP": "VISCOSE RAYON ESTAMPADO, VISCOSE RAYON ESTAMPADO, VISCOSE ESTAMPADO, VISCOSE ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "17050000": {
-      "codigoERP": "VISCOSE RAYON ESTAMPADO, VISCOSE RAYON ESTAMPADO, VISCOSE ESTAMPADO, VISCOSE ESTAMPADO",
-      "nomeERP": null,
-      "fornecedor": "LITORAL"
-    },
-    "5219103": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "EURO"
-    },
-    "5219100": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "EURO"
-    },
-    "4432103": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "EURO"
-    },
-    "4432100": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "EURO"
-    },
-    "3108103": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "EURO"
-    },
-    "3108100": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "EURO"
-    },
-    "18280000": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "18290000": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "11110000": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "11100000": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "11150000": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "11140000": {
-      "codigoERP": "12456",
-      "nomeERP": "VISCOSE - LISA",
-      "fornecedor": "LITORAL"
-    },
-    "732100": {
-      "codigoERP": "12779",
-      "nomeERP": "VOIL 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "732103": {
-      "codigoERP": "12779",
-      "nomeERP": "VOIL 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "11330000": {
-      "codigoERP": "12779",
-      "nomeERP": "VOIL 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "11320000": {
-      "codigoERP": "12779",
-      "nomeERP": "VOIL 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "1993100": {
-      "codigoERP": "13144",
-      "nomeERP": "VOIL XADREZ DE POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "1993103": {
-      "codigoERP": "13144",
-      "nomeERP": "VOIL XADREZ DE POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "14090000": {
-      "codigoERP": "13184",
-      "nomeERP": "ZIBELINE 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "4465103": {
-      "codigoERP": "13184",
-      "nomeERP": "ZIBELINE 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "4465100": {
-      "codigoERP": "13184",
-      "nomeERP": "ZIBELINE 100% POLIESTER",
-      "fornecedor": "EURO"
-    },
-    "14100000": {
-      "codigoERP": "13184",
-      "nomeERP": "ZIBELINE 100% POLIESTER",
-      "fornecedor": "LITORAL"
-    },
-    "5745103": {
-      "codigoERP": "13184",
-      "nomeERP": "ZIBELINE 100% POLIESTER",
-      "fornecedor": "EURO"
-    }
+[
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4335100",
+    "produtofornecedor": "FELPUDO TROPICAL TINTO 1.45L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "2770",
+    "nomeerp": "ATOALHADO - 100% POLIESTER",
+    "cProd_norm": "4335100",
+    "variants": [
+      "4335100",
+      "43351000",
+      "43351001",
+      "43351002",
+      "43351003",
+      "43351004",
+      "43351005",
+      "43351006",
+      "43351007",
+      "43351008",
+      "43351009"
+    ]
   },
-  "mapeamentoCores": {}
-}
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4335103",
+    "produtofornecedor": "FELPUDO TROPICAL TINTO 1.45L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "2770",
+    "nomeerp": "ATOALHADO - 100% POLIESTER",
+    "cProd_norm": "4335103",
+    "variants": [
+      "4335103",
+      "43351030",
+      "43351031",
+      "43351032",
+      "43351033",
+      "43351034",
+      "43351035",
+      "43351036",
+      "43351037",
+      "43351038",
+      "43351039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "1700000",
+    "produtofornecedor": "CETIM CHARMOUSSE",
+    "unidademedida": "MT",
+    "codigoerp": "3670",
+    "nomeerp": "CETIM 100% POLIESTER - LISO",
+    "cProd_norm": "1700000",
+    "variants": [
+      "1700000",
+      "17000000",
+      "17000001",
+      "17000002",
+      "17000003",
+      "17000004",
+      "17000005",
+      "17000006",
+      "17000007",
+      "17000008",
+      "17000009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "1710000",
+    "produtofornecedor": "CETIM CHARMOUSSE",
+    "unidademedida": "MT",
+    "codigoerp": "3670",
+    "nomeerp": "CETIM 100% POLIESTER - LISO",
+    "cProd_norm": "1710000",
+    "variants": [
+      "1710000",
+      "17100000",
+      "17100001",
+      "17100002",
+      "17100003",
+      "17100004",
+      "17100005",
+      "17100006",
+      "17100007",
+      "17100008",
+      "17100009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "172100",
+    "produtofornecedor": "CETIM TWIST 1,47L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "3670",
+    "nomeerp": "CETIM 100% POLIESTER - LISO",
+    "cProd_norm": "172100",
+    "variants": [
+      "172100",
+      "1721000",
+      "1721001",
+      "1721002",
+      "1721003",
+      "1721004",
+      "1721005",
+      "1721006",
+      "1721007",
+      "1721008",
+      "1721009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "1800000",
+    "produtofornecedor": "CETIM CHARMOUSSE SPAN",
+    "unidademedida": "MT",
+    "codigoerp": "3710",
+    "nomeerp": "CETIM  C/ ELASTANO - LISO",
+    "cProd_norm": "1800000",
+    "variants": [
+      "1800000",
+      "18000000",
+      "18000001",
+      "18000002",
+      "18000003",
+      "18000004",
+      "18000005",
+      "18000006",
+      "18000007",
+      "18000008",
+      "18000009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "1810000",
+    "produtofornecedor": "CETIM CHARMOUSSE SPAN",
+    "unidademedida": "MT",
+    "codigoerp": "3710",
+    "nomeerp": "CETIM  C/ ELASTANO - LISO",
+    "cProd_norm": "1810000",
+    "variants": [
+      "1810000",
+      "18100000",
+      "18100001",
+      "18100002",
+      "18100003",
+      "18100004",
+      "18100005",
+      "18100006",
+      "18100007",
+      "18100008",
+      "18100009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "172103",
+    "produtofornecedor": "CETIM TWIST 1,47L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "3710",
+    "nomeerp": "CETIM  C/ ELASTANO - LISO",
+    "cProd_norm": "172103",
+    "variants": [
+      "172103",
+      "1721030",
+      "1721031",
+      "1721032",
+      "1721033",
+      "1721034",
+      "1721035",
+      "1721036",
+      "1721037",
+      "1721038",
+      "1721039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5212100",
+    "produtofornecedor": "CETIM C/ELASTANO 1,50L 97% POLYE 3%ELAST",
+    "unidademedida": "MT",
+    "codigoerp": "3710",
+    "nomeerp": "CETIM  C/ ELASTANO - LISO",
+    "cProd_norm": "5212100",
+    "variants": [
+      "5212100",
+      "52121000",
+      "52121001",
+      "52121002",
+      "52121003",
+      "52121004",
+      "52121005",
+      "52121006",
+      "52121007",
+      "52121008",
+      "52121009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5212103",
+    "produtofornecedor": "CETIM C/ELASTANO 1,50L 97% POLYE 3%ELAST",
+    "unidademedida": "MT",
+    "codigoerp": "3710",
+    "nomeerp": "CETIM  C/ ELASTANO - LISO",
+    "cProd_norm": "5212103",
+    "variants": [
+      "5212103",
+      "52121030",
+      "52121031",
+      "52121032",
+      "52121033",
+      "52121034",
+      "52121035",
+      "52121036",
+      "52121037",
+      "52121038",
+      "52121039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "169100",
+    "produtofornecedor": "CETIM C/ELASTANO 1.47L 97% POLIESTER 3%ELASTANO 88GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "3710",
+    "nomeerp": "CETIM  C/ ELASTANO - LISO",
+    "cProd_norm": "169100",
+    "variants": [
+      "169100",
+      "1691000",
+      "1691001",
+      "1691002",
+      "1691003",
+      "1691004",
+      "1691005",
+      "1691006",
+      "1691007",
+      "1691008",
+      "1691009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "169103",
+    "produtofornecedor": "CETIM C/ELASTANO 1.47L 97% POLYE 3%ELAST",
+    "unidademedida": "MT",
+    "codigoerp": "3710",
+    "nomeerp": "CETIM  C/ ELASTANO - LISO",
+    "cProd_norm": "169103",
+    "variants": [
+      "169103",
+      "1691030",
+      "1691031",
+      "1691032",
+      "1691033",
+      "1691034",
+      "1691035",
+      "1691036",
+      "1691037",
+      "1691038",
+      "1691039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4885100",
+    "produtofornecedor": "CETIM TINTO 3,0L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "3911",
+    "nomeerp": "CETIM LISO",
+    "cProd_norm": "4885100",
+    "variants": [
+      "4885100",
+      "48851000",
+      "48851001",
+      "48851002",
+      "48851003",
+      "48851004",
+      "48851005",
+      "48851006",
+      "48851007",
+      "48851008",
+      "48851009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4885103",
+    "produtofornecedor": "CETIM TINTO 3,0L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "3911",
+    "nomeerp": "CETIM LISO",
+    "cProd_norm": "4885103",
+    "variants": [
+      "4885103",
+      "48851030",
+      "48851031",
+      "48851032",
+      "48851033",
+      "48851034",
+      "48851035",
+      "48851036",
+      "48851037",
+      "48851038",
+      "48851039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "1990000",
+    "produtofornecedor": "CHIFFON 100D",
+    "unidademedida": "MT",
+    "codigoerp": "3951",
+    "nomeerp": "CHIFFON",
+    "cProd_norm": "1990000",
+    "variants": [
+      "1990000",
+      "19900000",
+      "19900001",
+      "19900002",
+      "19900003",
+      "19900004",
+      "19900005",
+      "19900006",
+      "19900007",
+      "19900008",
+      "19900009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "1950000",
+    "produtofornecedor": "CHIFFON 100D",
+    "unidademedida": "MT",
+    "codigoerp": "3951",
+    "nomeerp": "CHIFFON",
+    "cProd_norm": "1950000",
+    "variants": [
+      "1950000",
+      "19500000",
+      "19500001",
+      "19500002",
+      "19500003",
+      "19500004",
+      "19500005",
+      "19500006",
+      "19500007",
+      "19500008",
+      "19500009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54680000",
+    "produtofornecedor": "CHIFFON 100D",
+    "unidademedida": "MT",
+    "codigoerp": "3951",
+    "nomeerp": "CHIFFON",
+    "cProd_norm": "54680000",
+    "variants": [
+      "54680000",
+      "546800000",
+      "546800001",
+      "546800002",
+      "546800003",
+      "546800004",
+      "546800005",
+      "546800006",
+      "546800007",
+      "546800008",
+      "546800009",
+      "5468000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54690000",
+    "produtofornecedor": "CHIFFON 100D",
+    "unidademedida": "MT",
+    "codigoerp": "3951",
+    "nomeerp": "CHIFFON",
+    "cProd_norm": "54690000",
+    "variants": [
+      "54690000",
+      "546900000",
+      "546900001",
+      "546900002",
+      "546900003",
+      "546900004",
+      "546900005",
+      "546900006",
+      "546900007",
+      "546900008",
+      "546900009",
+      "5469000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "201100",
+    "produtofornecedor": "CHIFFON TINTO 1.47L 100% POLIESTER 74GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "3951",
+    "nomeerp": "CHIFFON",
+    "cProd_norm": "201100",
+    "variants": [
+      "201100",
+      "2011000",
+      "2011001",
+      "2011002",
+      "2011003",
+      "2011004",
+      "2011005",
+      "2011006",
+      "2011007",
+      "2011008",
+      "2011009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "201103",
+    "produtofornecedor": "CHIFFON TINTO 1.47L 100% POLIESTER 74GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "3951",
+    "nomeerp": "CHIFFON",
+    "cProd_norm": "201103",
+    "variants": [
+      "201103",
+      "2011030",
+      "2011031",
+      "2011032",
+      "2011033",
+      "2011034",
+      "2011035",
+      "2011036",
+      "2011037",
+      "2011038",
+      "2011039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54790000",
+    "produtofornecedor": "CHITAO ESTAMPADO",
+    "unidademedida": "MT",
+    "codigoerp": "4072",
+    "nomeerp": "CHITAO / TEXTOLEEN ESTAMPADO 100% POLIESTER",
+    "cProd_norm": "54790000",
+    "variants": [
+      "54790000",
+      "547900000",
+      "547900001",
+      "547900002",
+      "547900003",
+      "547900004",
+      "547900005",
+      "547900006",
+      "547900007",
+      "547900008",
+      "547900009",
+      "5479000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3667103",
+    "produtofornecedor": "CHITAO FLEX 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4072",
+    "nomeerp": "CHITAO / TEXTOLEEN ESTAMPADO 100% POLIESTER",
+    "cProd_norm": "3667103",
+    "variants": [
+      "3667103",
+      "36671030",
+      "36671031",
+      "36671032",
+      "36671033",
+      "36671034",
+      "36671035",
+      "36671036",
+      "36671037",
+      "36671038",
+      "36671039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5612103",
+    "produtofornecedor": "EUROLEEN ARTEDECOR 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4072",
+    "nomeerp": "CHITAO / TEXTOLEEN ESTAMPADO 100% POLIESTER",
+    "cProd_norm": "5612103",
+    "variants": [
+      "5612103",
+      "56121030",
+      "56121031",
+      "56121032",
+      "56121033",
+      "56121034",
+      "56121035",
+      "56121036",
+      "56121037",
+      "56121038",
+      "56121039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5607103",
+    "produtofornecedor": "EUROLEEN CLASSIC 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4072",
+    "nomeerp": "CHITAO / TEXTOLEEN ESTAMPADO 100% POLIESTER",
+    "cProd_norm": "5607103",
+    "variants": [
+      "5607103",
+      "56071030",
+      "56071031",
+      "56071032",
+      "56071033",
+      "56071034",
+      "56071035",
+      "56071036",
+      "56071037",
+      "56071038",
+      "56071039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5142100",
+    "produtofornecedor": "CREPE AMANDA 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4402",
+    "nomeerp": "CREPE AMANDA",
+    "cProd_norm": "5142100",
+    "variants": [
+      "5142100",
+      "51421000",
+      "51421001",
+      "51421002",
+      "51421003",
+      "51421004",
+      "51421005",
+      "51421006",
+      "51421007",
+      "51421008",
+      "51421009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5142103",
+    "produtofornecedor": "CREPE AMANDA 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4402",
+    "nomeerp": "CREPE AMANDA",
+    "cProd_norm": "5142103",
+    "variants": [
+      "5142103",
+      "51421030",
+      "51421031",
+      "51421032",
+      "51421033",
+      "51421034",
+      "51421035",
+      "51421036",
+      "51421037",
+      "51421038",
+      "51421039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3235100",
+    "produtofornecedor": "CREPE AMANDA 1.47L 100%POLIESTER 156GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "4402",
+    "nomeerp": "CREPE AMANDA",
+    "cProd_norm": "3235100",
+    "variants": [
+      "3235100",
+      "32351000",
+      "32351001",
+      "32351002",
+      "32351003",
+      "32351004",
+      "32351005",
+      "32351006",
+      "32351007",
+      "32351008",
+      "32351009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3235103",
+    "produtofornecedor": "CREPE AMANDA 1.47L 100%POLIESTER 156GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "4402",
+    "nomeerp": "CREPE AMANDA",
+    "cProd_norm": "3235103",
+    "variants": [
+      "3235103",
+      "32351030",
+      "32351031",
+      "32351032",
+      "32351033",
+      "32351034",
+      "32351035",
+      "32351036",
+      "32351037",
+      "32351038",
+      "32351039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "51600000",
+    "produtofornecedor": "AIR FLOW SLUB LAGUNA",
+    "unidademedida": "MT",
+    "codigoerp": "4682",
+    "nomeerp": "CREPE DUNA  - AIR FLOW",
+    "cProd_norm": "51600000",
+    "variants": [
+      "51600000",
+      "516000000",
+      "516000001",
+      "516000002",
+      "516000003",
+      "516000004",
+      "516000005",
+      "516000006",
+      "516000007",
+      "516000008",
+      "516000009",
+      "5160000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "14200000",
+    "produtofornecedor": "TECIDO DUNAS (CEY)",
+    "unidademedida": "MT",
+    "codigoerp": "4682",
+    "nomeerp": "CREPE DUNA  - AIR FLOW",
+    "cProd_norm": "14200000",
+    "variants": [
+      "14200000",
+      "142000000",
+      "142000001",
+      "142000002",
+      "142000003",
+      "142000004",
+      "142000005",
+      "142000006",
+      "142000007",
+      "142000008",
+      "142000009",
+      "1420000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "14210000",
+    "produtofornecedor": "TECIDO DUNAS (CEY)",
+    "unidademedida": "MT",
+    "codigoerp": "4682",
+    "nomeerp": "CREPE DUNA  - AIR FLOW",
+    "cProd_norm": "14210000",
+    "variants": [
+      "14210000",
+      "142100000",
+      "142100001",
+      "142100002",
+      "142100003",
+      "142100004",
+      "142100005",
+      "142100006",
+      "142100007",
+      "142100008",
+      "142100009",
+      "1421000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "55250000",
+    "produtofornecedor": "TECIDO DUNAS HEAVY",
+    "unidademedida": "MT",
+    "codigoerp": "4682",
+    "nomeerp": "CREPE DUNA  - AIR FLOW",
+    "cProd_norm": "55250000",
+    "variants": [
+      "55250000",
+      "552500000",
+      "552500001",
+      "552500002",
+      "552500003",
+      "552500004",
+      "552500005",
+      "552500006",
+      "552500007",
+      "552500008",
+      "552500009",
+      "5525000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5012103",
+    "produtofornecedor": "CEY AIR FLOW FIO TINTO 1,47L  100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4682",
+    "nomeerp": "CREPE DUNA  - AIR FLOW",
+    "cProd_norm": "5012103",
+    "variants": [
+      "5012103",
+      "50121030",
+      "50121031",
+      "50121032",
+      "50121033",
+      "50121034",
+      "50121035",
+      "50121036",
+      "50121037",
+      "50121038",
+      "50121039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5051103",
+    "produtofornecedor": "CEY AIR FLOW PREMIUM TINTO 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4682",
+    "nomeerp": "CREPE DUNA  - AIR FLOW",
+    "cProd_norm": "5051103",
+    "variants": [
+      "5051103",
+      "50511030",
+      "50511031",
+      "50511032",
+      "50511033",
+      "50511034",
+      "50511035",
+      "50511036",
+      "50511037",
+      "50511038",
+      "50511039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4861100",
+    "produtofornecedor": "CEY AIR FLOW TINTO 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4682",
+    "nomeerp": "CREPE DUNA  - AIR FLOW",
+    "cProd_norm": "4861100",
+    "variants": [
+      "4861100",
+      "48611000",
+      "48611001",
+      "48611002",
+      "48611003",
+      "48611004",
+      "48611005",
+      "48611006",
+      "48611007",
+      "48611008",
+      "48611009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4861103",
+    "produtofornecedor": "CEY AIR FLOW TINTO 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4682",
+    "nomeerp": "CREPE DUNA  - AIR FLOW",
+    "cProd_norm": "4861103",
+    "variants": [
+      "4861103",
+      "48611030",
+      "48611031",
+      "48611032",
+      "48611033",
+      "48611034",
+      "48611035",
+      "48611036",
+      "48611037",
+      "48611038",
+      "48611039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5502103",
+    "produtofornecedor": "CEY TINTO 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4682",
+    "nomeerp": "CREPE DUNA  - AIR FLOW",
+    "cProd_norm": "5502103",
+    "variants": [
+      "5502103",
+      "55021030",
+      "55021031",
+      "55021032",
+      "55021033",
+      "55021034",
+      "55021035",
+      "55021036",
+      "55021037",
+      "55021038",
+      "55021039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54660000",
+    "produtofornecedor": "CREPE GEORGETE",
+    "unidademedida": "MT",
+    "codigoerp": "4724",
+    "nomeerp": "CREPE GEORGETE LISO 100% POLIESTER",
+    "cProd_norm": "54660000",
+    "variants": [
+      "54660000",
+      "546600000",
+      "546600001",
+      "546600002",
+      "546600003",
+      "546600004",
+      "546600005",
+      "546600006",
+      "546600007",
+      "546600008",
+      "546600009",
+      "5466000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56900000",
+    "produtofornecedor": "CREPE GEORGETE",
+    "unidademedida": "MT",
+    "codigoerp": "4724",
+    "nomeerp": "CREPE GEORGETE LISO 100% POLIESTER",
+    "cProd_norm": "56900000",
+    "variants": [
+      "56900000",
+      "569000000",
+      "569000001",
+      "569000002",
+      "569000003",
+      "569000004",
+      "569000005",
+      "569000006",
+      "569000007",
+      "569000008",
+      "569000009",
+      "5690000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56910000",
+    "produtofornecedor": "CREPE GEORGETE BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "4724",
+    "nomeerp": "CREPE GEORGETE LISO 100% POLIESTER",
+    "cProd_norm": "56910000",
+    "variants": [
+      "56910000",
+      "569100000",
+      "569100001",
+      "569100002",
+      "569100003",
+      "569100004",
+      "569100005",
+      "569100006",
+      "569100007",
+      "569100008",
+      "569100009",
+      "5691000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3281103",
+    "produtofornecedor": "CREPE GGT 2400 TORCOES 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "4724",
+    "nomeerp": "CREPE GEORGETE LISO 100% POLIESTER",
+    "cProd_norm": "3281103",
+    "variants": [
+      "3281103",
+      "32811030",
+      "32811031",
+      "32811032",
+      "32811033",
+      "32811034",
+      "32811035",
+      "32811036",
+      "32811037",
+      "32811038",
+      "32811039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3281100",
+    "produtofornecedor": "CREPE GGT 2400 TORCOES 1.47L 100%POLIESTER 114GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "4724",
+    "nomeerp": "CREPE GEORGETE LISO 100% POLIESTER",
+    "cProd_norm": "3281100",
+    "variants": [
+      "3281100",
+      "32811000",
+      "32811001",
+      "32811002",
+      "32811003",
+      "32811004",
+      "32811005",
+      "32811006",
+      "32811007",
+      "32811008",
+      "32811009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "19360000",
+    "produtofornecedor": "CREPE MUSSON ITALY",
+    "unidademedida": "MT",
+    "codigoerp": "4926",
+    "nomeerp": "CREPE MUSSON",
+    "cProd_norm": "19360000",
+    "variants": [
+      "19360000",
+      "193600000",
+      "193600001",
+      "193600002",
+      "193600003",
+      "193600004",
+      "193600005",
+      "193600006",
+      "193600007",
+      "193600008",
+      "193600009",
+      "1936000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "19370000",
+    "produtofornecedor": "CREPE MUSSON ITALY",
+    "unidademedida": "MT",
+    "codigoerp": "4926",
+    "nomeerp": "CREPE MUSSON",
+    "cProd_norm": "19370000",
+    "variants": [
+      "19370000",
+      "193700000",
+      "193700001",
+      "193700002",
+      "193700003",
+      "193700004",
+      "193700005",
+      "193700006",
+      "193700007",
+      "193700008",
+      "193700009",
+      "1937000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "3170000",
+    "produtofornecedor": "CREPE MUSSON ITALY",
+    "unidademedida": "MT",
+    "codigoerp": "4926",
+    "nomeerp": "CREPE MUSSON",
+    "cProd_norm": "3170000",
+    "variants": [
+      "3170000",
+      "31700000",
+      "31700001",
+      "31700002",
+      "31700003",
+      "31700004",
+      "31700005",
+      "31700006",
+      "31700007",
+      "31700008",
+      "31700009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4415103",
+    "produtofornecedor": "CREPE MUSSON VENEZA 1.47 92% POLY 8% ELAST",
+    "unidademedida": "MT",
+    "codigoerp": "4926",
+    "nomeerp": "CREPE MUSSON",
+    "cProd_norm": "4415103",
+    "variants": [
+      "4415103",
+      "44151030",
+      "44151031",
+      "44151032",
+      "44151033",
+      "44151034",
+      "44151035",
+      "44151036",
+      "44151037",
+      "44151038",
+      "44151039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4564103",
+    "produtofornecedor": "CREPE MUSSON VENEZA ESTAMPADO 1,47L 95% POLYESTER 5% ELASTAN",
+    "unidademedida": "MT",
+    "codigoerp": "4926",
+    "nomeerp": "CREPE MUSSON",
+    "cProd_norm": "4564103",
+    "variants": [
+      "4564103",
+      "45641030",
+      "45641031",
+      "45641032",
+      "45641033",
+      "45641034",
+      "45641035",
+      "45641036",
+      "45641037",
+      "45641038",
+      "45641039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5221100",
+    "produtofornecedor": "SALINA TINTO 1,50L 96% POLYESTER 4% ELASTANO",
+    "unidademedida": "MT",
+    "codigoerp": "5167",
+    "nomeerp": "CREPE SALINA LISO 96% POLIESTER 4% ELAST",
+    "cProd_norm": "5221100",
+    "variants": [
+      "5221100",
+      "52211000",
+      "52211001",
+      "52211002",
+      "52211003",
+      "52211004",
+      "52211005",
+      "52211006",
+      "52211007",
+      "52211008",
+      "52211009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5221103",
+    "produtofornecedor": "SALINA TINTO 1,50L 96% POLYESTER 4% ELASTANO",
+    "unidademedida": "MT",
+    "codigoerp": "5167",
+    "nomeerp": "CREPE SALINA LISO 96% POLIESTER 4% ELAST",
+    "cProd_norm": "5221103",
+    "variants": [
+      "5221103",
+      "52211030",
+      "52211031",
+      "52211032",
+      "52211033",
+      "52211034",
+      "52211035",
+      "52211036",
+      "52211037",
+      "52211038",
+      "52211039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "2637103",
+    "produtofornecedor": "SALINA TINTO 1.47L  96% POLYESTER 4% ELASTANO 72GR/M",
+    "unidademedida": "MT",
+    "codigoerp": "5167",
+    "nomeerp": "CREPE SALINA LISO 96% POLIESTER 4% ELAST",
+    "cProd_norm": "2637103",
+    "variants": [
+      "2637103",
+      "26371030",
+      "26371031",
+      "26371032",
+      "26371033",
+      "26371034",
+      "26371035",
+      "26371036",
+      "26371037",
+      "26371038",
+      "26371039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "2637100",
+    "produtofornecedor": "SALINA TINTO 1.47L  96% POLYESTER 4% ELASTANO 72GR/M",
+    "unidademedida": "MT",
+    "codigoerp": "5167",
+    "nomeerp": "CREPE SALINA LISO 96% POLIESTER 4% ELAST",
+    "cProd_norm": "2637100",
+    "variants": [
+      "2637100",
+      "26371000",
+      "26371001",
+      "26371002",
+      "26371003",
+      "26371004",
+      "26371005",
+      "26371006",
+      "26371007",
+      "26371008",
+      "26371009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4476100",
+    "produtofornecedor": "TULLE ARMACAO 2.80L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "5491",
+    "nomeerp": "FILÓ DE ARMAÇÃO",
+    "cProd_norm": "4476100",
+    "variants": [
+      "4476100",
+      "44761000",
+      "44761001",
+      "44761002",
+      "44761003",
+      "44761004",
+      "44761005",
+      "44761006",
+      "44761007",
+      "44761008",
+      "44761009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4476103",
+    "produtofornecedor": "TULLE ARMACAO 2.80L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "5491",
+    "nomeerp": "FILÓ DE ARMAÇÃO",
+    "cProd_norm": "4476103",
+    "variants": [
+      "4476103",
+      "44761030",
+      "44761031",
+      "44761032",
+      "44761033",
+      "44761034",
+      "44761035",
+      "44761036",
+      "44761037",
+      "44761038",
+      "44761039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "57150000",
+    "produtofornecedor": "GABARDINE DOURO",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "57150000",
+    "variants": [
+      "57150000",
+      "571500000",
+      "571500001",
+      "571500002",
+      "571500003",
+      "571500004",
+      "571500005",
+      "571500006",
+      "571500007",
+      "571500008",
+      "571500009",
+      "5715000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "57140000",
+    "produtofornecedor": "GABARDINE DOURO",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "57140000",
+    "variants": [
+      "57140000",
+      "571400000",
+      "571400001",
+      "571400002",
+      "571400003",
+      "571400004",
+      "571400005",
+      "571400006",
+      "571400007",
+      "571400008",
+      "571400009",
+      "5714000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "16930000",
+    "produtofornecedor": "GABARDINE ESTORIL",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "16930000",
+    "variants": [
+      "16930000",
+      "169300000",
+      "169300001",
+      "169300002",
+      "169300003",
+      "169300004",
+      "169300005",
+      "169300006",
+      "169300007",
+      "169300008",
+      "169300009",
+      "1693000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "16920000",
+    "produtofornecedor": "GABARDINE ESTORIL",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "16920000",
+    "variants": [
+      "16920000",
+      "169200000",
+      "169200001",
+      "169200002",
+      "169200003",
+      "169200004",
+      "169200005",
+      "169200006",
+      "169200007",
+      "169200008",
+      "169200009",
+      "1692000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5202100",
+    "produtofornecedor": "GABARDINE MADRID 1,47L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "5202100",
+    "variants": [
+      "5202100",
+      "52021000",
+      "52021001",
+      "52021002",
+      "52021003",
+      "52021004",
+      "52021005",
+      "52021006",
+      "52021007",
+      "52021008",
+      "52021009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5202103",
+    "produtofornecedor": "GABARDINE MADRID 1,47L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "5202103",
+    "variants": [
+      "5202103",
+      "52021030",
+      "52021031",
+      "52021032",
+      "52021033",
+      "52021034",
+      "52021035",
+      "52021036",
+      "52021037",
+      "52021038",
+      "52021039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5428103",
+    "produtofornecedor": "GABARDINE PREMIUM 1,47L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "5428103",
+    "variants": [
+      "5428103",
+      "54281030",
+      "54281031",
+      "54281032",
+      "54281033",
+      "54281034",
+      "54281035",
+      "54281036",
+      "54281037",
+      "54281038",
+      "54281039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "3510000",
+    "produtofornecedor": "GABARDINE SINTRA",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "3510000",
+    "variants": [
+      "3510000",
+      "35100000",
+      "35100001",
+      "35100002",
+      "35100003",
+      "35100004",
+      "35100005",
+      "35100006",
+      "35100007",
+      "35100008",
+      "35100009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "3520000",
+    "produtofornecedor": "GABARDINE SINTRA BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "3520000",
+    "variants": [
+      "3520000",
+      "35200000",
+      "35200001",
+      "35200002",
+      "35200003",
+      "35200004",
+      "35200005",
+      "35200006",
+      "35200007",
+      "35200008",
+      "35200009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4725100",
+    "produtofornecedor": "GABARDINE TINTO 1.50L 100%POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "4725100",
+    "variants": [
+      "4725100",
+      "47251000",
+      "47251001",
+      "47251002",
+      "47251003",
+      "47251004",
+      "47251005",
+      "47251006",
+      "47251007",
+      "47251008",
+      "47251009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4725103",
+    "produtofornecedor": "GABARDINE TINTO 1.50L 100%POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "5747",
+    "nomeerp": "GABARDINE   - 100% POLIESTER",
+    "cProd_norm": "4725103",
+    "variants": [
+      "4725103",
+      "47251030",
+      "47251031",
+      "47251032",
+      "47251033",
+      "47251034",
+      "47251035",
+      "47251036",
+      "47251037",
+      "47251038",
+      "47251039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "58120000",
+    "produtofornecedor": "JACQUARD DAKOTA",
+    "unidademedida": "MT",
+    "codigoerp": "5787",
+    "nomeerp": "JACQUARD",
+    "cProd_norm": "58120000",
+    "variants": [
+      "58120000",
+      "581200000",
+      "581200001",
+      "581200002",
+      "581200003",
+      "581200004",
+      "581200005",
+      "581200006",
+      "581200007",
+      "581200008",
+      "581200009",
+      "5812000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "60080000",
+    "produtofornecedor": "JACQUARD DAKOTA",
+    "unidademedida": "MT",
+    "codigoerp": "5787",
+    "nomeerp": "JACQUARD",
+    "cProd_norm": "60080000",
+    "variants": [
+      "60080000",
+      "600800000",
+      "600800001",
+      "600800002",
+      "600800003",
+      "600800004",
+      "600800005",
+      "600800006",
+      "600800007",
+      "600800008",
+      "600800009",
+      "6008000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "60220000",
+    "produtofornecedor": "JACQUARD DAKOTA",
+    "unidademedida": "MT",
+    "codigoerp": "5787",
+    "nomeerp": "JACQUARD",
+    "cProd_norm": "60220000",
+    "variants": [
+      "60220000",
+      "602200000",
+      "602200001",
+      "602200002",
+      "602200003",
+      "602200004",
+      "602200005",
+      "602200006",
+      "602200007",
+      "602200008",
+      "602200009",
+      "6022000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4262103",
+    "produtofornecedor": "DAMASK 2.80L 100% POLYESTER 152GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "5787",
+    "nomeerp": "JACQUARD",
+    "cProd_norm": "4262103",
+    "variants": [
+      "4262103",
+      "42621030",
+      "42621031",
+      "42621032",
+      "42621033",
+      "42621034",
+      "42621035",
+      "42621036",
+      "42621037",
+      "42621038",
+      "42621039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5435103",
+    "produtofornecedor": "COTTON EMBROIDERY 3D 1,30L 100%ALGODAO BORDADO 100%POLYESTE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "5435103",
+    "variants": [
+      "5435103",
+      "54351030",
+      "54351031",
+      "54351032",
+      "54351033",
+      "54351034",
+      "54351035",
+      "54351036",
+      "54351037",
+      "54351038",
+      "54351039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4759103",
+    "produtofornecedor": "COTTON EMBROIDERY CORD 1.30L 100% ALGODAO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "4759103",
+    "variants": [
+      "4759103",
+      "47591030",
+      "47591031",
+      "47591032",
+      "47591033",
+      "47591034",
+      "47591035",
+      "47591036",
+      "47591037",
+      "47591038",
+      "47591039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4385103",
+    "produtofornecedor": "COTTON EMBROIDERY LUNA 1,30L 100%ALGODAO/BORDADO:100%POLIEST",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "4385103",
+    "variants": [
+      "4385103",
+      "43851030",
+      "43851031",
+      "43851032",
+      "43851033",
+      "43851034",
+      "43851035",
+      "43851036",
+      "43851037",
+      "43851038",
+      "43851039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4385104",
+    "produtofornecedor": "COTTON EMBROIDERY LUNA 1,30L 100%ALGODAO/BORDADO:100%POLIEST",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "4385104",
+    "variants": [
+      "4385104",
+      "43851040",
+      "43851041",
+      "43851042",
+      "43851043",
+      "43851044",
+      "43851045",
+      "43851046",
+      "43851047",
+      "43851048",
+      "43851049"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4385106",
+    "produtofornecedor": "COTTON EMBROIDERY LUNA 1,30L 100%ALGODAO/BORDADO:100%POLIEST",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "4385106",
+    "variants": [
+      "4385106",
+      "43851060",
+      "43851061",
+      "43851062",
+      "43851063",
+      "43851064",
+      "43851065",
+      "43851066",
+      "43851067",
+      "43851068",
+      "43851069"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4385105",
+    "produtofornecedor": "COTTON EMBROIDERY LUNA 1,30L 100%ALGODAO/BORDADO:100%POLIEST",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "4385105",
+    "variants": [
+      "4385105",
+      "43851050",
+      "43851051",
+      "43851052",
+      "43851053",
+      "43851054",
+      "43851055",
+      "43851056",
+      "43851057",
+      "43851058",
+      "43851059"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4761103",
+    "produtofornecedor": "COTTON EMBROIDERY LYON 1.30L 100% ALGODAO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "4761103",
+    "variants": [
+      "4761103",
+      "47611030",
+      "47611031",
+      "47611032",
+      "47611033",
+      "47611034",
+      "47611035",
+      "47611036",
+      "47611037",
+      "47611038",
+      "47611039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4662103",
+    "produtofornecedor": "COTTON EMBROIDERY MARSELHA 1.30L 100% ALGODAO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "4662103",
+    "variants": [
+      "4662103",
+      "46621030",
+      "46621031",
+      "46621032",
+      "46621033",
+      "46621034",
+      "46621035",
+      "46621036",
+      "46621037",
+      "46621038",
+      "46621039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "19040000",
+    "produtofornecedor": "LAISE MAUI",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "19040000",
+    "variants": [
+      "19040000",
+      "190400000",
+      "190400001",
+      "190400002",
+      "190400003",
+      "190400004",
+      "190400005",
+      "190400006",
+      "190400007",
+      "190400008",
+      "190400009",
+      "1904000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "57710000",
+    "produtofornecedor": "LAISE MISSISSIPI",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "57710000",
+    "variants": [
+      "57710000",
+      "577100000",
+      "577100001",
+      "577100002",
+      "577100003",
+      "577100004",
+      "577100005",
+      "577100006",
+      "577100007",
+      "577100008",
+      "577100009",
+      "5771000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "57720000",
+    "produtofornecedor": "LAISE MISSISSIPI",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "57720000",
+    "variants": [
+      "57720000",
+      "577200000",
+      "577200001",
+      "577200002",
+      "577200003",
+      "577200004",
+      "577200005",
+      "577200006",
+      "577200007",
+      "577200008",
+      "577200009",
+      "5772000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "57730000",
+    "produtofornecedor": "LAISE MISSISSIPI",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "57730000",
+    "variants": [
+      "57730000",
+      "577300000",
+      "577300001",
+      "577300002",
+      "577300003",
+      "577300004",
+      "577300005",
+      "577300006",
+      "577300007",
+      "577300008",
+      "577300009",
+      "5773000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "57740000",
+    "produtofornecedor": "LAISE MISSISSIPI",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "57740000",
+    "variants": [
+      "57740000",
+      "577400000",
+      "577400001",
+      "577400002",
+      "577400003",
+      "577400004",
+      "577400005",
+      "577400006",
+      "577400007",
+      "577400008",
+      "577400009",
+      "5774000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "57750000",
+    "produtofornecedor": "LAISE MISSISSIPI",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "57750000",
+    "variants": [
+      "57750000",
+      "577500000",
+      "577500001",
+      "577500002",
+      "577500003",
+      "577500004",
+      "577500005",
+      "577500006",
+      "577500007",
+      "577500008",
+      "577500009",
+      "5775000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "57760000",
+    "produtofornecedor": "LAISE MISSISSIPI",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "57760000",
+    "variants": [
+      "57760000",
+      "577600000",
+      "577600001",
+      "577600002",
+      "577600003",
+      "577600004",
+      "577600005",
+      "577600006",
+      "577600007",
+      "577600008",
+      "577600009",
+      "5776000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "19060000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "19060000",
+    "variants": [
+      "19060000",
+      "190600000",
+      "190600001",
+      "190600002",
+      "190600003",
+      "190600004",
+      "190600005",
+      "190600006",
+      "190600007",
+      "190600008",
+      "190600009",
+      "1906000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54730000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "54730000",
+    "variants": [
+      "54730000",
+      "547300000",
+      "547300001",
+      "547300002",
+      "547300003",
+      "547300004",
+      "547300005",
+      "547300006",
+      "547300007",
+      "547300008",
+      "547300009",
+      "5473000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56060000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56060000",
+    "variants": [
+      "56060000",
+      "560600000",
+      "560600001",
+      "560600002",
+      "560600003",
+      "560600004",
+      "560600005",
+      "560600006",
+      "560600007",
+      "560600008",
+      "560600009",
+      "5606000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56070000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56070000",
+    "variants": [
+      "56070000",
+      "560700000",
+      "560700001",
+      "560700002",
+      "560700003",
+      "560700004",
+      "560700005",
+      "560700006",
+      "560700007",
+      "560700008",
+      "560700009",
+      "5607000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56090000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56090000",
+    "variants": [
+      "56090000",
+      "560900000",
+      "560900001",
+      "560900002",
+      "560900003",
+      "560900004",
+      "560900005",
+      "560900006",
+      "560900007",
+      "560900008",
+      "560900009",
+      "5609000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56100000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56100000",
+    "variants": [
+      "56100000",
+      "561000000",
+      "561000001",
+      "561000002",
+      "561000003",
+      "561000004",
+      "561000005",
+      "561000006",
+      "561000007",
+      "561000008",
+      "561000009",
+      "5610000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56110000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56110000",
+    "variants": [
+      "56110000",
+      "561100000",
+      "561100001",
+      "561100002",
+      "561100003",
+      "561100004",
+      "561100005",
+      "561100006",
+      "561100007",
+      "561100008",
+      "561100009",
+      "5611000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "60870000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "60870000",
+    "variants": [
+      "60870000",
+      "608700000",
+      "608700001",
+      "608700002",
+      "608700003",
+      "608700004",
+      "608700005",
+      "608700006",
+      "608700007",
+      "608700008",
+      "608700009",
+      "6087000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "60920000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "60920000",
+    "variants": [
+      "60920000",
+      "609200000",
+      "609200001",
+      "609200002",
+      "609200003",
+      "609200004",
+      "609200005",
+      "609200006",
+      "609200007",
+      "609200008",
+      "609200009",
+      "6092000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "55090000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "55090000",
+    "variants": [
+      "55090000",
+      "550900000",
+      "550900001",
+      "550900002",
+      "550900003",
+      "550900004",
+      "550900005",
+      "550900006",
+      "550900007",
+      "550900008",
+      "550900009",
+      "5509000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "55100000",
+    "produtofornecedor": "LAISE NATURALE",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "55100000",
+    "variants": [
+      "55100000",
+      "551000000",
+      "551000001",
+      "551000002",
+      "551000003",
+      "551000004",
+      "551000005",
+      "551000006",
+      "551000007",
+      "551000008",
+      "551000009",
+      "5510000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "17720000",
+    "produtofornecedor": "LAISE PATNA",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "17720000",
+    "variants": [
+      "17720000",
+      "177200000",
+      "177200001",
+      "177200002",
+      "177200003",
+      "177200004",
+      "177200005",
+      "177200006",
+      "177200007",
+      "177200008",
+      "177200009",
+      "1772000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "28260000",
+    "produtofornecedor": "LAISE PITAIA",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "28260000",
+    "variants": [
+      "28260000",
+      "282600000",
+      "282600001",
+      "282600002",
+      "282600003",
+      "282600004",
+      "282600005",
+      "282600006",
+      "282600007",
+      "282600008",
+      "282600009",
+      "2826000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "58240000",
+    "produtofornecedor": "LAISE PITAIA",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "58240000",
+    "variants": [
+      "58240000",
+      "582400000",
+      "582400001",
+      "582400002",
+      "582400003",
+      "582400004",
+      "582400005",
+      "582400006",
+      "582400007",
+      "582400008",
+      "582400009",
+      "5824000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "58250000",
+    "produtofornecedor": "LAISE PITAIA",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "58250000",
+    "variants": [
+      "58250000",
+      "582500000",
+      "582500001",
+      "582500002",
+      "582500003",
+      "582500004",
+      "582500005",
+      "582500006",
+      "582500007",
+      "582500008",
+      "582500009",
+      "5825000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "58270000",
+    "produtofornecedor": "LAISE PITAIA",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "58270000",
+    "variants": [
+      "58270000",
+      "582700000",
+      "582700001",
+      "582700002",
+      "582700003",
+      "582700004",
+      "582700005",
+      "582700006",
+      "582700007",
+      "582700008",
+      "582700009",
+      "5827000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56610000",
+    "produtofornecedor": "LAISE SLUB SALAR",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56610000",
+    "variants": [
+      "56610000",
+      "566100000",
+      "566100001",
+      "566100002",
+      "566100003",
+      "566100004",
+      "566100005",
+      "566100006",
+      "566100007",
+      "566100008",
+      "566100009",
+      "5661000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56620000",
+    "produtofornecedor": "LAISE SLUB SALAR",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56620000",
+    "variants": [
+      "56620000",
+      "566200000",
+      "566200001",
+      "566200002",
+      "566200003",
+      "566200004",
+      "566200005",
+      "566200006",
+      "566200007",
+      "566200008",
+      "566200009",
+      "5662000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56630000",
+    "produtofornecedor": "LAISE SLUB SALAR",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56630000",
+    "variants": [
+      "56630000",
+      "566300000",
+      "566300001",
+      "566300002",
+      "566300003",
+      "566300004",
+      "566300005",
+      "566300006",
+      "566300007",
+      "566300008",
+      "566300009",
+      "5663000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56650000",
+    "produtofornecedor": "LAISE SLUB SALAR",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56650000",
+    "variants": [
+      "56650000",
+      "566500000",
+      "566500001",
+      "566500002",
+      "566500003",
+      "566500004",
+      "566500005",
+      "566500006",
+      "566500007",
+      "566500008",
+      "566500009",
+      "5665000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56710000",
+    "produtofornecedor": "LAISE TC MARES",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56710000",
+    "variants": [
+      "56710000",
+      "567100000",
+      "567100001",
+      "567100002",
+      "567100003",
+      "567100004",
+      "567100005",
+      "567100006",
+      "567100007",
+      "567100008",
+      "567100009",
+      "5671000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56720000",
+    "produtofornecedor": "LAISE TC MARES",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56720000",
+    "variants": [
+      "56720000",
+      "567200000",
+      "567200001",
+      "567200002",
+      "567200003",
+      "567200004",
+      "567200005",
+      "567200006",
+      "567200007",
+      "567200008",
+      "567200009",
+      "5672000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "19000000",
+    "produtofornecedor": "LAISE VERANO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "19000000",
+    "variants": [
+      "19000000",
+      "190000000",
+      "190000001",
+      "190000002",
+      "190000003",
+      "190000004",
+      "190000005",
+      "190000006",
+      "190000007",
+      "190000008",
+      "190000009",
+      "1900000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "18920000",
+    "produtofornecedor": "LAISE VERANO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "18920000",
+    "variants": [
+      "18920000",
+      "189200000",
+      "189200001",
+      "189200002",
+      "189200003",
+      "189200004",
+      "189200005",
+      "189200006",
+      "189200007",
+      "189200008",
+      "189200009",
+      "1892000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "18890000",
+    "produtofornecedor": "LAISE VERANO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "18890000",
+    "variants": [
+      "18890000",
+      "188900000",
+      "188900001",
+      "188900002",
+      "188900003",
+      "188900004",
+      "188900005",
+      "188900006",
+      "188900007",
+      "188900008",
+      "188900009",
+      "1889000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "55610000",
+    "produtofornecedor": "LAISE VERANO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "55610000",
+    "variants": [
+      "55610000",
+      "556100000",
+      "556100001",
+      "556100002",
+      "556100003",
+      "556100004",
+      "556100005",
+      "556100006",
+      "556100007",
+      "556100008",
+      "556100009",
+      "5561000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56010000",
+    "produtofornecedor": "LAISE VERANO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56010000",
+    "variants": [
+      "56010000",
+      "560100000",
+      "560100001",
+      "560100002",
+      "560100003",
+      "560100004",
+      "560100005",
+      "560100006",
+      "560100007",
+      "560100008",
+      "560100009",
+      "5601000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56020000",
+    "produtofornecedor": "LAISE VERANO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56020000",
+    "variants": [
+      "56020000",
+      "560200000",
+      "560200001",
+      "560200002",
+      "560200003",
+      "560200004",
+      "560200005",
+      "560200006",
+      "560200007",
+      "560200008",
+      "560200009",
+      "5602000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54710000",
+    "produtofornecedor": "LAISE VERANO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "54710000",
+    "variants": [
+      "54710000",
+      "547100000",
+      "547100001",
+      "547100002",
+      "547100003",
+      "547100004",
+      "547100005",
+      "547100006",
+      "547100007",
+      "547100008",
+      "547100009",
+      "5471000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54720000",
+    "produtofornecedor": "LAISE VERANO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "54720000",
+    "variants": [
+      "54720000",
+      "547200000",
+      "547200001",
+      "547200002",
+      "547200003",
+      "547200004",
+      "547200005",
+      "547200006",
+      "547200007",
+      "547200008",
+      "547200009",
+      "5472000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "55630000",
+    "produtofornecedor": "LAISE VERANO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "55630000",
+    "variants": [
+      "55630000",
+      "556300000",
+      "556300001",
+      "556300002",
+      "556300003",
+      "556300004",
+      "556300005",
+      "556300006",
+      "556300007",
+      "556300008",
+      "556300009",
+      "5563000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56040000",
+    "produtofornecedor": "LAISE VERANO",
+    "unidademedida": "MT",
+    "codigoerp": "5919",
+    "nomeerp": "LAISE ALGODÃO - LISA",
+    "cProd_norm": "56040000",
+    "variants": [
+      "56040000",
+      "560400000",
+      "560400001",
+      "560400002",
+      "560400003",
+      "560400004",
+      "560400005",
+      "560400006",
+      "560400007",
+      "560400008",
+      "560400009",
+      "5604000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "1965103",
+    "produtofornecedor": "LAME 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "6120",
+    "nomeerp": "LAME - LISO",
+    "cProd_norm": "1965103",
+    "variants": [
+      "1965103",
+      "19651030",
+      "19651031",
+      "19651032",
+      "19651033",
+      "19651034",
+      "19651035",
+      "19651036",
+      "19651037",
+      "19651038",
+      "19651039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3176103",
+    "produtofornecedor": "LINHO RUSTICO 1.44L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "6264",
+    "nomeerp": "LINHAO 100% POLIESTER",
+    "cProd_norm": "3176103",
+    "variants": [
+      "3176103",
+      "31761030",
+      "31761031",
+      "31761032",
+      "31761033",
+      "31761034",
+      "31761035",
+      "31761036",
+      "31761037",
+      "31761038",
+      "31761039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "3980000",
+    "produtofornecedor": "LINHO PURO",
+    "unidademedida": "MT",
+    "codigoerp": "6344",
+    "nomeerp": "LINHO - 100%",
+    "cProd_norm": "3980000",
+    "variants": [
+      "3980000",
+      "39800000",
+      "39800001",
+      "39800002",
+      "39800003",
+      "39800004",
+      "39800005",
+      "39800006",
+      "39800007",
+      "39800008",
+      "39800009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4103100",
+    "produtofornecedor": "LINHO PURO 1,37L 100% LINHO",
+    "unidademedida": "MT",
+    "codigoerp": "6344",
+    "nomeerp": "LINHO - 100%",
+    "cProd_norm": "4103100",
+    "variants": [
+      "4103100",
+      "41031000",
+      "41031001",
+      "41031002",
+      "41031003",
+      "41031004",
+      "41031005",
+      "41031006",
+      "41031007",
+      "41031008",
+      "41031009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4103103",
+    "produtofornecedor": "LINHO PURO 1,37L 100% LINHO",
+    "unidademedida": "MT",
+    "codigoerp": "6344",
+    "nomeerp": "LINHO - 100%",
+    "cProd_norm": "4103103",
+    "variants": [
+      "4103103",
+      "41031030",
+      "41031031",
+      "41031032",
+      "41031033",
+      "41031034",
+      "41031035",
+      "41031036",
+      "41031037",
+      "41031038",
+      "41031039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "3990000",
+    "produtofornecedor": "LINHO PURO BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "6344",
+    "nomeerp": "LINHO - 100%",
+    "cProd_norm": "3990000",
+    "variants": [
+      "3990000",
+      "39900000",
+      "39900001",
+      "39900002",
+      "39900003",
+      "39900004",
+      "39900005",
+      "39900006",
+      "39900007",
+      "39900008",
+      "39900009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "17250000",
+    "produtofornecedor": "LINHO PURO HEAVY",
+    "unidademedida": "MT",
+    "codigoerp": "6344",
+    "nomeerp": "LINHO - 100%",
+    "cProd_norm": "17250000",
+    "variants": [
+      "17250000",
+      "172500000",
+      "172500001",
+      "172500002",
+      "172500003",
+      "172500004",
+      "172500005",
+      "172500006",
+      "172500007",
+      "172500008",
+      "172500009",
+      "1725000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "17260000",
+    "produtofornecedor": "LINHO PURO HEAVY",
+    "unidademedida": "MT",
+    "codigoerp": "6344",
+    "nomeerp": "LINHO - 100%",
+    "cProd_norm": "17260000",
+    "variants": [
+      "17260000",
+      "172600000",
+      "172600001",
+      "172600002",
+      "172600003",
+      "172600004",
+      "172600005",
+      "172600006",
+      "172600007",
+      "172600008",
+      "172600009",
+      "1726000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5065103",
+    "produtofornecedor": "LINHO EMBROIDERY SUNSET 1,22L 40% POLY, 40% VISCO, 20%LINHO",
+    "unidademedida": "MT",
+    "codigoerp": "6504",
+    "nomeerp": "LINHO BORDADO",
+    "cProd_norm": "5065103",
+    "variants": [
+      "5065103",
+      "50651030",
+      "50651031",
+      "50651032",
+      "50651033",
+      "50651034",
+      "50651035",
+      "50651036",
+      "50651037",
+      "50651038",
+      "50651039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4736103",
+    "produtofornecedor": "LINHO EMBROIDERY TINTO 1.30L  70% VISCOSE 30% LINHO",
+    "unidademedida": "MT",
+    "codigoerp": "6504",
+    "nomeerp": "LINHO BORDADO",
+    "cProd_norm": "4736103",
+    "variants": [
+      "4736103",
+      "47361030",
+      "47361031",
+      "47361032",
+      "47361033",
+      "47361034",
+      "47361035",
+      "47361036",
+      "47361037",
+      "47361038",
+      "47361039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5175103",
+    "produtofornecedor": "LINHO EMBROIDERY TURIM 1,40L 45%VISCO, 35% LINHO, 20% POLYES",
+    "unidademedida": "MT",
+    "codigoerp": "6504",
+    "nomeerp": "LINHO BORDADO",
+    "cProd_norm": "5175103",
+    "variants": [
+      "5175103",
+      "51751030",
+      "51751031",
+      "51751032",
+      "51751033",
+      "51751034",
+      "51751035",
+      "51751036",
+      "51751037",
+      "51751038",
+      "51751039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "20180000",
+    "produtofornecedor": "LINHO MISTO ITACARE",
+    "unidademedida": "MT",
+    "codigoerp": "6827",
+    "nomeerp": "LINHO MISTO -  70% VISCOSE 30% LINHO",
+    "cProd_norm": "20180000",
+    "variants": [
+      "20180000",
+      "201800000",
+      "201800001",
+      "201800002",
+      "201800003",
+      "201800004",
+      "201800005",
+      "201800006",
+      "201800007",
+      "201800008",
+      "201800009",
+      "2018000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "12130000",
+    "produtofornecedor": "LINHO MISTO ITACARE",
+    "unidademedida": "MT",
+    "codigoerp": "6827",
+    "nomeerp": "LINHO MISTO -  70% VISCOSE 30% LINHO",
+    "cProd_norm": "12130000",
+    "variants": [
+      "12130000",
+      "121300000",
+      "121300001",
+      "121300002",
+      "121300003",
+      "121300004",
+      "121300005",
+      "121300006",
+      "121300007",
+      "121300008",
+      "121300009",
+      "1213000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "61160000",
+    "produtofornecedor": "LINHO MISTO ITACARE BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "6827",
+    "nomeerp": "LINHO MISTO -  70% VISCOSE 30% LINHO",
+    "cProd_norm": "61160000",
+    "variants": [
+      "61160000",
+      "611600000",
+      "611600001",
+      "611600002",
+      "611600003",
+      "611600004",
+      "611600005",
+      "611600006",
+      "611600007",
+      "611600008",
+      "611600009",
+      "6116000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "20440000",
+    "produtofornecedor": "LINHO MISTO LEME SPAN",
+    "unidademedida": "MT",
+    "codigoerp": "6827",
+    "nomeerp": "LINHO MISTO -  70% VISCOSE 30% LINHO",
+    "cProd_norm": "20440000",
+    "variants": [
+      "20440000",
+      "204400000",
+      "204400001",
+      "204400002",
+      "204400003",
+      "204400004",
+      "204400005",
+      "204400006",
+      "204400007",
+      "204400008",
+      "204400009",
+      "2044000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "15420000",
+    "produtofornecedor": "LINHO MISTO MARAU",
+    "unidademedida": "MT",
+    "codigoerp": "6827",
+    "nomeerp": "LINHO MISTO -  70% VISCOSE 30% LINHO",
+    "cProd_norm": "15420000",
+    "variants": [
+      "15420000",
+      "154200000",
+      "154200001",
+      "154200002",
+      "154200003",
+      "154200004",
+      "154200005",
+      "154200006",
+      "154200007",
+      "154200008",
+      "154200009",
+      "1542000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5479103",
+    "produtofornecedor": "LINHO SUMMER 1,48L 50% VISCOSE 30%ALGODAO 20%LINHO",
+    "unidademedida": "MT",
+    "codigoerp": "6827",
+    "nomeerp": "LINHO MISTO -  70% VISCOSE 30% LINHO",
+    "cProd_norm": "5479103",
+    "variants": [
+      "5479103",
+      "54791030",
+      "54791031",
+      "54791032",
+      "54791033",
+      "54791034",
+      "54791035",
+      "54791036",
+      "54791037",
+      "54791038",
+      "54791039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "2443100",
+    "produtofornecedor": "LINHO TINTO 1,38L 55%VISCOSE 45%LINHO",
+    "unidademedida": "MT",
+    "codigoerp": "6827",
+    "nomeerp": "LINHO MISTO -  70% VISCOSE 30% LINHO",
+    "cProd_norm": "2443100",
+    "variants": [
+      "2443100",
+      "24431000",
+      "24431001",
+      "24431002",
+      "24431003",
+      "24431004",
+      "24431005",
+      "24431006",
+      "24431007",
+      "24431008",
+      "24431009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "2443103",
+    "produtofornecedor": "LINHO TINTO 1.38L 55%VISCOSE 45%LINHO",
+    "unidademedida": "MT",
+    "codigoerp": "6827",
+    "nomeerp": "LINHO MISTO -  70% VISCOSE 30% LINHO",
+    "cProd_norm": "2443103",
+    "variants": [
+      "2443103",
+      "24431030",
+      "24431031",
+      "24431032",
+      "24431033",
+      "24431034",
+      "24431035",
+      "24431036",
+      "24431037",
+      "24431038",
+      "24431039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5179103",
+    "produtofornecedor": "LINHO TINTO CARAIVA 1,38L 55%VISCOSE 45%LINHO",
+    "unidademedida": "MT",
+    "codigoerp": "6827",
+    "nomeerp": "LINHO MISTO -  70% VISCOSE 30% LINHO",
+    "cProd_norm": "5179103",
+    "variants": [
+      "5179103",
+      "51791030",
+      "51791031",
+      "51791032",
+      "51791033",
+      "51791034",
+      "51791035",
+      "51791036",
+      "51791037",
+      "51791038",
+      "51791039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5423103",
+    "produtofornecedor": "LINHO TULUM 1,38L 70% VISCOSE 30% LINHO",
+    "unidademedida": "MT",
+    "codigoerp": "6827",
+    "nomeerp": "LINHO MISTO -  70% VISCOSE 30% LINHO",
+    "cProd_norm": "5423103",
+    "variants": [
+      "5423103",
+      "54231030",
+      "54231031",
+      "54231032",
+      "54231033",
+      "54231034",
+      "54231035",
+      "54231036",
+      "54231037",
+      "54231038",
+      "54231039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5424103",
+    "produtofornecedor": "HELANKA FASHION 1,80L 100% POLYESTER",
+    "unidademedida": "KG",
+    "codigoerp": "7353",
+    "nomeerp": "MALHA HELANCA KG",
+    "cProd_norm": "5424103",
+    "variants": [
+      "5424103",
+      "54241030",
+      "54241031",
+      "54241032",
+      "54241033",
+      "54241034",
+      "54241035",
+      "54241036",
+      "54241037",
+      "54241038",
+      "54241039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "2248103",
+    "produtofornecedor": "HELANKA HIPER SOFT 1,80L 100% POLYESTER",
+    "unidademedida": "KG",
+    "codigoerp": "7353",
+    "nomeerp": "MALHA HELANCA KG",
+    "cProd_norm": "2248103",
+    "variants": [
+      "2248103",
+      "22481030",
+      "22481031",
+      "22481032",
+      "22481033",
+      "22481034",
+      "22481035",
+      "22481036",
+      "22481037",
+      "22481038",
+      "22481039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "2248100",
+    "produtofornecedor": "HELANKA HIPER SOFT 1.80 100% POLYESTER",
+    "unidademedida": "KG",
+    "codigoerp": "7353",
+    "nomeerp": "MALHA HELANCA KG",
+    "cProd_norm": "2248100",
+    "variants": [
+      "2248100",
+      "22481000",
+      "22481001",
+      "22481002",
+      "22481003",
+      "22481004",
+      "22481005",
+      "22481006",
+      "22481007",
+      "22481008",
+      "22481009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "2817103",
+    "produtofornecedor": "HELANKA HIPER SOFT ESTAMP 1.80 100%POLIESTER",
+    "unidademedida": "KG",
+    "codigoerp": "7353",
+    "nomeerp": "MALHA HELANCA KG",
+    "cProd_norm": "2817103",
+    "variants": [
+      "2817103",
+      "28171030",
+      "28171031",
+      "28171032",
+      "28171033",
+      "28171034",
+      "28171035",
+      "28171036",
+      "28171037",
+      "28171038",
+      "28171039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4923103",
+    "produtofornecedor": "HELANKA LISA 1,80L 100% POLYESTER",
+    "unidademedida": "KG",
+    "codigoerp": "7353",
+    "nomeerp": "MALHA HELANCA KG",
+    "cProd_norm": "4923103",
+    "variants": [
+      "4923103",
+      "49231030",
+      "49231031",
+      "49231032",
+      "49231033",
+      "49231034",
+      "49231035",
+      "49231036",
+      "49231037",
+      "49231038",
+      "49231039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4923100",
+    "produtofornecedor": "HELANKA LISA 1,80L 100% POLYESTER",
+    "unidademedida": "KG",
+    "codigoerp": "7353",
+    "nomeerp": "MALHA HELANCA KG",
+    "cProd_norm": "4923100",
+    "variants": [
+      "4923100",
+      "49231000",
+      "49231001",
+      "49231002",
+      "49231003",
+      "49231004",
+      "49231005",
+      "49231006",
+      "49231007",
+      "49231008",
+      "49231009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "4170000",
+    "produtofornecedor": "MALHA HELANCA LIGHT",
+    "unidademedida": "KG",
+    "codigoerp": "7353",
+    "nomeerp": "MALHA HELANCA KG",
+    "cProd_norm": "4170000",
+    "variants": [
+      "4170000",
+      "41700000",
+      "41700001",
+      "41700002",
+      "41700003",
+      "41700004",
+      "41700005",
+      "41700006",
+      "41700007",
+      "41700008",
+      "41700009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "4180000",
+    "produtofornecedor": "MALHA HELANCA LIGHT",
+    "unidademedida": "KG",
+    "codigoerp": "7353",
+    "nomeerp": "MALHA HELANCA KG",
+    "cProd_norm": "4180000",
+    "variants": [
+      "4180000",
+      "41800000",
+      "41800001",
+      "41800002",
+      "41800003",
+      "41800004",
+      "41800005",
+      "41800006",
+      "41800007",
+      "41800008",
+      "41800009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "17490000",
+    "produtofornecedor": "MALHA HELANQUINHA",
+    "unidademedida": "KG",
+    "codigoerp": "7353",
+    "nomeerp": "MALHA HELANCA KG",
+    "cProd_norm": "17490000",
+    "variants": [
+      "17490000",
+      "174900000",
+      "174900001",
+      "174900002",
+      "174900003",
+      "174900004",
+      "174900005",
+      "174900006",
+      "174900007",
+      "174900008",
+      "174900009",
+      "1749000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "17480000",
+    "produtofornecedor": "MALHA HELANQUINHA",
+    "unidademedida": "KG",
+    "codigoerp": "7353",
+    "nomeerp": "MALHA HELANCA KG",
+    "cProd_norm": "17480000",
+    "variants": [
+      "17480000",
+      "174800000",
+      "174800001",
+      "174800002",
+      "174800003",
+      "174800004",
+      "174800005",
+      "174800006",
+      "174800007",
+      "174800008",
+      "174800009",
+      "1748000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "15490000",
+    "produtofornecedor": "MATELASSE FLORA ESTAMPADO",
+    "unidademedida": "MT",
+    "codigoerp": "8369",
+    "nomeerp": "MATELASSE - 100% POLIESTER",
+    "cProd_norm": "15490000",
+    "variants": [
+      "15490000",
+      "154900000",
+      "154900001",
+      "154900002",
+      "154900003",
+      "154900004",
+      "154900005",
+      "154900006",
+      "154900007",
+      "154900008",
+      "154900009",
+      "1549000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54460000",
+    "produtofornecedor": "MATELASSE FLORA ESTAMPADO",
+    "unidademedida": "MT",
+    "codigoerp": "8369",
+    "nomeerp": "MATELASSE - 100% POLIESTER",
+    "cProd_norm": "54460000",
+    "variants": [
+      "54460000",
+      "544600000",
+      "544600001",
+      "544600002",
+      "544600003",
+      "544600004",
+      "544600005",
+      "544600006",
+      "544600007",
+      "544600008",
+      "544600009",
+      "5446000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5249103",
+    "produtofornecedor": "MATELADO CARNEIRINHO 2.40L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8369",
+    "nomeerp": "MATELASSE - 100% POLIESTER",
+    "cProd_norm": "5249103",
+    "variants": [
+      "5249103",
+      "52491030",
+      "52491031",
+      "52491032",
+      "52491033",
+      "52491034",
+      "52491035",
+      "52491036",
+      "52491037",
+      "52491038",
+      "52491039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4348103",
+    "produtofornecedor": "MATELADO ESTAMPADO DOBRADO 2.40L 100%POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8369",
+    "nomeerp": "MATELASSE - 100% POLIESTER",
+    "cProd_norm": "4348103",
+    "variants": [
+      "4348103",
+      "43481030",
+      "43481031",
+      "43481032",
+      "43481033",
+      "43481034",
+      "43481035",
+      "43481036",
+      "43481037",
+      "43481038",
+      "43481039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5476103",
+    "produtofornecedor": "MATELADO LEAF ESTAMPADO 2,40L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8369",
+    "nomeerp": "MATELASSE - 100% POLIESTER",
+    "cProd_norm": "5476103",
+    "variants": [
+      "5476103",
+      "54761030",
+      "54761031",
+      "54761032",
+      "54761033",
+      "54761034",
+      "54761035",
+      "54761036",
+      "54761037",
+      "54761038",
+      "54761039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5482103",
+    "produtofornecedor": "MATELADO LEAF TINTO 2,40L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8369",
+    "nomeerp": "MATELASSE - 100% POLIESTER",
+    "cProd_norm": "5482103",
+    "variants": [
+      "5482103",
+      "54821030",
+      "54821031",
+      "54821032",
+      "54821033",
+      "54821034",
+      "54821035",
+      "54821036",
+      "54821037",
+      "54821038",
+      "54821039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4397103",
+    "produtofornecedor": "MATELADO TINTO DOBRADO 2.40L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8369",
+    "nomeerp": "MATELASSE - 100% POLIESTER",
+    "cProd_norm": "4397103",
+    "variants": [
+      "4397103",
+      "43971030",
+      "43971031",
+      "43971032",
+      "43971033",
+      "43971034",
+      "43971035",
+      "43971036",
+      "43971037",
+      "43971038",
+      "43971039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4158103",
+    "produtofornecedor": "MATELADO TINTO PREMIUM RAMADO 2,40L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8369",
+    "nomeerp": "MATELASSE - 100% POLIESTER",
+    "cProd_norm": "4158103",
+    "variants": [
+      "4158103",
+      "41581030",
+      "41581031",
+      "41581032",
+      "41581033",
+      "41581034",
+      "41581035",
+      "41581036",
+      "41581037",
+      "41581038",
+      "41581039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "17580000",
+    "produtofornecedor": "MATELASSE LIDIA LISO",
+    "unidademedida": "MT",
+    "codigoerp": "8369",
+    "nomeerp": "MATELASSE - 100% POLIESTER",
+    "cProd_norm": "17580000",
+    "variants": [
+      "17580000",
+      "175800000",
+      "175800001",
+      "175800002",
+      "175800003",
+      "175800004",
+      "175800005",
+      "175800006",
+      "175800007",
+      "175800008",
+      "175800009",
+      "1758000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54740000",
+    "produtofornecedor": "MATELASSE LISO CORA",
+    "unidademedida": "MT",
+    "codigoerp": "8369",
+    "nomeerp": "MATELASSE - 100% POLIESTER",
+    "cProd_norm": "54740000",
+    "variants": [
+      "54740000",
+      "547400000",
+      "547400001",
+      "547400002",
+      "547400003",
+      "547400004",
+      "547400005",
+      "547400006",
+      "547400007",
+      "547400008",
+      "547400009",
+      "5474000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "59710000",
+    "produtofornecedor": "CHIFFON CELINE",
+    "unidademedida": "MT",
+    "codigoerp": "8745",
+    "nomeerp": "MUSSELINE TOQUE DE SEDA",
+    "cProd_norm": "59710000",
+    "variants": [
+      "59710000",
+      "597100000",
+      "597100001",
+      "597100002",
+      "597100003",
+      "597100004",
+      "597100005",
+      "597100006",
+      "597100007",
+      "597100008",
+      "597100009",
+      "5971000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "59720000",
+    "produtofornecedor": "CHIFFON CELINE BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "8745",
+    "nomeerp": "MUSSELINE TOQUE DE SEDA",
+    "cProd_norm": "59720000",
+    "variants": [
+      "59720000",
+      "597200000",
+      "597200001",
+      "597200002",
+      "597200003",
+      "597200004",
+      "597200005",
+      "597200006",
+      "597200007",
+      "597200008",
+      "597200009",
+      "5972000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4927103",
+    "produtofornecedor": "MUSSELINE CREPE 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8745",
+    "nomeerp": "MUSSELINE TOQUE DE SEDA",
+    "cProd_norm": "4927103",
+    "variants": [
+      "4927103",
+      "49271030",
+      "49271031",
+      "49271032",
+      "49271033",
+      "49271034",
+      "49271035",
+      "49271036",
+      "49271037",
+      "49271038",
+      "49271039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5297100",
+    "produtofornecedor": "MUSSELINE CREPE CRYSTAL STONE 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8745",
+    "nomeerp": "MUSSELINE TOQUE DE SEDA",
+    "cProd_norm": "5297100",
+    "variants": [
+      "5297100",
+      "52971000",
+      "52971001",
+      "52971002",
+      "52971003",
+      "52971004",
+      "52971005",
+      "52971006",
+      "52971007",
+      "52971008",
+      "52971009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5297103",
+    "produtofornecedor": "MUSSELINE CREPE CRYSTAL STONE 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8745",
+    "nomeerp": "MUSSELINE TOQUE DE SEDA",
+    "cProd_norm": "5297103",
+    "variants": [
+      "5297103",
+      "52971030",
+      "52971031",
+      "52971032",
+      "52971033",
+      "52971034",
+      "52971035",
+      "52971036",
+      "52971037",
+      "52971038",
+      "52971039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "15950000",
+    "produtofornecedor": "ORGANZA CRISTAL",
+    "unidademedida": "MT",
+    "codigoerp": "8785",
+    "nomeerp": "ORGANZA",
+    "cProd_norm": "15950000",
+    "variants": [
+      "15950000",
+      "159500000",
+      "159500001",
+      "159500002",
+      "159500003",
+      "159500004",
+      "159500005",
+      "159500006",
+      "159500007",
+      "159500008",
+      "159500009",
+      "1595000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "323103",
+    "produtofornecedor": "ORGANZA CRISTAL 1.52L 100% POLIESTER - 27GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "8785",
+    "nomeerp": "ORGANZA",
+    "cProd_norm": "323103",
+    "variants": [
+      "323103",
+      "3231030",
+      "3231031",
+      "3231032",
+      "3231033",
+      "3231034",
+      "3231035",
+      "3231036",
+      "3231037",
+      "3231038",
+      "3231039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "323100",
+    "produtofornecedor": "ORGANZA CRISTAL 1.52L 100% POLIESTER - 27GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "8785",
+    "nomeerp": "ORGANZA",
+    "cProd_norm": "323100",
+    "variants": [
+      "323100",
+      "3231000",
+      "3231001",
+      "3231002",
+      "3231003",
+      "3231004",
+      "3231005",
+      "3231006",
+      "3231007",
+      "3231008",
+      "3231009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "15960000",
+    "produtofornecedor": "ORGANZA CRISTAL BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "8785",
+    "nomeerp": "ORGANZA",
+    "cProd_norm": "15960000",
+    "variants": [
+      "15960000",
+      "159600000",
+      "159600001",
+      "159600002",
+      "159600003",
+      "159600004",
+      "159600005",
+      "159600006",
+      "159600007",
+      "159600008",
+      "159600009",
+      "1596000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5167100",
+    "produtofornecedor": "ORGANZA TINTO 1.47L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8785",
+    "nomeerp": "ORGANZA",
+    "cProd_norm": "5167100",
+    "variants": [
+      "5167100",
+      "51671000",
+      "51671001",
+      "51671002",
+      "51671003",
+      "51671004",
+      "51671005",
+      "51671006",
+      "51671007",
+      "51671008",
+      "51671009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5167103",
+    "produtofornecedor": "ORGANZA TINTO 1.47L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8785",
+    "nomeerp": "ORGANZA",
+    "cProd_norm": "5167103",
+    "variants": [
+      "5167103",
+      "51671030",
+      "51671031",
+      "51671032",
+      "51671033",
+      "51671034",
+      "51671035",
+      "51671036",
+      "51671037",
+      "51671038",
+      "51671039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "13270000",
+    "produtofornecedor": "OXFORD 3.00",
+    "unidademedida": "MT",
+    "codigoerp": "8906",
+    "nomeerp": "OXFORD 3 M 100% POLIESTER",
+    "cProd_norm": "13270000",
+    "variants": [
+      "13270000",
+      "132700000",
+      "132700001",
+      "132700002",
+      "132700003",
+      "132700004",
+      "132700005",
+      "132700006",
+      "132700007",
+      "132700008",
+      "132700009",
+      "1327000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "13280000",
+    "produtofornecedor": "OXFORD 3.00 BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "8906",
+    "nomeerp": "OXFORD 3 M 100% POLIESTER",
+    "cProd_norm": "13280000",
+    "variants": [
+      "13280000",
+      "132800000",
+      "132800001",
+      "132800002",
+      "132800003",
+      "132800004",
+      "132800005",
+      "132800006",
+      "132800007",
+      "132800008",
+      "132800009",
+      "1328000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "1113103",
+    "produtofornecedor": "OXFORD TINTO 3,00L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8906",
+    "nomeerp": "OXFORD 3 M 100% POLIESTER",
+    "cProd_norm": "1113103",
+    "variants": [
+      "1113103",
+      "11131030",
+      "11131031",
+      "11131032",
+      "11131033",
+      "11131034",
+      "11131035",
+      "11131036",
+      "11131037",
+      "11131038",
+      "11131039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "1113100",
+    "produtofornecedor": "OXFORD TINTO 3.00L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8906",
+    "nomeerp": "OXFORD 3 M 100% POLIESTER",
+    "cProd_norm": "1113100",
+    "variants": [
+      "1113100",
+      "11131000",
+      "11131001",
+      "11131002",
+      "11131003",
+      "11131004",
+      "11131005",
+      "11131006",
+      "11131007",
+      "11131008",
+      "11131009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "50080000",
+    "produtofornecedor": "OXFORD FLAME",
+    "unidademedida": "MT",
+    "codigoerp": "8986",
+    "nomeerp": "OXFORD FLAME",
+    "cProd_norm": "50080000",
+    "variants": [
+      "50080000",
+      "500800000",
+      "500800001",
+      "500800002",
+      "500800003",
+      "500800004",
+      "500800005",
+      "500800006",
+      "500800007",
+      "500800008",
+      "500800009",
+      "5008000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "50090000",
+    "produtofornecedor": "OXFORD FLAME",
+    "unidademedida": "MT",
+    "codigoerp": "8986",
+    "nomeerp": "OXFORD FLAME",
+    "cProd_norm": "50090000",
+    "variants": [
+      "50090000",
+      "500900000",
+      "500900001",
+      "500900002",
+      "500900003",
+      "500900004",
+      "500900005",
+      "500900006",
+      "500900007",
+      "500900008",
+      "500900009",
+      "5009000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3058100",
+    "produtofornecedor": "OXFORD SLUB 3.00L 100%POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8986",
+    "nomeerp": "OXFORD FLAME",
+    "cProd_norm": "3058100",
+    "variants": [
+      "3058100",
+      "30581000",
+      "30581001",
+      "30581002",
+      "30581003",
+      "30581004",
+      "30581005",
+      "30581006",
+      "30581007",
+      "30581008",
+      "30581009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3058103",
+    "produtofornecedor": "OXFORD SLUB 3.00L 100%POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "8986",
+    "nomeerp": "OXFORD FLAME",
+    "cProd_norm": "3058103",
+    "variants": [
+      "3058103",
+      "30581030",
+      "30581031",
+      "30581032",
+      "30581033",
+      "30581034",
+      "30581035",
+      "30581036",
+      "30581037",
+      "30581038",
+      "30581039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "20020000",
+    "produtofornecedor": "OXFORD 1.47",
+    "unidademedida": "MT",
+    "codigoerp": "9026",
+    "nomeerp": "OXFORD LISO",
+    "cProd_norm": "20020000",
+    "variants": [
+      "20020000",
+      "200200000",
+      "200200001",
+      "200200002",
+      "200200003",
+      "200200004",
+      "200200005",
+      "200200006",
+      "200200007",
+      "200200008",
+      "200200009",
+      "2002000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "20030000",
+    "produtofornecedor": "OXFORD 1.47 BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "9026",
+    "nomeerp": "OXFORD LISO",
+    "cProd_norm": "20030000",
+    "variants": [
+      "20030000",
+      "200300000",
+      "200300001",
+      "200300002",
+      "200300003",
+      "200300004",
+      "200300005",
+      "200300006",
+      "200300007",
+      "200300008",
+      "200300009",
+      "2003000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "59030000",
+    "produtofornecedor": "OXFORD HEAVY",
+    "unidademedida": "MT",
+    "codigoerp": "9026",
+    "nomeerp": "OXFORD LISO",
+    "cProd_norm": "59030000",
+    "variants": [
+      "59030000",
+      "590300000",
+      "590300001",
+      "590300002",
+      "590300003",
+      "590300004",
+      "590300005",
+      "590300006",
+      "590300007",
+      "590300008",
+      "590300009",
+      "5903000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "59040000",
+    "produtofornecedor": "OXFORD HEAVY BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "9026",
+    "nomeerp": "OXFORD LISO",
+    "cProd_norm": "59040000",
+    "variants": [
+      "59040000",
+      "590400000",
+      "590400001",
+      "590400002",
+      "590400003",
+      "590400004",
+      "590400005",
+      "590400006",
+      "590400007",
+      "590400008",
+      "590400009",
+      "5904000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "334103",
+    "produtofornecedor": "OXFORD TINTO 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "9026",
+    "nomeerp": "OXFORD LISO",
+    "cProd_norm": "334103",
+    "variants": [
+      "334103",
+      "3341030",
+      "3341031",
+      "3341032",
+      "3341033",
+      "3341034",
+      "3341035",
+      "3341036",
+      "3341037",
+      "3341038",
+      "3341039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "334100",
+    "produtofornecedor": "OXFORD TINTO 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "9026",
+    "nomeerp": "OXFORD LISO",
+    "cProd_norm": "334100",
+    "variants": [
+      "334100",
+      "3341000",
+      "3341001",
+      "3341002",
+      "3341003",
+      "3341004",
+      "3341005",
+      "3341006",
+      "3341007",
+      "3341008",
+      "3341009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "5570000",
+    "produtofornecedor": "OXFORDINE",
+    "unidademedida": "MT",
+    "codigoerp": "9109",
+    "nomeerp": "OXFORDINE",
+    "cProd_norm": "5570000",
+    "variants": [
+      "5570000",
+      "55700000",
+      "55700001",
+      "55700002",
+      "55700003",
+      "55700004",
+      "55700005",
+      "55700006",
+      "55700007",
+      "55700008",
+      "55700009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "11940000",
+    "produtofornecedor": "OXFORDINE",
+    "unidademedida": "MT",
+    "codigoerp": "9109",
+    "nomeerp": "OXFORDINE",
+    "cProd_norm": "11940000",
+    "variants": [
+      "11940000",
+      "119400000",
+      "119400001",
+      "119400002",
+      "119400003",
+      "119400004",
+      "119400005",
+      "119400006",
+      "119400007",
+      "119400008",
+      "119400009",
+      "1194000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4700103",
+    "produtofornecedor": "OXFORDINE TINTO 1.50L 100%POLYESTER 109GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "9109",
+    "nomeerp": "OXFORDINE",
+    "cProd_norm": "4700103",
+    "variants": [
+      "4700103",
+      "47001030",
+      "47001031",
+      "47001032",
+      "47001033",
+      "47001034",
+      "47001035",
+      "47001036",
+      "47001037",
+      "47001038",
+      "47001039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4700100",
+    "produtofornecedor": "OXFORDINE TINTO 1.50L 100%POLYESTER 109GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "9109",
+    "nomeerp": "OXFORDINE",
+    "cProd_norm": "4700100",
+    "variants": [
+      "4700100",
+      "47001000",
+      "47001001",
+      "47001002",
+      "47001003",
+      "47001004",
+      "47001005",
+      "47001006",
+      "47001007",
+      "47001008",
+      "47001009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "845103",
+    "produtofornecedor": "PAETE 6M/M 1.12L 60% LAMINA POLIES.METALIZ.40%POLIES.77GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "9229",
+    "nomeerp": "PAETE - FANTASIA",
+    "cProd_norm": "845103",
+    "variants": [
+      "845103",
+      "8451030",
+      "8451031",
+      "8451032",
+      "8451033",
+      "8451034",
+      "8451035",
+      "8451036",
+      "8451037",
+      "8451038",
+      "8451039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "8760000",
+    "produtofornecedor": "TEMATICO PAETE 6MM",
+    "unidademedida": "MT",
+    "codigoerp": "9229",
+    "nomeerp": "PAETE - FANTASIA",
+    "cProd_norm": "8760000",
+    "variants": [
+      "8760000",
+      "87600000",
+      "87600001",
+      "87600002",
+      "87600003",
+      "87600004",
+      "87600005",
+      "87600006",
+      "87600007",
+      "87600008",
+      "87600009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "1468100",
+    "produtofornecedor": "EUROSTAR 400 FIOS TINTO 2,80L 100% ALGODAO",
+    "unidademedida": "MT",
+    "codigoerp": "9532",
+    "nomeerp": "PERCAL  -  400 FIOS",
+    "cProd_norm": "1468100",
+    "variants": [
+      "1468100",
+      "14681000",
+      "14681001",
+      "14681002",
+      "14681003",
+      "14681004",
+      "14681005",
+      "14681006",
+      "14681007",
+      "14681008",
+      "14681009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "1468103",
+    "produtofornecedor": "EUROSTAR 400 FIOS TINTO 2.80L 100% ALGODAO - 143GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "9532",
+    "nomeerp": "PERCAL  -  400 FIOS",
+    "cProd_norm": "1468103",
+    "variants": [
+      "1468103",
+      "14681030",
+      "14681031",
+      "14681032",
+      "14681033",
+      "14681034",
+      "14681035",
+      "14681036",
+      "14681037",
+      "14681038",
+      "14681039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54850000",
+    "produtofornecedor": "PERCAL ALGODAO 400 FIOS",
+    "unidademedida": "MT",
+    "codigoerp": "9532",
+    "nomeerp": "PERCAL  -  400 FIOS",
+    "cProd_norm": "54850000",
+    "variants": [
+      "54850000",
+      "548500000",
+      "548500001",
+      "548500002",
+      "548500003",
+      "548500004",
+      "548500005",
+      "548500006",
+      "548500007",
+      "548500008",
+      "548500009",
+      "5485000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54860000",
+    "produtofornecedor": "PERCAL ALGODAO 400 FIOS",
+    "unidademedida": "MT",
+    "codigoerp": "9532",
+    "nomeerp": "PERCAL  -  400 FIOS",
+    "cProd_norm": "54860000",
+    "variants": [
+      "54860000",
+      "548600000",
+      "548600001",
+      "548600002",
+      "548600003",
+      "548600004",
+      "548600005",
+      "548600006",
+      "548600007",
+      "548600008",
+      "548600009",
+      "5486000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "706100",
+    "produtofornecedor": "EUROSTAR 230 FIOS TINTO 2.50L 100%  ALGODAO",
+    "unidademedida": "MT",
+    "codigoerp": "9732",
+    "nomeerp": "PERCAL 230 FIOS",
+    "cProd_norm": "706100",
+    "variants": [
+      "706100",
+      "7061000",
+      "7061001",
+      "7061002",
+      "7061003",
+      "7061004",
+      "7061005",
+      "7061006",
+      "7061007",
+      "7061008",
+      "7061009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "706103",
+    "produtofornecedor": "EUROSTAR 230 FIOS TINTO 2.50L 100%  ALGODAO",
+    "unidademedida": "MT",
+    "codigoerp": "9732",
+    "nomeerp": "PERCAL 230 FIOS",
+    "cProd_norm": "706103",
+    "variants": [
+      "706103",
+      "7061030",
+      "7061031",
+      "7061032",
+      "7061033",
+      "7061034",
+      "7061035",
+      "7061036",
+      "7061037",
+      "7061038",
+      "7061039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "7470000",
+    "produtofornecedor": "PERCAL ALGODAO 230 FIOS",
+    "unidademedida": "MT",
+    "codigoerp": "9732",
+    "nomeerp": "PERCAL 230 FIOS",
+    "cProd_norm": "7470000",
+    "variants": [
+      "7470000",
+      "74700000",
+      "74700001",
+      "74700002",
+      "74700003",
+      "74700004",
+      "74700005",
+      "74700006",
+      "74700007",
+      "74700008",
+      "74700009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "7480000",
+    "produtofornecedor": "PERCAL ALGODAO 230 FIOS (BRANCO)",
+    "unidademedida": "MT",
+    "codigoerp": "9732",
+    "nomeerp": "PERCAL 230 FIOS",
+    "cProd_norm": "7480000",
+    "variants": [
+      "7480000",
+      "74800000",
+      "74800001",
+      "74800002",
+      "74800003",
+      "74800004",
+      "74800005",
+      "74800006",
+      "74800007",
+      "74800008",
+      "74800009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "307103",
+    "produtofornecedor": "MICRO SPORT TINTO 1,60L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "10577",
+    "nomeerp": "TACTEL",
+    "cProd_norm": "307103",
+    "variants": [
+      "307103",
+      "3071030",
+      "3071031",
+      "3071032",
+      "3071033",
+      "3071034",
+      "3071035",
+      "3071036",
+      "3071037",
+      "3071038",
+      "3071039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "307100",
+    "produtofornecedor": "MICRO SPORT TINTO 1.60L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "10577",
+    "nomeerp": "TACTEL",
+    "cProd_norm": "307100",
+    "variants": [
+      "307100",
+      "3071000",
+      "3071001",
+      "3071002",
+      "3071003",
+      "3071004",
+      "3071005",
+      "3071006",
+      "3071007",
+      "3071008",
+      "3071009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "5050000",
+    "produtofornecedor": "MICROFIBRA CALIFORNIA",
+    "unidademedida": "MT",
+    "codigoerp": "10577",
+    "nomeerp": "TACTEL",
+    "cProd_norm": "5050000",
+    "variants": [
+      "5050000",
+      "50500000",
+      "50500001",
+      "50500002",
+      "50500003",
+      "50500004",
+      "50500005",
+      "50500006",
+      "50500007",
+      "50500008",
+      "50500009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "5040000",
+    "produtofornecedor": "MICROFIBRA CALIFORNIA",
+    "unidademedida": "MT",
+    "codigoerp": "10577",
+    "nomeerp": "TACTEL",
+    "cProd_norm": "5040000",
+    "variants": [
+      "5040000",
+      "50400000",
+      "50400001",
+      "50400002",
+      "50400003",
+      "50400004",
+      "50400005",
+      "50400006",
+      "50400007",
+      "50400008",
+      "50400009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "19150000",
+    "produtofornecedor": "MICROFIBRA CALIFORNIA",
+    "unidademedida": "MT",
+    "codigoerp": "10577",
+    "nomeerp": "TACTEL",
+    "cProd_norm": "19150000",
+    "variants": [
+      "19150000",
+      "191500000",
+      "191500001",
+      "191500002",
+      "191500003",
+      "191500004",
+      "191500005",
+      "191500006",
+      "191500007",
+      "191500008",
+      "191500009",
+      "1915000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "10550000",
+    "produtofornecedor": "TULE CRISTAL",
+    "unidademedida": "MT",
+    "codigoerp": "11772",
+    "nomeerp": "TULE COM GLITTER",
+    "cProd_norm": "10550000",
+    "variants": [
+      "10550000",
+      "105500000",
+      "105500001",
+      "105500002",
+      "105500003",
+      "105500004",
+      "105500005",
+      "105500006",
+      "105500007",
+      "105500008",
+      "105500009",
+      "1055000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "60750000",
+    "produtofornecedor": "TULE CRISTAL TONE TO TONE",
+    "unidademedida": "MT",
+    "codigoerp": "11772",
+    "nomeerp": "TULE COM GLITTER",
+    "cProd_norm": "60750000",
+    "variants": [
+      "60750000",
+      "607500000",
+      "607500001",
+      "607500002",
+      "607500003",
+      "607500004",
+      "607500005",
+      "607500006",
+      "607500007",
+      "607500008",
+      "607500009",
+      "6075000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "56260000",
+    "produtofornecedor": "TULE STAR GLITTER",
+    "unidademedida": "MT",
+    "codigoerp": "11772",
+    "nomeerp": "TULE COM GLITTER",
+    "cProd_norm": "56260000",
+    "variants": [
+      "56260000",
+      "562600000",
+      "562600001",
+      "562600002",
+      "562600003",
+      "562600004",
+      "562600005",
+      "562600006",
+      "562600007",
+      "562600008",
+      "562600009",
+      "5626000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4405103",
+    "produtofornecedor": "TULLE GLITTER 1.47L 100% POLYESTER 36GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "11772",
+    "nomeerp": "TULE COM GLITTER",
+    "cProd_norm": "4405103",
+    "variants": [
+      "4405103",
+      "44051030",
+      "44051031",
+      "44051032",
+      "44051033",
+      "44051034",
+      "44051035",
+      "44051036",
+      "44051037",
+      "44051038",
+      "44051039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4405100",
+    "produtofornecedor": "TULLE GLITTER 1.47L 100% POLYESTER 36GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "11772",
+    "nomeerp": "TULE COM GLITTER",
+    "cProd_norm": "4405100",
+    "variants": [
+      "4405100",
+      "44051000",
+      "44051001",
+      "44051002",
+      "44051003",
+      "44051004",
+      "44051005",
+      "44051006",
+      "44051007",
+      "44051008",
+      "44051009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5287103",
+    "produtofornecedor": "TULLE GLITZ 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "11772",
+    "nomeerp": "TULE COM GLITTER",
+    "cProd_norm": "5287103",
+    "variants": [
+      "5287103",
+      "52871030",
+      "52871031",
+      "52871032",
+      "52871033",
+      "52871034",
+      "52871035",
+      "52871036",
+      "52871037",
+      "52871038",
+      "52871039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4599103",
+    "produtofornecedor": "TULLE FLEX TINTO 1.60L 96% POLY 4% ELAST",
+    "unidademedida": "KG",
+    "codigoerp": "11892",
+    "nomeerp": "TULE DE MALHA",
+    "cProd_norm": "4599103",
+    "variants": [
+      "4599103",
+      "45991030",
+      "45991031",
+      "45991032",
+      "45991033",
+      "45991034",
+      "45991035",
+      "45991036",
+      "45991037",
+      "45991038",
+      "45991039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4599100",
+    "produtofornecedor": "TULLE FLEX TINTO 1.60L 96% POLYESTER 4% ELASTANO 92GR/M2",
+    "unidademedida": "KG",
+    "codigoerp": "11892",
+    "nomeerp": "TULE DE MALHA",
+    "cProd_norm": "4599100",
+    "variants": [
+      "4599100",
+      "45991000",
+      "45991001",
+      "45991002",
+      "45991003",
+      "45991004",
+      "45991005",
+      "45991006",
+      "45991007",
+      "45991008",
+      "45991009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4592103",
+    "produtofornecedor": "TULLE INVISIVEL 1,50L 100% POLIAMIDA",
+    "unidademedida": "MT",
+    "codigoerp": "11932",
+    "nomeerp": "TULE ILUSAO / ILUSION",
+    "cProd_norm": "4592103",
+    "variants": [
+      "4592103",
+      "45921030",
+      "45921031",
+      "45921032",
+      "45921033",
+      "45921034",
+      "45921035",
+      "45921036",
+      "45921037",
+      "45921038",
+      "45921039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3961100",
+    "produtofornecedor": "TULLE SHINE 3.20L 100% POLIESTER 15GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "12053",
+    "nomeerp": "TULE SHINE - LISO",
+    "cProd_norm": "3961100",
+    "variants": [
+      "3961100",
+      "39611000",
+      "39611001",
+      "39611002",
+      "39611003",
+      "39611004",
+      "39611005",
+      "39611006",
+      "39611007",
+      "39611008",
+      "39611009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3961103",
+    "produtofornecedor": "TULLE SHINE 3.20L 100% POLIESTER 15GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "12053",
+    "nomeerp": "TULE SHINE - LISO",
+    "cProd_norm": "3961103",
+    "variants": [
+      "3961103",
+      "39611030",
+      "39611031",
+      "39611032",
+      "39611033",
+      "39611034",
+      "39611035",
+      "39611036",
+      "39611037",
+      "39611038",
+      "39611039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "20270000",
+    "produtofornecedor": "TWO WAY",
+    "unidademedida": "MT",
+    "codigoerp": "12174",
+    "nomeerp": "TWO WAY",
+    "cProd_norm": "20270000",
+    "variants": [
+      "20270000",
+      "202700000",
+      "202700001",
+      "202700002",
+      "202700003",
+      "202700004",
+      "202700005",
+      "202700006",
+      "202700007",
+      "202700008",
+      "202700009",
+      "2027000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "13860000",
+    "produtofornecedor": "TWO WAY BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "12174",
+    "nomeerp": "TWO WAY",
+    "cProd_norm": "13860000",
+    "variants": [
+      "13860000",
+      "138600000",
+      "138600001",
+      "138600002",
+      "138600003",
+      "138600004",
+      "138600005",
+      "138600006",
+      "138600007",
+      "138600008",
+      "138600009",
+      "1386000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "669100",
+    "produtofornecedor": "TWO WAY SPAN 1.47L 96% POLIESTER 4% ELASTANO - 220GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "12174",
+    "nomeerp": "TWO WAY",
+    "cProd_norm": "669100",
+    "variants": [
+      "669100",
+      "6691000",
+      "6691001",
+      "6691002",
+      "6691003",
+      "6691004",
+      "6691005",
+      "6691006",
+      "6691007",
+      "6691008",
+      "6691009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "669103",
+    "produtofornecedor": "TWO WAY SPAN 1.47L 96% POLY 4% ELAST",
+    "unidademedida": "MT",
+    "codigoerp": "12174",
+    "nomeerp": "TWO WAY",
+    "cProd_norm": "669103",
+    "variants": [
+      "669103",
+      "6691030",
+      "6691031",
+      "6691032",
+      "6691033",
+      "6691034",
+      "6691035",
+      "6691036",
+      "6691037",
+      "6691038",
+      "6691039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5102103",
+    "produtofornecedor": "TWO WAY RISCA DE GIZ 1,50L 94%POLYES, 5%ELAST, 1%VISCO",
+    "unidademedida": "MT",
+    "codigoerp": "12214",
+    "nomeerp": "TWO WAY - RISCA DE GIZ",
+    "cProd_norm": "5102103",
+    "variants": [
+      "5102103",
+      "51021030",
+      "51021031",
+      "51021032",
+      "51021033",
+      "51021034",
+      "51021035",
+      "51021036",
+      "51021037",
+      "51021038",
+      "51021039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "15990000",
+    "produtofornecedor": "VELUDO CRISTAL",
+    "unidademedida": "KG",
+    "codigoerp": "12294",
+    "nomeerp": "VELUDO CRISTAL 96% POLIESTER  4% ELASTANO",
+    "cProd_norm": "15990000",
+    "variants": [
+      "15990000",
+      "159900000",
+      "159900001",
+      "159900002",
+      "159900003",
+      "159900004",
+      "159900005",
+      "159900006",
+      "159900007",
+      "159900008",
+      "159900009",
+      "1599000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3597100",
+    "produtofornecedor": "VELUDO CRISTAL 1,50L 95%POLIESTER 5%ELASTANO",
+    "unidademedida": "KG",
+    "codigoerp": "12294",
+    "nomeerp": "VELUDO CRISTAL 96% POLIESTER  4% ELASTANO",
+    "cProd_norm": "3597100",
+    "variants": [
+      "3597100",
+      "35971000",
+      "35971001",
+      "35971002",
+      "35971003",
+      "35971004",
+      "35971005",
+      "35971006",
+      "35971007",
+      "35971008",
+      "35971009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3597103",
+    "produtofornecedor": "VELUDO CRISTAL 1.50L 95%POLIESTER 5%ELASTANO",
+    "unidademedida": "KG",
+    "codigoerp": "12294",
+    "nomeerp": "VELUDO CRISTAL 96% POLIESTER  4% ELASTANO",
+    "cProd_norm": "3597103",
+    "variants": [
+      "3597103",
+      "35971030",
+      "35971031",
+      "35971032",
+      "35971033",
+      "35971034",
+      "35971035",
+      "35971036",
+      "35971037",
+      "35971038",
+      "35971039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4705100",
+    "produtofornecedor": "RAYON SLUB AIRJET 1,47L 100% VISCOSE",
+    "unidademedida": "MT",
+    "codigoerp": "12376",
+    "nomeerp": "VISCOLINHO LISO",
+    "cProd_norm": "4705100",
+    "variants": [
+      "4705100",
+      "47051000",
+      "47051001",
+      "47051002",
+      "47051003",
+      "47051004",
+      "47051005",
+      "47051006",
+      "47051007",
+      "47051008",
+      "47051009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4705103",
+    "produtofornecedor": "RAYON SLUB AIRJET 1,47L 100% VISCOSE",
+    "unidademedida": "MT",
+    "codigoerp": "12376",
+    "nomeerp": "VISCOLINHO LISO",
+    "cProd_norm": "4705103",
+    "variants": [
+      "4705103",
+      "47051030",
+      "47051031",
+      "47051032",
+      "47051033",
+      "47051034",
+      "47051035",
+      "47051036",
+      "47051037",
+      "47051038",
+      "47051039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5135103",
+    "produtofornecedor": "RAYON SLUB AIRJET 1,50L 100% VISCOSE",
+    "unidademedida": "MT",
+    "codigoerp": "12376",
+    "nomeerp": "VISCOLINHO LISO",
+    "cProd_norm": "5135103",
+    "variants": [
+      "5135103",
+      "51351030",
+      "51351031",
+      "51351032",
+      "51351033",
+      "51351034",
+      "51351035",
+      "51351036",
+      "51351037",
+      "51351038",
+      "51351039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5135100",
+    "produtofornecedor": "RAYON SLUB AIRJET 1,50L 100% VISCOSE",
+    "unidademedida": "MT",
+    "codigoerp": "12376",
+    "nomeerp": "VISCOLINHO LISO",
+    "cProd_norm": "5135100",
+    "variants": [
+      "5135100",
+      "51351000",
+      "51351001",
+      "51351002",
+      "51351003",
+      "51351004",
+      "51351005",
+      "51351006",
+      "51351007",
+      "51351008",
+      "51351009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4515100",
+    "produtofornecedor": "RAYON SLUB LISO 1.46L 100% VISCOSE 142 GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "12376",
+    "nomeerp": "VISCOLINHO LISO",
+    "cProd_norm": "4515100",
+    "variants": [
+      "4515100",
+      "45151000",
+      "45151001",
+      "45151002",
+      "45151003",
+      "45151004",
+      "45151005",
+      "45151006",
+      "45151007",
+      "45151008",
+      "45151009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4515103",
+    "produtofornecedor": "RAYON SLUB LISO 1.46L 100% VISCOSE 142 GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "12376",
+    "nomeerp": "VISCOLINHO LISO",
+    "cProd_norm": "4515103",
+    "variants": [
+      "4515103",
+      "45151030",
+      "45151031",
+      "45151032",
+      "45151033",
+      "45151034",
+      "45151035",
+      "45151036",
+      "45151037",
+      "45151038",
+      "45151039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "15360000",
+    "produtofornecedor": "VISCOSE TULUM SLUB",
+    "unidademedida": "MT",
+    "codigoerp": "12376",
+    "nomeerp": "VISCOLINHO LISO",
+    "cProd_norm": "15360000",
+    "variants": [
+      "15360000",
+      "153600000",
+      "153600001",
+      "153600002",
+      "153600003",
+      "153600004",
+      "153600005",
+      "153600006",
+      "153600007",
+      "153600008",
+      "153600009",
+      "1536000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "15370000",
+    "produtofornecedor": "VISCOSE TULUM SLUB",
+    "unidademedida": "MT",
+    "codigoerp": "12376",
+    "nomeerp": "VISCOLINHO LISO",
+    "cProd_norm": "15370000",
+    "variants": [
+      "15370000",
+      "153700000",
+      "153700001",
+      "153700002",
+      "153700003",
+      "153700004",
+      "153700005",
+      "153700006",
+      "153700007",
+      "153700008",
+      "153700009",
+      "1537000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5219103",
+    "produtofornecedor": "RAYON POPLIN AIRJET 1,50L 100% VISCOSE",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "5219103",
+    "variants": [
+      "5219103",
+      "52191030",
+      "52191031",
+      "52191032",
+      "52191033",
+      "52191034",
+      "52191035",
+      "52191036",
+      "52191037",
+      "52191038",
+      "52191039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5219100",
+    "produtofornecedor": "RAYON POPLIN AIRJET 1,50L 100% VISCOSE",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "5219100",
+    "variants": [
+      "5219100",
+      "52191000",
+      "52191001",
+      "52191002",
+      "52191003",
+      "52191004",
+      "52191005",
+      "52191006",
+      "52191007",
+      "52191008",
+      "52191009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4432103",
+    "produtofornecedor": "RAYON POPLIN AIRJET 1.47L 100%VISCOSE",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "4432103",
+    "variants": [
+      "4432103",
+      "44321030",
+      "44321031",
+      "44321032",
+      "44321033",
+      "44321034",
+      "44321035",
+      "44321036",
+      "44321037",
+      "44321038",
+      "44321039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4432100",
+    "produtofornecedor": "RAYON POPLIN AIRJET 1.47L 100%VISCOSE 115GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "4432100",
+    "variants": [
+      "4432100",
+      "44321000",
+      "44321001",
+      "44321002",
+      "44321003",
+      "44321004",
+      "44321005",
+      "44321006",
+      "44321007",
+      "44321008",
+      "44321009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3108103",
+    "produtofornecedor": "RAYON VIENA TINTO 1.47L 100%VISCOSE 114GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "3108103",
+    "variants": [
+      "3108103",
+      "31081030",
+      "31081031",
+      "31081032",
+      "31081033",
+      "31081034",
+      "31081035",
+      "31081036",
+      "31081037",
+      "31081038",
+      "31081039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3108100",
+    "produtofornecedor": "RAYON VIENA TINTO 1.47L 100%VISCOSE 114GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "3108100",
+    "variants": [
+      "3108100",
+      "31081000",
+      "31081001",
+      "31081002",
+      "31081003",
+      "31081004",
+      "31081005",
+      "31081006",
+      "31081007",
+      "31081008",
+      "31081009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "18280000",
+    "produtofornecedor": "VISCOSE ARLES",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "18280000",
+    "variants": [
+      "18280000",
+      "182800000",
+      "182800001",
+      "182800002",
+      "182800003",
+      "182800004",
+      "182800005",
+      "182800006",
+      "182800007",
+      "182800008",
+      "182800009",
+      "1828000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "18290000",
+    "produtofornecedor": "VISCOSE ARLES",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "18290000",
+    "variants": [
+      "18290000",
+      "182900000",
+      "182900001",
+      "182900002",
+      "182900003",
+      "182900004",
+      "182900005",
+      "182900006",
+      "182900007",
+      "182900008",
+      "182900009",
+      "1829000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "11110000",
+    "produtofornecedor": "VISCOSE POPLIN 1.47",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "11110000",
+    "variants": [
+      "11110000",
+      "111100000",
+      "111100001",
+      "111100002",
+      "111100003",
+      "111100004",
+      "111100005",
+      "111100006",
+      "111100007",
+      "111100008",
+      "111100009",
+      "1111000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "11100000",
+    "produtofornecedor": "VISCOSE POPLIN 1.47",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "11100000",
+    "variants": [
+      "11100000",
+      "111000000",
+      "111000001",
+      "111000002",
+      "111000003",
+      "111000004",
+      "111000005",
+      "111000006",
+      "111000007",
+      "111000008",
+      "111000009",
+      "1110000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "11150000",
+    "produtofornecedor": "VISCOSE TRICOLINE",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "11150000",
+    "variants": [
+      "11150000",
+      "111500000",
+      "111500001",
+      "111500002",
+      "111500003",
+      "111500004",
+      "111500005",
+      "111500006",
+      "111500007",
+      "111500008",
+      "111500009",
+      "1115000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "11140000",
+    "produtofornecedor": "VISCOSE TRICOLINE BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "12456",
+    "nomeerp": "VISCOSE - LISA",
+    "cProd_norm": "11140000",
+    "variants": [
+      "11140000",
+      "111400000",
+      "111400001",
+      "111400002",
+      "111400003",
+      "111400004",
+      "111400005",
+      "111400006",
+      "111400007",
+      "111400008",
+      "111400009",
+      "1114000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "18780000",
+    "produtofornecedor": "ALFAIATARIA KALI TWILL",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "18780000",
+    "variants": [
+      "18780000",
+      "187800000",
+      "187800001",
+      "187800002",
+      "187800003",
+      "187800004",
+      "187800005",
+      "187800006",
+      "187800007",
+      "187800008",
+      "187800009",
+      "1878000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5112100",
+    "produtofornecedor": "MARANT SLUB LIGHT TINTO 1,45L 75% VISCOSE 25% POLIAMIDA",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "5112100",
+    "variants": [
+      "5112100",
+      "51121000",
+      "51121001",
+      "51121002",
+      "51121003",
+      "51121004",
+      "51121005",
+      "51121006",
+      "51121007",
+      "51121008",
+      "51121009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5112103",
+    "produtofornecedor": "MARANT SLUB LIGHT TINTO 1,45L 75% VISCOSE 25% POLIAMIDA",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "5112103",
+    "variants": [
+      "5112103",
+      "51121030",
+      "51121031",
+      "51121032",
+      "51121033",
+      "51121034",
+      "51121035",
+      "51121036",
+      "51121037",
+      "51121038",
+      "51121039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4446100",
+    "produtofornecedor": "RAYON POPLIN SPANDEX TINTO 1,48L 97% VISCOSE 3% ELASTANO",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "4446100",
+    "variants": [
+      "4446100",
+      "44461000",
+      "44461001",
+      "44461002",
+      "44461003",
+      "44461004",
+      "44461005",
+      "44461006",
+      "44461007",
+      "44461008",
+      "44461009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4446103",
+    "produtofornecedor": "RAYON POPLIN SPANDEX TINTO 1,48L 97% VISCOSE 3% ELASTANO",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "4446103",
+    "variants": [
+      "4446103",
+      "44461030",
+      "44461031",
+      "44461032",
+      "44461033",
+      "44461034",
+      "44461035",
+      "44461036",
+      "44461037",
+      "44461038",
+      "44461039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5169103",
+    "produtofornecedor": "RAYON SENSORIALLE AIR FLOW TINTO 1,47L 92%VISCOSE 8%POLY",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "5169103",
+    "variants": [
+      "5169103",
+      "51691030",
+      "51691031",
+      "51691032",
+      "51691033",
+      "51691034",
+      "51691035",
+      "51691036",
+      "51691037",
+      "51691038",
+      "51691039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5191103",
+    "produtofornecedor": "RAYON SENSORIALLE AIRFLOWRISCADEGIZ1,47L92%VIS7%POLIA1%POLYE",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "5191103",
+    "variants": [
+      "5191103",
+      "51911030",
+      "51911031",
+      "51911032",
+      "51911033",
+      "51911034",
+      "51911035",
+      "51911036",
+      "51911037",
+      "51911038",
+      "51911039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5485103",
+    "produtofornecedor": "RAYON SENSORIALLE LINHO 1,50L 75%VICOSE 17%LINHO 8%POLYES",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "5485103",
+    "variants": [
+      "5485103",
+      "54851030",
+      "54851031",
+      "54851032",
+      "54851033",
+      "54851034",
+      "54851035",
+      "54851036",
+      "54851037",
+      "54851038",
+      "54851039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5394103",
+    "produtofornecedor": "RAYON SENSORIALLE SLUB 1,50L 90% VISCOSE 10% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "5394103",
+    "variants": [
+      "5394103",
+      "53941030",
+      "53941031",
+      "53941032",
+      "53941033",
+      "53941034",
+      "53941035",
+      "53941036",
+      "53941037",
+      "53941038",
+      "53941039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4851100",
+    "produtofornecedor": "RAYON SENSORIALLE TWILL 1,50 92% VISCOSE 8% POLYES",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "4851100",
+    "variants": [
+      "4851100",
+      "48511000",
+      "48511001",
+      "48511002",
+      "48511003",
+      "48511004",
+      "48511005",
+      "48511006",
+      "48511007",
+      "48511008",
+      "48511009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4851103",
+    "produtofornecedor": "RAYON SENSORIALLE TWILL 1,50L 92% VISCOSE 8% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "12699",
+    "nomeerp": "VISCOSE SENSORIALLE",
+    "cProd_norm": "4851103",
+    "variants": [
+      "4851103",
+      "48511030",
+      "48511031",
+      "48511032",
+      "48511033",
+      "48511034",
+      "48511035",
+      "48511036",
+      "48511037",
+      "48511038",
+      "48511039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "732100",
+    "produtofornecedor": "POLY VOIL 3,00L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "12779",
+    "nomeerp": "VOIL 100% POLIESTER",
+    "cProd_norm": "732100",
+    "variants": [
+      "732100",
+      "7321000",
+      "7321001",
+      "7321002",
+      "7321003",
+      "7321004",
+      "7321005",
+      "7321006",
+      "7321007",
+      "7321008",
+      "7321009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "732103",
+    "produtofornecedor": "POLY VOIL 3,00L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "12779",
+    "nomeerp": "VOIL 100% POLIESTER",
+    "cProd_norm": "732103",
+    "variants": [
+      "732103",
+      "7321030",
+      "7321031",
+      "7321032",
+      "7321033",
+      "7321034",
+      "7321035",
+      "7321036",
+      "7321037",
+      "7321038",
+      "7321039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "11330000",
+    "produtofornecedor": "VOAL",
+    "unidademedida": "MT",
+    "codigoerp": "12779",
+    "nomeerp": "VOIL 100% POLIESTER",
+    "cProd_norm": "11330000",
+    "variants": [
+      "11330000",
+      "113300000",
+      "113300001",
+      "113300002",
+      "113300003",
+      "113300004",
+      "113300005",
+      "113300006",
+      "113300007",
+      "113300008",
+      "113300009",
+      "1133000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "11320000",
+    "produtofornecedor": "VOAL BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "12779",
+    "nomeerp": "VOIL 100% POLIESTER",
+    "cProd_norm": "11320000",
+    "variants": [
+      "11320000",
+      "113200000",
+      "113200001",
+      "113200002",
+      "113200003",
+      "113200004",
+      "113200005",
+      "113200006",
+      "113200007",
+      "113200008",
+      "113200009",
+      "1132000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "1993100",
+    "produtofornecedor": "POLY VOIL CHECK 3.0L 100% POLIESTER - 52GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "13144",
+    "nomeerp": "VOIL XADREZ DE POLIESTER",
+    "cProd_norm": "1993100",
+    "variants": [
+      "1993100",
+      "19931000",
+      "19931001",
+      "19931002",
+      "19931003",
+      "19931004",
+      "19931005",
+      "19931006",
+      "19931007",
+      "19931008",
+      "19931009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "1993103",
+    "produtofornecedor": "POLY VOIL CHECK 3.0L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "13144",
+    "nomeerp": "VOIL XADREZ DE POLIESTER",
+    "cProd_norm": "1993103",
+    "variants": [
+      "1993103",
+      "19931030",
+      "19931031",
+      "19931032",
+      "19931033",
+      "19931034",
+      "19931035",
+      "19931036",
+      "19931037",
+      "19931038",
+      "19931039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "14090000",
+    "produtofornecedor": "ZIBELINE",
+    "unidademedida": "MT",
+    "codigoerp": "13184",
+    "nomeerp": "ZIBELINE 100% POLIESTER",
+    "cProd_norm": "14090000",
+    "variants": [
+      "14090000",
+      "140900000",
+      "140900001",
+      "140900002",
+      "140900003",
+      "140900004",
+      "140900005",
+      "140900006",
+      "140900007",
+      "140900008",
+      "140900009",
+      "1409000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4465103",
+    "produtofornecedor": "ZIBELINE 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "13184",
+    "nomeerp": "ZIBELINE 100% POLIESTER",
+    "cProd_norm": "4465103",
+    "variants": [
+      "4465103",
+      "44651030",
+      "44651031",
+      "44651032",
+      "44651033",
+      "44651034",
+      "44651035",
+      "44651036",
+      "44651037",
+      "44651038",
+      "44651039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4465100",
+    "produtofornecedor": "ZIBELINE 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "13184",
+    "nomeerp": "ZIBELINE 100% POLIESTER",
+    "cProd_norm": "4465100",
+    "variants": [
+      "4465100",
+      "44651000",
+      "44651001",
+      "44651002",
+      "44651003",
+      "44651004",
+      "44651005",
+      "44651006",
+      "44651007",
+      "44651008",
+      "44651009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "14100000",
+    "produtofornecedor": "ZIBELINE BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "13184",
+    "nomeerp": "ZIBELINE 100% POLIESTER",
+    "cProd_norm": "14100000",
+    "variants": [
+      "14100000",
+      "141000000",
+      "141000001",
+      "141000002",
+      "141000003",
+      "141000004",
+      "141000005",
+      "141000006",
+      "141000007",
+      "141000008",
+      "141000009",
+      "1410000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5745103",
+    "produtofornecedor": "ZIBELINE RAFFINE 1,45L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "13184",
+    "nomeerp": "ZIBELINE 100% POLIESTER",
+    "cProd_norm": "5745103",
+    "variants": [
+      "5745103",
+      "57451030",
+      "57451031",
+      "57451032",
+      "57451033",
+      "57451034",
+      "57451035",
+      "57451036",
+      "57451037",
+      "57451038",
+      "57451039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4548100",
+    "produtofornecedor": "CETIM BUCOL 1,47L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "13290",
+    "nomeerp": "CETIM BUCOL 100% POLIESTER - TINTO",
+    "cProd_norm": "4548100",
+    "variants": [
+      "4548100",
+      "45481000",
+      "45481001",
+      "45481002",
+      "45481003",
+      "45481004",
+      "45481005",
+      "45481006",
+      "45481007",
+      "45481008",
+      "45481009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4548103",
+    "produtofornecedor": "CETIM BUCOL 1,47L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "13290",
+    "nomeerp": "CETIM BUCOL 100% POLIESTER - TINTO",
+    "cProd_norm": "4548103",
+    "variants": [
+      "4548103",
+      "45481030",
+      "45481031",
+      "45481032",
+      "45481033",
+      "45481034",
+      "45481035",
+      "45481036",
+      "45481037",
+      "45481038",
+      "45481039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "57780000",
+    "produtofornecedor": "CETIM BUCOL BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "13290",
+    "nomeerp": "CETIM BUCOL 100% POLIESTER - TINTO",
+    "cProd_norm": "57780000",
+    "variants": [
+      "57780000",
+      "577800000",
+      "577800001",
+      "577800002",
+      "577800003",
+      "577800004",
+      "577800005",
+      "577800006",
+      "577800007",
+      "577800008",
+      "577800009",
+      "5778000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "250103",
+    "produtofornecedor": "ELEGANT TWILL TINTO 1.47 L 100% POLIESTER - 153GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "13991",
+    "nomeerp": "GABARDINE 170G M2",
+    "cProd_norm": "250103",
+    "variants": [
+      "250103",
+      "2501030",
+      "2501031",
+      "2501032",
+      "2501033",
+      "2501034",
+      "2501035",
+      "2501036",
+      "2501037",
+      "2501038",
+      "2501039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5038103",
+    "produtofornecedor": "ALFAIATARIA 5388 1,50L 100% POLYESTER",
+    "unidademedida": "MT",
+    "codigoerp": "14527",
+    "nomeerp": "ALFAIATARIA NEW LOOK - LISO",
+    "cProd_norm": "5038103",
+    "variants": [
+      "5038103",
+      "50381030",
+      "50381031",
+      "50381032",
+      "50381033",
+      "50381034",
+      "50381035",
+      "50381036",
+      "50381037",
+      "50381038",
+      "50381039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "20000",
+    "produtofornecedor": "ALFAIATARIA BARBIE",
+    "unidademedida": "MT",
+    "codigoerp": "14527",
+    "nomeerp": "ALFAIATARIA NEW LOOK - LISO",
+    "cProd_norm": "20000",
+    "variants": [
+      "20000",
+      "200000",
+      "200001",
+      "200002",
+      "200003",
+      "200004",
+      "200005",
+      "200006",
+      "200007",
+      "200008",
+      "200009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "30000",
+    "produtofornecedor": "ALFAIATARIA BARBIE BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "14527",
+    "nomeerp": "ALFAIATARIA NEW LOOK - LISO",
+    "cProd_norm": "30000",
+    "variants": [
+      "30000",
+      "300000",
+      "300001",
+      "300002",
+      "300003",
+      "300004",
+      "300005",
+      "300006",
+      "300007",
+      "300008",
+      "300009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3831103",
+    "produtofornecedor": "ALFAIATARIA NEW LOOK DIGITAL ESTAMP 1.47L 90% POLYES 10%ELAS",
+    "unidademedida": "MT",
+    "codigoerp": "14527",
+    "nomeerp": "ALFAIATARIA NEW LOOK - LISO",
+    "cProd_norm": "3831103",
+    "variants": [
+      "3831103",
+      "38311030",
+      "38311031",
+      "38311032",
+      "38311033",
+      "38311034",
+      "38311035",
+      "38311036",
+      "38311037",
+      "38311038",
+      "38311039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4792103",
+    "produtofornecedor": "ALFAIATARIA NEW LOOK NEON TINTO 1.47L 90% POLY 10% ELAST",
+    "unidademedida": "MT",
+    "codigoerp": "14527",
+    "nomeerp": "ALFAIATARIA NEW LOOK - LISO",
+    "cProd_norm": "4792103",
+    "variants": [
+      "4792103",
+      "47921030",
+      "47921031",
+      "47921032",
+      "47921033",
+      "47921034",
+      "47921035",
+      "47921036",
+      "47921037",
+      "47921038",
+      "47921039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5213103",
+    "produtofornecedor": "ALFAIATARIA NEW LOOK TINTO 1,50L 90% POLYESTER 10% ELASTANO",
+    "unidademedida": "MT",
+    "codigoerp": "14527",
+    "nomeerp": "ALFAIATARIA NEW LOOK - LISO",
+    "cProd_norm": "5213103",
+    "variants": [
+      "5213103",
+      "52131030",
+      "52131031",
+      "52131032",
+      "52131033",
+      "52131034",
+      "52131035",
+      "52131036",
+      "52131037",
+      "52131038",
+      "52131039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3376100",
+    "produtofornecedor": "ALFAIATARIA NEW LOOK TINTO 1.47L 90% POLIE 10% ELAST 180GR/M",
+    "unidademedida": "MT",
+    "codigoerp": "14527",
+    "nomeerp": "ALFAIATARIA NEW LOOK - LISO",
+    "cProd_norm": "3376100",
+    "variants": [
+      "3376100",
+      "33761000",
+      "33761001",
+      "33761002",
+      "33761003",
+      "33761004",
+      "33761005",
+      "33761006",
+      "33761007",
+      "33761008",
+      "33761009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "3376103",
+    "produtofornecedor": "ALFAIATARIA NEW LOOK TINTO 1.47L 90% POLY 10% ELAST",
+    "unidademedida": "MT",
+    "codigoerp": "14527",
+    "nomeerp": "ALFAIATARIA NEW LOOK - LISO",
+    "cProd_norm": "3376103",
+    "variants": [
+      "3376103",
+      "33761030",
+      "33761031",
+      "33761032",
+      "33761033",
+      "33761034",
+      "33761035",
+      "33761036",
+      "33761037",
+      "33761038",
+      "33761039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "5213100",
+    "produtofornecedor": "ALFAIATARIA NEW LOOK TINTO 1.50L 90% POLY 10% ELAST",
+    "unidademedida": "MT",
+    "codigoerp": "14527",
+    "nomeerp": "ALFAIATARIA NEW LOOK - LISO",
+    "cProd_norm": "5213100",
+    "variants": [
+      "5213100",
+      "52131000",
+      "52131001",
+      "52131002",
+      "52131003",
+      "52131004",
+      "52131005",
+      "52131006",
+      "52131007",
+      "52131008",
+      "52131009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "5350000",
+    "produtofornecedor": "NUDE SPAN",
+    "unidademedida": "MT",
+    "codigoerp": "15428",
+    "nomeerp": "PRADA",
+    "cProd_norm": "5350000",
+    "variants": [
+      "5350000",
+      "53500000",
+      "53500001",
+      "53500002",
+      "53500003",
+      "53500004",
+      "53500005",
+      "53500006",
+      "53500007",
+      "53500008",
+      "53500009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "19220000",
+    "produtofornecedor": "NUDE SPAN",
+    "unidademedida": "MT",
+    "codigoerp": "15428",
+    "nomeerp": "PRADA",
+    "cProd_norm": "19220000",
+    "variants": [
+      "19220000",
+      "192200000",
+      "192200001",
+      "192200002",
+      "192200003",
+      "192200004",
+      "192200005",
+      "192200006",
+      "192200007",
+      "192200008",
+      "192200009",
+      "1922000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "19230000",
+    "produtofornecedor": "NUDE SPAN",
+    "unidademedida": "MT",
+    "codigoerp": "15428",
+    "nomeerp": "PRADA",
+    "cProd_norm": "19230000",
+    "variants": [
+      "19230000",
+      "192300000",
+      "192300001",
+      "192300002",
+      "192300003",
+      "192300004",
+      "192300005",
+      "192300006",
+      "192300007",
+      "192300008",
+      "192300009",
+      "1923000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54220000",
+    "produtofornecedor": "NUDE SPAN",
+    "unidademedida": "MT",
+    "codigoerp": "15428",
+    "nomeerp": "PRADA",
+    "cProd_norm": "54220000",
+    "variants": [
+      "54220000",
+      "542200000",
+      "542200001",
+      "542200002",
+      "542200003",
+      "542200004",
+      "542200005",
+      "542200006",
+      "542200007",
+      "542200008",
+      "542200009",
+      "5422000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "54210000",
+    "produtofornecedor": "NUDE SPAN",
+    "unidademedida": "MT",
+    "codigoerp": "15428",
+    "nomeerp": "PRADA",
+    "cProd_norm": "54210000",
+    "variants": [
+      "54210000",
+      "542100000",
+      "542100001",
+      "542100002",
+      "542100003",
+      "542100004",
+      "542100005",
+      "542100006",
+      "542100007",
+      "542100008",
+      "542100009",
+      "5421000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "LITORAL",
+    "codigoprodutofornecedor": "13500000",
+    "produtofornecedor": "NUDE SPAN BRANCO",
+    "unidademedida": "MT",
+    "codigoerp": "15428",
+    "nomeerp": "PRADA",
+    "cProd_norm": "13500000",
+    "variants": [
+      "13500000",
+      "135000000",
+      "135000001",
+      "135000002",
+      "135000003",
+      "135000004",
+      "135000005",
+      "135000006",
+      "135000007",
+      "135000008",
+      "135000009",
+      "1350000"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "404103",
+    "produtofornecedor": "PRADA 1.47L 96% POLIESTER 4% ELASTANO - 221GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "15428",
+    "nomeerp": "PRADA",
+    "cProd_norm": "404103",
+    "variants": [
+      "404103",
+      "4041030",
+      "4041031",
+      "4041032",
+      "4041033",
+      "4041034",
+      "4041035",
+      "4041036",
+      "4041037",
+      "4041038",
+      "4041039"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "404100",
+    "produtofornecedor": "PRADA 1.47L 96% POLIESTER 4% ELASTANO - 221GR/M2",
+    "unidademedida": "MT",
+    "codigoerp": "15428",
+    "nomeerp": "PRADA",
+    "cProd_norm": "404100",
+    "variants": [
+      "404100",
+      "4041000",
+      "4041001",
+      "4041002",
+      "4041003",
+      "4041004",
+      "4041005",
+      "4041006",
+      "4041007",
+      "4041008",
+      "4041009"
+    ]
+  },
+  {
+    "fornecedor_grupo": "EURO",
+    "codigoprodutofornecedor": "4566103",
+    "produtofornecedor": "PRADA TWILL TINTO 1,47L 96% POLYESTER 4% ELASTANO",
+    "unidademedida": "MT",
+    "codigoerp": "15428",
+    "nomeerp": "PRADA",
+    "cProd_norm": "4566103",
+    "variants": [
+      "4566103",
+      "45661030",
+      "45661031",
+      "45661032",
+      "45661033",
+      "45661034",
+      "45661035",
+      "45661036",
+      "45661037",
+      "45661038",
+      "45661039"
+    ]
+  }
+]
