@@ -36,27 +36,30 @@ class CodigoDecoder {
     }
 
     static identificarFornecedorPorPadrao(codigo) {
-        // Remover espaços
-        codigo = codigo.trim();
-        
-        // LITORAL: códigos muito longos (30+ dígitos) sem pontos
-        if (codigo.length >= 30 && !codigo.includes('.') && /^\d+$/.test(codigo)) {
-            return 'LITORAL';
-        }
-        
-        // EURO: geralmente 7 dígitos ou com pontos e SDE###
-        if (/^\d{7}$/.test(codigo) || (codigo.includes('.') && /SDE\d{3}/.test(codigo))) {
-            return 'EURO';
-        }
-        
-        // LITORAL: 5-8 dígitos sem pontos
-        if (/^\d{5,8}$/.test(codigo) && !codigo.includes('.')) {
-            return 'LITORAL';
-        }
-        
-        return 'DESCONHECIDO';
+    codigo = codigo.trim();
+
+    // EURO: códigos contínuos de 40–46 dígitos (sem pontos)
+    if (/^\d{40,46}$/.test(codigo)) {
+        return 'EURO';
     }
 
+    // LITORAL: códigos de 30–39 dígitos (sem pontos)
+    if (/^\d{30,39}$/.test(codigo)) {
+        return 'LITORAL';
+    }
+
+    // EURO com pontos e padrão SDE###
+    if (codigo.includes('.') && /SDE\d{3}/.test(codigo)) {
+        return 'EURO';
+    }
+
+    // LITORAL simples 5–8 dígitos sem pontos
+    if (/^\d{5,8}$/.test(codigo) && !codigo.includes('.')) {
+        return 'LITORAL';
+    }
+
+    return 'DESCONHECIDO';
+}
     static decodificarLitoralContinuo(codigoCompleto, bibliotecaDePara) {
     // Formato LITORAL sem pontos: 000002003000500005900025101300936
     // Estrutura correta: [zeros][produto 8 dígitos][quantidade 5 dígitos][controle...]
