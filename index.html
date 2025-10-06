@@ -432,123 +432,126 @@
         // Estado global da aplicação
         let inventario = [];
         let bibliotecaDePara = {};
+        let mapeamentoCores = {};
+
+        const normalizarLinhaArray = (linha) => {
+            if (!linha) return null;
+
+            let codigoFornecedor = String(linha.codigoprodutofornecedor ?? linha.codigo_fornecedor ?? '')
+                .replace(/\D+/g, '')
+                .replace(/^0+/, '');
+            if (!codigoFornecedor) return null;
+
+            const codigoERP = linha.codigoERP ?? linha.codigoerp ?? linha.codigoErp ?? linha.codigo;
+            const fornecedorRaw = linha.fornecedor_grupo ?? linha.fornecedor ?? linha.fornecedorGrupo;
+            const fornecedor = typeof fornecedorRaw === 'string' ? fornecedorRaw.trim().toUpperCase() : fornecedorRaw;
+            const produtoFornecedor = linha.produtoFornecedor ?? linha.produtofornecedor ?? linha.descricaoFornecedor ?? linha.nomeerp;
+
+            return [codigoFornecedor, {
+                ...linha,
+                codigoERP: codigoERP != null ? String(codigoERP).split('.')[0] : null,
+                nomeERP: linha.nomeERP ?? linha.nomeerp ?? produtoFornecedor ?? null,
+                fornecedor: fornecedor || null,
+                produtoFornecedor: produtoFornecedor ?? null
+            }];
+        };
+
+        const normalizarBiblioteca = (dados) => {
+            if (!dados) {
+                return { mapa: {}, cores: {} };
+            }
+
+            if (Array.isArray(dados)) {
+                const mapa = {};
+                for (const linha of dados) {
+                    const normalizado = normalizarLinhaArray(linha);
+                    if (!normalizado) continue;
+                    const [codigoFornecedor, payload] = normalizado;
+                    mapa[codigoFornecedor] = payload;
+                }
+                return { mapa, cores: {} };
+            }
+
+            if (typeof dados === 'object') {
+                const candidatos = [dados.produtos, dados.lookup, dados.mapa, dados.data];
+                const principal = candidatos.find(item => item && typeof item === 'object' && !Array.isArray(item)) || dados;
+                const cores = dados.mapeamentoCores || dados.cores || {};
+                return { mapa: principal, cores };
+            }
+
+            throw new Error('Formato inválido: tipo ' + typeof dados);
+        };
 
         // Carregar biblioteca DE->PARA do JSON
         async function carregarBiblioteca() {
+            const statusDiv = document.getElementById('bibliotecaStatus');
+
             try {
-                console.log('=== INICIANDO CARREGAMENTO DA BIBLIOTECA ===');
-                console.log('Tentando carregar: ./data/depara.json');
-                
-                const response = await fetch('./data/depara.json');
-                console.log('Status da resposta:', response.status, response.statusText);
-                
+                const url = `./data/depara.json?v=${Date.now()}`;
+                const response = await fetch(url, { cache: 'no-store' });
+
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
-                
+
                 const texto = await response.text();
-                console.log('Tamanho do arquivo:', texto.length, 'caracteres');
-                console.log('Primeiros 200 caracteres:', texto.substring(0, 200));
-                
                 const dados = JSON.parse(texto);
-                console.log('JSON parseado com sucesso');
-                console.log('Tipo de dados:', Array.isArray(dados) ? 'Array' : 'Object');
-                console.log('Total de registros:', dados.length);
-                
-                if (!Array.isArray(dados)) {
-                    throw new Error('Formato inválido: esperado array, recebido ' + typeof dados);
-                }
-                
-                if (dados.length === 0) {
-                    throw new Error('Arquivo JSON vazio');
-                }
-                
-                // Converter array para objeto de lookup
-                bibliotecaDePara = {};
-                let erros = 0;
-                
-                dados.forEach((item, index) => {
-                    if (!item.codigoprodutofornecedor) {
-                        erros++;
-                        console.warn(`Registro ${index} sem código:`, item);
-                        return;
-                    }
-                    
-                    const codigo = item.codigoprodutofornecedor.toString();
-                    bibliotecaDePara[codigo] = {
-                        codigoERP: item.codigoerp,
-                        nomeERP: item.nomeerp,
-                        fornecedor: item.fornecedor_grupo,
-                        produtoFornecedor: item.produtofornecedor,
-                        ncm: item.ncm,
-                        unidade: item.unidademedida
-                    };
-                });
-                
+                const { mapa, cores } = normalizarBiblioteca(dados);
+
+                bibliotecaDePara = mapa || {};
+                mapeamentoCores = cores || {};
+                window.bibliotecaDePara = bibliotecaDePara;
+                window.mapeamentoCores = mapeamentoCores;
+
                 const totalCarregado = Object.keys(bibliotecaDePara).length;
-                console.log('Biblioteca processada:', totalCarregado, 'produtos');
-                
-                if (erros > 0) {
-                    console.warn('Registros com erro:', erros);
-                }
-                
-                // Testar códigos específicos
-                console.log('=== TESTANDO CÓDIGOS CONHECIDOS ===');
-                const codigosTeste = ['4700103', '20000', '20030005', '1468100', '5038103'];
-                codigosTeste.forEach(codigo => {
-                    const existe = bibliotecaDePara[codigo] ? '✅' : '❌';
-                    console.log(`${existe} Código ${codigo}:`, bibliotecaDePara[codigo]?.nomeERP || 'não encontrado');
-                });
-                
+
                 document.getElementById('totalMappings').textContent = totalCarregado;
-                
-                // Atualizar status da biblioteca
-                const statusDiv = document.getElementById('bibliotecaStatus');
+
                 if (statusDiv) {
                     statusDiv.innerHTML = `
                         <div style="background: #27ae60; color: white; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
                             <h3>✅ Biblioteca Carregada</h3>
                             <p style="margin: 5px 0;">Produtos: ${totalCarregado}</p>
+                            <p style="margin: 5px 0; font-size: 0.9em;">Cores carregadas: ${Object.keys(mapeamentoCores).length}</p>
                             <p style="margin: 5px 0; font-size: 0.9em;">Arquivo: data/depara.json</p>
                         </div>
                     `;
                 }
-                
+
                 return totalCarregado;
-                
+
             } catch (error) {
-                console.error('=== ERRO NO CARREGAMENTO ===');
-                console.error('Tipo:', error.name);
-                console.error('Mensagem:', error.message);
-                console.error('Stack:', error.stack);
-                
+                console.error('Erro ao carregar biblioteca:', error);
                 showNotification('Erro ao carregar biblioteca: ' + error.message, 'error');
-                
-                // Fallback com alguns produtos essenciais
-                console.warn('Usando biblioteca FALLBACK (5 produtos)');
-                bibliotecaDePara = {
+
+                const fallback = {
                     "5038103": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "EURO" },
                     "4700103": { codigoERP: "9109", nomeERP: "OXFORDINE", fornecedor: "EURO" },
                     "20000": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "LITORAL" },
                     "1468100": { codigoERP: "9532", nomeERP: "PERCAL - 400 FIOS", fornecedor: "EURO" },
                     "732100": { codigoERP: "12779", nomeERP: "VOIL 100% POLIESTER", fornecedor: "EURO" }
                 };
-                
-                document.getElementById('totalMappings').textContent = Object.keys(bibliotecaDePara).length;
-                
-                // Atualizar status com erro
-                const statusDiv = document.getElementById('bibliotecaStatus');
+                const coresFallback = { '100': 'branco', '223': 'vermelho', '302': 'cinza', '408': 'azul', '903': 'preto' };
+
+                bibliotecaDePara = fallback;
+                mapeamentoCores = coresFallback;
+                window.bibliotecaDePara = fallback;
+                window.mapeamentoCores = coresFallback;
+
+                const totalFallback = Object.keys(fallback).length;
+                document.getElementById('totalMappings').textContent = totalFallback;
+
                 if (statusDiv) {
                     statusDiv.innerHTML = `
                         <div style="background: #e74c3c; color: white; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
                             <h3>⚠️ Erro no Carregamento</h3>
-                            <p style="margin: 5px 0;">Usando fallback: 5 produtos</p>
+                            <p style="margin: 5px 0;">Usando fallback: ${totalFallback} produtos</p>
                             <p style="margin: 5px 0; font-size: 0.9em;">Erro: ${error.message}</p>
                         </div>
                     `;
                 }
-                
-                return Object.keys(bibliotecaDePara).length;
+
+                return totalFallback;
             }
         }
 
@@ -557,10 +560,12 @@
             try {
                 // Carregar biblioteca primeiro
                 const totalProdutos = await carregarBiblioteca();
-                
+                mapeamentoCores = window.mapeamentoCores || {};
+
                 // Inicializar scanner com a biblioteca carregada
                 if (window.ScannerReal) {
                     window.ScannerReal.bibliotecaDePara = bibliotecaDePara;
+                    window.ScannerReal.mapeamentoCores = mapeamentoCores;
                     await window.ScannerReal.init();
                 }
                 
@@ -578,7 +583,7 @@
                     console.log('Código existe na biblioteca?', bibliotecaDePara[codigo] ? 'SIM' : 'NÃO');
                     
                     if (window.CodigoDecoder) {
-                        const resultado = window.CodigoDecoder.decodificar(codigo, bibliotecaDePara);
+                        const resultado = window.CodigoDecoder.decodificar(codigo, bibliotecaDePara, window.mapeamentoCores || {});
                         console.log('Resultado decoder:', resultado);
                         return resultado;
                     } else {
@@ -611,7 +616,7 @@
             }
             
             // Processar usando o decoder com a biblioteca carregada
-            const resultado = window.CodigoDecoder.decodificar(codigo, bibliotecaDePara);
+            const resultado = window.CodigoDecoder.decodificar(codigo, bibliotecaDePara, window.mapeamentoCores || {});
             
             if (resultado && resultado.nomeERP !== 'PRODUTO NÃO MAPEADO') {
                 preencherCampos(resultado);
@@ -828,74 +833,6 @@
         // Carregar inventário ao inicializar
         carregarInventario();
     </script>
-    <!-- OVERRIDE MINIMALISTA: substitui SOMENTE a função carregarBiblioteca -->
-<script>
-(function () {
-  // mantém compatibilidade com o resto do index
-  window.carregarBiblioteca = async function carregarBiblioteca() {
-    try {
-      const url = `./data/depara.json?v=${Date.now()}`; // cache-bust
-      const resp = await fetch(url, { cache: 'no-store' });
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}: ${resp.statusText}`);
-
-      const raw = await resp.text();
-      const dados = JSON.parse(raw);
-
-      // Aceita OBJETO {produtos:{...}} OU ARRAY [...]
-      window.bibliotecaDePara = {};
-      let ignorados = 0;
-
-      if (dados && typeof dados === 'object' && !Array.isArray(dados)) {
-        if (!dados.produtos || typeof dados.produtos !== 'object') {
-          throw new Error('Formato inválido: objeto sem chave "produtos"');
-        }
-        window.bibliotecaDePara = dados.produtos;
-      } else if (Array.isArray(dados)) {
-        for (let i = 0; i < dados.length; i++) {
-          const it = dados[i] || {};
-          let cod = String(it.codigoprodutofornecedor ?? '')
-                      .replace(/\D+/g, '')
-                      .replace(/^0+/, '');
-          if (!cod) { ignorados++; continue; }
-          const codigoERP  = it.codigoerp != null ? String(it.codigoerp).split('.')[0] : null;
-          const fornecedor = String(it.fornecedor_grupo || '').trim().toUpperCase();
-          window.bibliotecaDePara[cod] = {
-            codigoERP,
-            nomeERP: it.nomeerp ?? null,
-            fornecedor: fornecedor || null,
-            produtoFornecedor: it.produtofornecedor ?? null,
-            ncm: it.ncm ?? null,
-            unidade: it.unidademedida ?? null
-          };
-        }
-      } else {
-        throw new Error('Formato inválido: tipo ' + typeof dados);
-      }
-
-      // Atualiza contador
-      const total = Object.keys(window.bibliotecaDePara).length;
-      const counterEl = document.getElementById('totalMappings');
-      if (counterEl) counterEl.textContent = total;
-
-      // retorna total para quem estiver aguardando
-      return total;
-
-    } catch (error) {
-      // Fallback mínimo igual ao seu
-      window.bibliotecaDePara = {
-        "5038103": { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "EURO" },
-        "4700103": { codigoERP: "9109",  nomeERP: "OXFORDINE", fornecedor: "EURO" },
-        "20000":   { codigoERP: "14527", nomeERP: "ALFAIATARIA NEW LOOK - LISO", fornecedor: "LITORAL" },
-        "1468100": { codigoERP: "9532",  nomeERP: "PERCAL - 400 FIOS", fornecedor: "EURO" },
-        "732100":  { codigoERP: "12779", nomeERP: "VOIL 100% POLIESTER", fornecedor: "EURO" }
-      };
-      const counterEl = document.getElementById('totalMappings');
-      if (counterEl) counterEl.textContent = Object.keys(window.bibliotecaDePara).length;
-      return Object.keys(window.bibliotecaDePara).length;
-    }
-  };
-})();
-</script>
 
 </body>
 </html>
