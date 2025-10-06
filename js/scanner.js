@@ -24,14 +24,21 @@ class ScannerReal {
     // Carregar biblioteca DE→PARA do arquivo JSON
     async carregarBiblioteca() {
         try {
+            if (typeof window !== 'undefined' && window.bibliotecaDePara && Object.keys(window.bibliotecaDePara).length) {
+                this.bibliotecaDePara = window.bibliotecaDePara;
+                this.mapeamentoCores = window.mapeamentoCores || {};
+                console.log('Biblioteca reutilizada da aplicação principal:', Object.keys(this.bibliotecaDePara).length);
+                return { produtos: this.bibliotecaDePara, mapeamentoCores: this.mapeamentoCores };
+            }
+
             const response = await fetch(`./data/depara.json?v=${Date.now()}`, { cache: 'no-store' });
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
             const data = await response.json();
-            
+
             // Aceita objeto {produtos:{...}} ou array [...]
             if (data && typeof data === 'object' && !Array.isArray(data)) {
                 this.bibliotecaDePara = data.produtos || data.lookup || data;
-                this.mapeamentoCores = data.mapeamentoCores || {};
+                this.mapeamentoCores = data.mapeamentoCores || data.cores || {};
             } else if (Array.isArray(data)) {
                 const mapa = {};
                 let ignorados = 0;
